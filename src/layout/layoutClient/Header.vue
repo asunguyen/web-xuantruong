@@ -28,5 +28,5 @@
         </div>
       </div>
     </b-container>
-  </header> 
+  </header>
 </template>
