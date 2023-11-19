@@ -1,0 +1,124 @@
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    text-align: left;
+  }
+  
+  ol, ul {
+    list-style: none;
+  }
+  /* .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12{
+    padding: 0;
+  } */
+  img {
+    max-width: 100%;
+    object-fit: cover;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    vertical-align: middle;
+    display: inline-block;
+   
+
+}
+h3.title{
+  font-size: 35px;
+  font-weight: 600;
+  text-align: left;
+}
+.form-group{
+  margin-bottom: 10px;
+}
+.form-group input{
+  font-size: 14px;
+  height: 40px;
+}
+
+ul {
+    list-style: none;
+    margin: unset;
+  }
+  
+  a {
+    text-decoration: none!important;
+    /* color: white; */
+  }
+  
+  .sk-btn {
+    display: inline-block;
+    height: 46px;
+    line-height: 44px;
+    padding: 0 25px 0 60px;
+    border: 1px #fff solid;
+    background: rgba(255, 255, 255, 0.16);
+    -webkit-border-radius: 23px;
+    border-radius: 23px;
+    color: #fff;
+    position: relative;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    white-space: nowrap;
+  }
+  
+  .sk-btn span {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    position: absolute;
+    width: 39px;
+    height: 39px;
+    top: 2px;
+    right: calc(100% - 41px);
+    line-height: 37px;
+    text-align: center;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px #fff solid;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .sk-btn img {
+    display: inline-block;
+    width: auto !important;
+    margin: 0 auto;
+  }
+  
+  .sk-btn img.hover {
+    display: none;
+  }
+  
+  .sk-btn:hover {
+    background: #fff;
+    color: #1b5b23;
+    padding: 0 60px 0 25px;
+  }
+  
+  .sk-btn:hover span {
+    background: #1b5b23;
+    right: 2px;
+  }
+  
+  .sk-btn:hover img.default {
+    display: none;
+  }
+  
+  .sk-btn:hover img.hover {
+    display: inline-block;
+  }
+  
+  .sk-button .sk-btn:hover {
+    color: #fff;
+    background: #618565;
+  }
+  
+  .sk-button .sk-btn {
+    color: #1b5b23;
+    background: #d7e3d8;
+  }
