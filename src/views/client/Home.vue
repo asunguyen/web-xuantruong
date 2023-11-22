@@ -38,7 +38,7 @@
               <div class="banner-left">
                 <div class="text-content-section">
                   <div class="title">
-                    <div class="d-flex ">
+                    <div class="d-flex">
                       <h5>
                         <img src="~@/assets/styles/images/star.png" />
                         CÔNG TY CỔ PHẦN ĐẦU TƯ XÂY DỰNG VÀ PHÁT TRIỂN XUÂN TRƯỜNG
@@ -144,7 +144,7 @@
                   </div>
                   <div class="text-images">
                     <div class="images">
-                      <img src="~@/assets/styles/images/Ho-Bau-Ngu-cover.jpg" />
+                      <img src="~@/assets/styles/images/Ho-Bau-Ngu-cover.jpg" /> 
                     </div>
                     <div class="text_right">
                       <h3 class="title">
@@ -273,8 +273,7 @@
                     <b-col cols="6">
                       <div class="big-new">
                         <div class="images-new">
-                          <img class="default"
-                            src="~@/assets/styles/images/z2265403739225_01cfaa40494e07911fff673d827b0756.jpg" />
+                          <img class="default" src="~@/assets/styles/images/z2265403739225_01cfaa40494e07911fff673d827b0756.jpg" />
                         </div>
                         <div class="text-new">
                           <h5 class="title">
@@ -369,8 +368,7 @@
                     <b-col cols="6">
                       <div class="big-new">
                         <div class="images-new">
-                          <img class="default"
-                            src="~@/assets/styles/images/z2265403739225_01cfaa40494e07911fff673d827b0756.jpg" />
+                          <img class="default" src="~@/assets/styles/images/z2265403739225_01cfaa40494e07911fff673d827b0756.jpg" />
                         </div>
                         <div class="text-new">
                           <h5 class="title">
@@ -613,8 +611,9 @@
           </div>
         </div>
         <div class="section-our-project">
+          <h3 class="title"> Dư án của chúng tôi</h3>
           <div class="hight-default content-new w-100">
-            <VueSlickCarousel v-bind="settingsAbout" class="slick-section-about">
+            <VueSlickCarousel v-bind="settingMyProject" class="slick-section-about">
               <div class="item-slick">
                 <b-row class="w-100">
                   <b-col cols="6 ">
@@ -805,17 +804,19 @@
 </template>
 
 <script>
-import VueSlickCarousel from "vue-slick-carousel";
-import "vue-slick-carousel/dist/vue-slick-carousel.css";
-import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
+import VueSlickCarousel from 'vue-slick-carousel'
+import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 
 export default {
-  name: "Home",
+  props: {
+  },
+  name: 'Home',
   components: { VueSlickCarousel },
   methods: {
     goToProductDetail() {
-      this.$router.push("/product-detail");
-    },
+      this.$router.push('/product-detail')
+    }
   },
   data() {
     return {
@@ -847,7 +848,16 @@ export default {
       settingsAbout: {
         dots: true,
         infinite: true,
-        initialSlide: 1,
+        initialSlide: 2,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        swipeToSlide: true
+      },
+      settingMyProject: {
+        dots: true,
+        dotsClass: 'slick-dots custom-dot-class',
+        infinite: true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -884,7 +894,17 @@ export default {
         content: ''
       }
     }
-  },
-};
+  }
+}
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 60px 70px;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+</style>

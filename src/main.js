@@ -48,3 +48,7 @@ new Vue({
   store,
   render: h => h(App)
 })
+
+global.jQuery = require('jquery')
+var $ = global.jQuery
+window.$ = $
