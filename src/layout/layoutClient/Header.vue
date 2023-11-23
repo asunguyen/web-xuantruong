@@ -4,7 +4,7 @@
       <div class="menu-header">
         <div class="logo">
           <a href="#">
-            <img src="~@/assets/styles/images/logo.png" />
+            <img src="~@/assets/images/Logo-04.png" />
           </a>
         </div>
         <div class="menu_ d-flex">
@@ -18,7 +18,13 @@
           </ul>
           <div class="search-flag">
             <div class="search">
-              <b-icon icon="search" aria-hidden="true"></b-icon>
+              <b-icon icon="search"  @click="!seen" aria-hidden="true"></b-icon>
+              <div class="iput-search" v-if="seen">
+                <b-form-input
+                  v-model='inputSearch'
+                  placeholder="Enter your name"
+                ></b-form-input>
+              </div>
             </div>
             <div class="flag">
               <img src="~@/assets/styles/images/vn.png" />
@@ -27,6 +33,19 @@
           </div>
         </div>
       </div>
+
     </b-container>
-  </header> 
+  </header>
 </template>
+<script>
+
+export default {
+  data() {
+    return {
+      inputSearch: '',
+      seen: false
+    }
+  }
+
+}
+</script>

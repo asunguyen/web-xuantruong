@@ -18,8 +18,8 @@
 </template>
 
 <script>
-import Header from "./Header.vue";
-import Footer from "./Footer.vue";
+import Header from './Header.vue'
+import Footer from './Footer.vue'
 import VueSlickCarousel from 'vue-slick-carousel'
 import {
   BCard,
@@ -44,7 +44,7 @@ import {
 } from 'bootstrap-vue'
 
 export default {
-  name: "LayoutClient",
+  name: 'LayoutClient',
   components: {
     Header,
     Footer,
@@ -67,11 +67,11 @@ export default {
     BFormGroup,
     BFormCheckbox,
     BFormSelect,
-    BAlert
-  },
-};
+    BAlert 
+  }
+}
 </script>
-<style lang="scss" scoped>
+<style lang="scss" >
 @import "~@/styles/mixin.scss";
 @import "~@/styles/variables.scss";
 @import "~@/styles/css/home.css";
@@ -82,6 +82,7 @@ export default {
   position: relative;
   height: 100%;
   width: 100%;
+
   &.mobile.openSidebar {
     position: fixed;
     top: 0;
