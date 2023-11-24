@@ -155,7 +155,7 @@
                             <div class="ban-lanhdao">
                                 <b-row>
                                     <b-col cols="12">
-                                        <div class="item chu-tich">
+                                        <div class="item">
                                             <div class="image">
                                                 <img class="default" src="~@/assets/styles/images/Co-Ngoc.jpg" />
                                             </div>
@@ -166,7 +166,9 @@
                                                     <p>Kiêm Trưởng văn phòng đại diện tại Hà Nội</p>
                                                 </div>
                                                 <div class="progress">
-                                                    <h5 class="title">Quá trình công tác</h5>
+                                                    <div class="title">
+                                                        <h5 >Quá trình công tác</h5>
+                                                    </div>
                                                     <p>
                                                         2008 – 2014: Thành viên HĐQT Công ty cổ phần Đầu tư xây dựng và phát
                                                         triển Trường Thành
@@ -188,7 +190,7 @@
                                         </div>
                                     </b-col>
                                     <b-col cols="6">
-                                        <div class="item chu-tich">
+                                        <div class="item">
                                             <div class="image">
                                                 <img class="default" src="~@/assets/styles/images/Co-Ngoc.jpg" />
                                             </div>
@@ -199,7 +201,9 @@
                                                     <p>Kiêm Trưởng văn phòng đại diện tại Hà Nội</p>
                                                 </div>
                                                 <div class="progress">
-                                                    <h5 class="title">Quá trình công tác</h5>
+                                                    <div class="title">
+                                                        <h5>Quá trình công tác</h5>
+                                                    </div>
                                                     <p>
                                                         2008 – 2014: Thành viên HĐQT Công ty cổ phần Đầu tư xây dựng và phát
                                                         triển Trường Thành
@@ -221,7 +225,7 @@
                                         </div>
                                     </b-col>
                                     <b-col cols="6">
-                                        <div class="item chu-tich">
+                                        <div class="item">
                                             <div class="image">
                                                 <img class="default" src="~@/assets/styles/images/Co-Ngoc.jpg" />
                                             </div>
@@ -232,7 +236,9 @@
                                                     <p>Kiêm Trưởng văn phòng đại diện tại Hà Nội</p>
                                                 </div>
                                                 <div class="progress">
-                                                    <h5 class="title">Quá trình công tác</h5>
+                                                    <div class="title">
+                                                        <h5 >Quá trình công tác</h5>
+                                                    </div>
                                                     <p>
                                                         2008 – 2014: Thành viên HĐQT Công ty cổ phần Đầu tư xây dựng và phát
                                                         triển Trường Thành
@@ -260,9 +266,9 @@
                 </div>
                 <div class="organizational">
                     <h3 class="title"> Sơ đồ tổ chức</h3>
-                        <div class="images w-100">
-                            <img class="default" src="~@/assets/styles/images/so_do_to_chuc.png" />
-                        </div>
+                    <div class="images w-100">
+                        <img class="default" src="~@/assets/styles/images/so_do_to_chuc.png" />
+                    </div>
                 </div>
             </div>
         </main>
@@ -276,8 +282,8 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 export default {
     name: 'introduce',
     components: { VueSlickCarousel },
-    methods: {
-    },
+    // methods: {
+    // },
     data() {
         return {
             settingsHistory: {
@@ -355,5 +361,62 @@ export default {
             }
         }
     }
+}
+
+.ban-lanhdao {
+    .row{
+        div:first-child{
+            display: block;
+            .item{
+                display: -webkit-box;
+                .image{
+                    margin: 0 45px;
+                }
+                .content{
+                    padding-left: 20px;
+                }
+            }
+        }
+    }
+    .item {
+        display: block;
+        .image {
+            width: 200px;
+            height: 250px;
+
+            img {
+                vertical-align: middle;
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .content {
+            h4.title {
+                font-size: 20px;
+                font-weight: 600;
+            }
+
+            .important {
+                font-style: italic;
+                font-size: 16px;
+                p {
+
+                }
+            }
+
+            .progress {
+                display: block;
+                h5.title {
+                    font-size: 16px;
+                    font-weight: 800;
+                }
+
+                p {}
+            }
+        }
+    }
+
 }
 </style>
