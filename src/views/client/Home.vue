@@ -807,6 +807,7 @@
 import VueSlickCarousel from 'vue-slick-carousel'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+import $ from "jquery";
 
 export default {
   props: {
@@ -894,6 +895,9 @@ export default {
         content: ''
       }
     }
+  },
+  mounted() {
+    console.log("đây là jquery:: ", $(".sticky-footer"));
   }
 }
 </script>
