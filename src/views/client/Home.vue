@@ -611,8 +611,8 @@
           </div>
         </div>
         <div class="section-our-project">
-          <h3 class="title"> Dư án của chúng tôi</h3>
-          <div class="hight-default content-new w-100">
+          <h3 class="title"> Dự án của chúng tôi</h3>
+          <div class="hight-default content-new w-100 d-block">
             <VueSlickCarousel v-bind="settingMyProject" class="slick-section-about">
               <div class="item-slick">
                 <b-row class="w-100">
@@ -861,7 +861,7 @@ export default {
         infinite: true,
         speed: 500,
         slidesToShow: 1,
-        slidesToScroll: 1,
+        slidesToScroll: 2,
         swipeToSlide: true
       },
       settingsNews: {

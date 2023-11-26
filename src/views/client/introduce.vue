@@ -2,30 +2,28 @@
     <div class="sticky-footer">
         <main class="site-container site-container-elementor">
             <div class="site-page-content">
-                <div class="section_">
+                <div class="section_ ">
                     <b-row>
-                        <b-col cols="5">
+                        <b-col class="p-0" cols="5">
                             <div class="banner-left">
                                 <div class="text-content-section">
                                     <div class="title">
                                         <div class="d-flex">
-                                            <h5>
-                                                <img src="~@/assets/styles/images/star.png" />
-                                                CÔNG TY CỔ PHẦN ĐẦU TƯ XÂY DỰNG VÀ PHÁT TRIỂN XUÂN TRƯỜNG
-                                            </h5>
+                                            <h3>
+                                                Về chúng tôi
+                                            </h3>
                                         </div>
-                                        <h3>
-                                            Phát triển nguồn năng lượng xanh cho tương lai bền vững
-                                        </h3>
-                                    </div>
-                                    <div class="button-view">
-                                        <a class="sk-btn sk-btn-1" href="#">
-                                            <span>
-                                                <img class="default" src="~@/assets/styles/images/arrow-blue-right.png" />
-                                                <img class="hover" src="~@/assets/styles/images/arrow-white-right.png" />
-                                            </span>
-                                            Xem thêm
-                                        </a>
+                                        <ul class="sk-custom-items">
+                                            <li><a href="#"> Tổng quan
+                                                    <img alt="" src="~@/assets/styles/images/arrow-white-right.png"></a>
+                                            </li>
+                                            <li><a href="#"> Lich sử phát triển
+                                                    <img alt="" src="~@/assets/styles/images/arrow-white-right.png"></a>
+                                            </li>
+                                            <li><a href="#"> Sứ mệnh - tầm nhìn
+                                                    <img alt="" src="~@/assets/styles/images/arrow-white-right.png"></a>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -33,7 +31,7 @@
                         <b-col cols="7 hight-default">
                             <div class="content-right d-flex">
                                 <div class="text">
-                                    <h3 class="title">Về Xuân Trường</h3>
+                                    <h3 class="title-big">Tổng Quan</h3>
                                     <div class="content">
                                         <p>
                                             Công ty Cổ phần Đầu tư Xây dựng và Phát triển Xuân Trường
@@ -156,8 +154,10 @@
                                 <b-row>
                                     <b-col cols="12">
                                         <div class="item">
-                                            <div class="image">
-                                                <img class="default" src="~@/assets/styles/images/Co-Ngoc.jpg" />
+                                            <div class="content-image">
+                                                <div class="image">
+                                                    <img class="default" src="~@/assets/styles/images/Co-Ngoc.jpg" />
+                                                </div>
                                             </div>
                                             <div class="content">
                                                 <h4 class="title">Bà: Nguyễn Thị Ngọc</h4>
@@ -165,42 +165,7 @@
                                                     <p>Chủ tịch Hội đồng quản trị</p>
                                                     <p>Kiêm Trưởng văn phòng đại diện tại Hà Nội</p>
                                                 </div>
-                                                <div class="progress">
-                                                    <div class="title">
-                                                        <h5 >Quá trình công tác</h5>
-                                                    </div>
-                                                    <p>
-                                                        2008 – 2014: Thành viên HĐQT Công ty cổ phần Đầu tư xây dựng và phát
-                                                        triển Trường Thành
-                                                    </p>
-                                                    <p>
-                                                        2014 – Nay: Trưởng văn phòng đại diện tại Hà Nội của Công ty cổ phần
-                                                        Đầu tư xây dựng và Phát triển Trường Thành
-                                                    </p>
-                                                    <p>
-                                                        04/2021 – 04/2023: Thành viên HĐQT Công ty cổ phần Đầu tư xây dựng
-                                                        và Phát triển Trường Thành
-                                                    </p>
-                                                    <p>
-                                                        04/2021 – 04/2023: Thành viên HĐQT Công ty cổ phần Đầu tư xây dựng
-                                                        và Phát triển Trường Thành
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </b-col>
-                                    <b-col cols="6">
-                                        <div class="item">
-                                            <div class="image">
-                                                <img class="default" src="~@/assets/styles/images/Co-Ngoc.jpg" />
-                                            </div>
-                                            <div class="content">
-                                                <h4 class="title">Bà: Nguyễn Thị Ngọc</h4>
-                                                <div class="important">
-                                                    <p>Chủ tịch Hội đồng quản trị</p>
-                                                    <p>Kiêm Trưởng văn phòng đại diện tại Hà Nội</p>
-                                                </div>
-                                                <div class="progress">
+                                                <div class="progress-content">
                                                     <div class="title">
                                                         <h5>Quá trình công tác</h5>
                                                     </div>
@@ -226,8 +191,10 @@
                                     </b-col>
                                     <b-col cols="6">
                                         <div class="item">
-                                            <div class="image">
-                                                <img class="default" src="~@/assets/styles/images/Co-Ngoc.jpg" />
+                                            <div class="content-image">
+                                                <div class="image">
+                                                    <img class="default" src="~@/assets/styles/images/Co-Ngoc.jpg" />
+                                                </div>
                                             </div>
                                             <div class="content">
                                                 <h4 class="title">Bà: Nguyễn Thị Ngọc</h4>
@@ -235,9 +202,46 @@
                                                     <p>Chủ tịch Hội đồng quản trị</p>
                                                     <p>Kiêm Trưởng văn phòng đại diện tại Hà Nội</p>
                                                 </div>
-                                                <div class="progress">
+                                                <div class="progress-content">
                                                     <div class="title">
-                                                        <h5 >Quá trình công tác</h5>
+                                                        <h5>Quá trình công tác</h5>
+                                                    </div>
+                                                    <p>
+                                                        2008 – 2014: Thành viên HĐQT Công ty cổ phần Đầu tư xây dựng và phát
+                                                        triển Trường Thành
+                                                    </p>
+                                                    <p>
+                                                        2014 – Nay: Trưởng văn phòng đại diện tại Hà Nội của Công ty cổ phần
+                                                        Đầu tư xây dựng và Phát triển Trường Thành
+                                                    </p>
+                                                    <p>
+                                                        04/2021 – 04/2023: Thành viên HĐQT Công ty cổ phần Đầu tư xây dựng
+                                                        và Phát triển Trường Thành
+                                                    </p>
+                                                    <p>
+                                                        04/2021 – 04/2023: Thành viên HĐQT Công ty cổ phần Đầu tư xây dựng
+                                                        và Phát triển Trường Thành
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </b-col>
+                                    <b-col cols="6">
+                                        <div class="item">
+                                            <div class="content-image">
+                                                <div class="image">
+                                                    <img class="default" src="~@/assets/styles/images/Co-Ngoc.jpg" />
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <h4 class="title">Bà: Nguyễn Thị Ngọc</h4>
+                                                <div class="important">
+                                                    <p>Chủ tịch Hội đồng quản trị</p>
+                                                    <p>Kiêm Trưởng văn phòng đại diện tại Hà Nội</p>
+                                                </div>
+                                                <div class="progress-content">
+                                                    <div class="title">
+                                                        <h5>Quá trình công tác</h5>
                                                     </div>
                                                     <p>
                                                         2008 – 2014: Thành viên HĐQT Công ty cổ phần Đầu tư xây dựng và phát
@@ -302,22 +306,85 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+.menu-header .menu_ ul li a {
+    color: black;
+}
+
 .menu-header {
     position: unset;
 }
 
 .content-right {
     height: unset;
+
+    .text {
+        h3.title-big {
+            color: rgba(7, 44, 11, .09);
+            font-size: 60px;
+            font-weight: 600;
+            line-height: 83px;
+        }
+    }
+
 }
 
 .hight-default {
-    height: unset;
+    padding: 160px 30px 100px;
+    overflow-y: scroll;
+    height: 100vh;
     display: block;
+    background-color: #f5f5f5;
 }
 
-.slick-initialized .slick-slide[data-v-e4caeaf8] {
-    display: block;
-    padding-right: 30px;
+.section_  {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #c3afaf85;
+
+    .banner-left {
+        .text-content-section {
+            ul.sk-custom-items {
+                li {
+                    width: 70%;
+                    margin-left: 0px;
+                    &:hover {
+                        img {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+
+                        a {
+                            border-color: #fff;
+                            background: rgba(255, 255, 255, .1);
+                        }
+
+                    }
+
+                    a {
+                        display: block;
+                        color: #fff;
+                        padding: 9px 27px;
+                        border: 2px transparent solid;
+                        -webkit-border-radius: 25px;
+                        border-radius: 25px;
+                        -webkit-transition: all .3s ease-in-out;
+                        transition: all .3s ease-in-out;
+                    }
+
+                    img {
+                        display: inline-block;
+                        float: right;
+                        margin-left: 20px;
+                        opacity: 0;
+                        visibility: hidden;
+                        -webkit-transition: all .3s ease-in-out;
+                        transition: all .3s ease-in-out;
+                        position: relative;
+                        top: 5px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .history {
@@ -329,9 +396,21 @@ export default {
 
     .slick-initialized {
         .item {
-            padding-top: 60px;
+            padding-top: 50px;
+            margin-top: 20px;
             margin-right: 30px;
-            border-top: 2px #707070 solid;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: ".";
+                overflow: hidden;
+                width: 93%;
+                height: 1px;
+                background-color: #adadad;
+            }
 
             h3.year {
                 font-size: 60px;
@@ -353,6 +432,8 @@ export default {
                 }
 
                 .image {
+                    width: 30px;
+
                     img {
                         display: block;
                         width: 100%;
@@ -364,22 +445,43 @@ export default {
 }
 
 .ban-lanhdao {
-    .row{
-        div:first-child{
+    padding: 100px 0 70px;
+
+    .row {
+        div:first-child {
             display: block;
-            .item{
+
+            .item {
                 display: -webkit-box;
-                .image{
-                    margin: 0 45px;
+                width: 100%;
+
+                .content-image {
+                    width: 30%;
+
+                    // margin: 0 45px;
+                    .image {
+                        width: 200px;
+                        height: 250px;
+                    }
+
                 }
-                .content{
+
+                .content {
                     padding-left: 20px;
+                    width: 60%;
+
+                    h4.title {
+                        margin-top: 0;
+                    }
                 }
             }
         }
     }
+
     .item {
         display: block;
+        margin-bottom: 70px;
+
         .image {
             width: 200px;
             height: 250px;
@@ -396,18 +498,23 @@ export default {
             h4.title {
                 font-size: 20px;
                 font-weight: 600;
+                margin-top: 15px;
             }
 
             .important {
                 font-style: italic;
                 font-size: 16px;
+                padding: 10px 0;
+
                 p {
+                    margin-bottom: 0;
 
                 }
             }
 
-            .progress {
+            .progress-content {
                 display: block;
+
                 h5.title {
                     font-size: 16px;
                     font-weight: 800;
