@@ -58,7 +58,7 @@
                                     </div>
                                 </div>
                                 <div class="images">
-                                    <img src="~@/assets/styles/images/final-02-1578021735-1024x738.jpg" />
+                                    <img src="~@/assets/images/Logo-02.png" />
                                 </div>
                             </div>
                             <div class="history">
@@ -69,7 +69,7 @@
                                             2008</h3>
                                         <div class="content sk-slider-video">
                                             <div class="desc">
-                                                <p>Thành lập Công ty Cổ phần Đầu tư Xây dựng và Phát triển Trường Thành.</p>
+                                                <p>Thành lập Công ty Cổ phần Đầu tư Xây dựng và Phát triển Xuân Trường.</p>
                                                 <p>
                                                     “Phát triển nguồn năng lượng xanh cho một tương lai bền
                                                     vững là sứ mệnh của Xuân Trường Group.”
@@ -89,7 +89,7 @@
                                             2008</h3>
                                         <div class="content sk-slider-video">
                                             <div class="desc">
-                                                <p>Thành lập Công ty Cổ phần Đầu tư Xây dựng và Phát triển Trường Thành.</p>
+                                                <p>Thành lập Công ty Cổ phần Đầu tư Xây dựng và Phát triển Xuân Trường.</p>
                                             </div>
                                             <div class="image">
                                                 <img class="default" src="~@/assets/styles/images/icon-play.png" />
@@ -101,7 +101,7 @@
                                             2010</h3>
                                         <div class="content sk-slider-video">
                                             <div class="desc">
-                                                <p>Thành lập Công ty Cổ phần Đầu tư Xây dựng và Phát triển Trường Thành.</p>
+                                                <p>Thành lập Công ty Cổ phần Đầu tư Xây dựng và Phát triển Xuân Trường.</p>
                                             </div>
                                             <div class="image">
                                                 <img class="default" src="~@/assets/styles/images/icon-play.png" />
@@ -175,15 +175,15 @@
                                                     </p>
                                                     <p>
                                                         2014 – Nay: Trưởng văn phòng đại diện tại Hà Nội của Công ty cổ phần
-                                                        Đầu tư xây dựng và Phát triển Trường Thành
+                                                        Đầu tư xây dựng và Phát triển Xuân Trường
                                                     </p>
                                                     <p>
                                                         04/2021 – 04/2023: Thành viên HĐQT Công ty cổ phần Đầu tư xây dựng
-                                                        và Phát triển Trường Thành
+                                                        và Phát triển Xuân Trường
                                                     </p>
                                                     <p>
                                                         04/2021 – 04/2023: Thành viên HĐQT Công ty cổ phần Đầu tư xây dựng
-                                                        và Phát triển Trường Thành
+                                                        và Phát triển Xuân Trường
                                                     </p>
                                                 </div>
                                             </div>
@@ -212,15 +212,15 @@
                                                     </p>
                                                     <p>
                                                         2014 – Nay: Trưởng văn phòng đại diện tại Hà Nội của Công ty cổ phần
-                                                        Đầu tư xây dựng và Phát triển Trường Thành
+                                                        Đầu tư xây dựng và Phát triển Xuân Trường
                                                     </p>
                                                     <p>
                                                         04/2021 – 04/2023: Thành viên HĐQT Công ty cổ phần Đầu tư xây dựng
-                                                        và Phát triển Trường Thành
+                                                        và Phát triển Xuân Trường
                                                     </p>
                                                     <p>
                                                         04/2021 – 04/2023: Thành viên HĐQT Công ty cổ phần Đầu tư xây dựng
-                                                        và Phát triển Trường Thành
+                                                        và Phát triển Xuân Trường
                                                     </p>
                                                 </div>
                                             </div>
@@ -249,15 +249,15 @@
                                                     </p>
                                                     <p>
                                                         2014 – Nay: Trưởng văn phòng đại diện tại Hà Nội của Công ty cổ phần
-                                                        Đầu tư xây dựng và Phát triển Trường Thành
+                                                        Đầu tư xây dựng và Phát triển Xuân Trường
                                                     </p>
                                                     <p>
                                                         04/2021 – 04/2023: Thành viên HĐQT Công ty cổ phần Đầu tư xây dựng
-                                                        và Phát triển Trường Thành
+                                                        và Phát triển Xuân Trường
                                                     </p>
                                                     <p>
                                                         04/2021 – 04/2023: Thành viên HĐQT Công ty cổ phần Đầu tư xây dựng
-                                                        và Phát triển Trường Thành
+                                                        và Phát triển Xuân Trường
                                                     </p>
                                                 </div>
                                             </div>
@@ -284,7 +284,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 
 export default {
-    name: 'introduce',
+    name: 'Introduce',
     components: { VueSlickCarousel },
     // methods: {
     // },

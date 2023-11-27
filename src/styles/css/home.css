@@ -93,7 +93,7 @@
 
 /* section_1 */
 .section_ .banner-left {
-  background-image: url('~@/assets/styles/images/website.jpg');
+  background-image: url('~@/assets/styles/images/project5.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -234,6 +234,12 @@
   -webkit-border-radius: 5px;
   border-radius: 5px;
   overflow: hidden;
+}
+.slick-section-about .slick-slide img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .swiper-slide .background {

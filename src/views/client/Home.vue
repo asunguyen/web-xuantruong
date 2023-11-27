@@ -90,7 +90,7 @@
                   </div>
                 </div>
                 <div class="images">
-                  <img src="~@/assets/styles/images/final-02-1578021735-1024x738.jpg" />
+                  <img src="~@/assets/images/Logo-02.png" />
                 </div>
               </div>
             </b-col>
@@ -204,7 +204,7 @@
               <VueSlickCarousel v-bind="settingsAbout" class="slick-section-about">
                 <div class="swiper-slide">
                   <div class="image">
-                    <img class="hover" src="~@/assets/styles/images/youtube.jpg" />
+                    <img class="hover" src="~@/assets/images/Logo-02.png" />
                   </div>
                   <div class="sk-video-play">
                     <a href="https://www.youtube.com/watch?v=AEHfRfb6rsM&feature=emb_title">
@@ -217,7 +217,7 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="image">
-                    <img class="hover" src="~@/assets/styles/images/youtube.jpg" />
+                    <img class="hover" src="~@/assets/images/Logo-02.png" />
                   </div>
                   <div class="sk-video-play">
                     <a href="https://www.youtube.com/watch?v=AEHfRfb6rsM&feature=emb_title">
