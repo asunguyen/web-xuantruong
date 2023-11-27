@@ -1,70 +1,175 @@
 <template>
-  <div class="container mt-4">
-    <div class="row new-item mb-3">
-      <div class="col-6 new-item-image px-0">
-        <img
-          class="w-100"
-          src="https://e68fq8ewhqk.exactdn.com/wp-content/uploads/2022/08/ab430b84640ca652ff1d.jpg?strip=all&amp;lossy=1&amp;quality=77&amp;webp=77&amp;fit=150%2C150&amp;ssl=1"
-        />
-      </div>
-      <div class="col-6 align-items-center d-flex">
-        <div class="post-data">
-          <div class="post-heading">
-            <div class="post-heading-inner">
-              <h2 class="entry-title">
-                <router-link :to="{ path: '/news/detail' }">Chính sách phát triển AnCo</router-link>
-              </h2>
-              <div class="meta-post">
-                <i class="el-icon-date"> </i>
-                03/08/2022
-                <span class="meta-divider px-1">/</span>
-                <span class="views-count">
-                  <i class="el-icon-view pr-1"></i>50</span
-                >
-                <span class="meta-divider px-1">/</span>
-                <i class="el-icon-chat-square pr-1"></i>0
+  <div class="sticky-footer">
+    <main class="site-container site-container-elementor">
+      <div class="site-page-content">
+        <div class="my-project">
+          <h3 class="title"> Tin Tức</h3>
+          <b-tabs content-class="mt-3">
+            <b-tab title="TẤT CẢ TIN TỨC" active>
+              <div class="content-new">
+                <b-row>
+                  <b-col cols="6">
+                    <div class="big-new">
+                      <div class="images-new">
+                        <img class="default"
+                          src="~@/assets/styles/images/z2265403739225_01cfaa40494e07911fff673d827b0756.jpg" />
+                      </div>
+                      <div class="text-new">
+                        <h5 class="title">
+                          Suất đầu tư liên quan tới điện khí, điện gió, mặt trời
+                          trên thế giới (cập nhật tháng 10/2023)
+                        </h5>
+                        <span>17/10/2023</span>
+                        <P>Liên quan tới suất đầu tư một số nguồn điện, chuyên gia
+                          Tạp chí Năng lượng Việt Nam cập nhật thông tin về suất
+                          đầu tư thuộc lĩnh vực điện khí, điện gió và điện mặt
+                          trời trên thế giới hiện nay để bạn đọc cùng tham khảo.
+                          Suất đầu...</P>
+                        <div class="button-view">
+                          <a class="sk-btn sk-btn-1" href="#">
+                            <span>
+                              <img class="default" src="~@/assets/styles/images/arrow-blue-right.png" />
+                              <img class="hover" src="~@/assets/styles/images/arrow-white-right.png" />
+                            </span>
+                            Xem thêm
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </b-col>
+                  <b-col cols="3">
+                    <div class="smalls-new">
+                      <div class=" small-new">
+                        <div class="images-new">
+                          <img src="~@/assets/styles/images/Dien-MT-TQ-1.jpg" />
+                        </div>
+                        <div class="text-new">
+                          <h5 class="title">
+                            Suất đầu tư liên quan tới điện khí, điện gió, mặt trời
+                            trên thế giới (cập nhật tháng 10/2023)
+                          </h5>
+                          <span>17/10/2023</span>
+                          <div class="content-bottom">
+                            <P>Liên quan tới suất đầu tư một số nguồn điện, chuyên
+                              gia Tạp chí Năng lượng Việt Nam cập nhật thông tin
+                              về suất đầu tư thuộc lĩnh vực điện khí, điện gió và
+                              điện mặt trời trên thế giới hiện nay để bạn đọc cùng
+                              tham khảo. Suất đầu...</P>
+                            <div class="button-view">
+                              <a class="sk-btn sk-btn-1" href="#">
+                                <span>
+                                  <img class="default" src="~@/assets/styles/images/arrow-blue-right.png" />
+                                  <img class="hover" src="~@/assets/styles/images/arrow-white-right.png" />
+                                </span>
+                                Xem thêm
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </b-col>
+                  <b-col cols="3">
+                    <div class="smalls-new">
+                      <div class=" small-new">
+                        <div class="images-new">
+                          <img src="~@/assets/styles/images/Dien-MT-TQ-1.jpg" />
+                        </div>
+                        <div class="text-new">
+                          <h5 class="title">
+                            Suất đầu tư liên quan tới điện khí, điện gió, mặt trời
+                            trên thế giới (cập nhật tháng 10/2023)
+                          </h5>
+                          <span>17/10/2023</span>
+                          <div class="content-bottom">
+                            <P>Liên quan tới suất đầu tư một số nguồn điện, chuyên
+                              gia Tạp chí Năng lượng Việt Nam cập nhật thông tin
+                              về suất đầu tư thuộc lĩnh vực điện khí, điện gió và
+                              điện mặt trời trên thế giới hiện nay để bạn đọc cùng
+                              tham khảo. Suất đầu...</P>
+                            <div class="button-view">
+                              <a class="sk-btn sk-btn-1" href="#">
+                                <span>
+                                  <img class="default" src="~@/assets/styles/images/arrow-blue-right.png" />
+                                  <img class="hover" src="~@/assets/styles/images/arrow-white-right.png" />
+                                </span>
+                                Xem thêm
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </b-col>
+                  <b-col cols="3">
+                    <div class="smalls-new">
+                      <div class=" small-new">
+                        <div class="images-new">
+                          <img src="~@/assets/styles/images/Dien-MT-TQ-1.jpg" />
+                        </div>
+                        <div class="text-new">
+                          <h5 class="title">
+                            Suất đầu tư liên quan tới điện khí, điện gió, mặt trời
+                            trên thế giới (cập nhật tháng 10/2023)
+                          </h5>
+                          <span>17/10/2023</span>
+                          <div class="content-bottom">
+                            <P>Liên quan tới suất đầu tư một số nguồn điện, chuyên
+                              gia Tạp chí Năng lượng Việt Nam cập nhật thông tin
+                              về suất đầu tư thuộc lĩnh vực điện khí, điện gió và
+                              điện mặt trời trên thế giới hiện nay để bạn đọc cùng
+                              tham khảo. Suất đầu...</P>
+                            <div class="button-view">
+                              <a class="sk-btn sk-btn-1" href="#">
+                                <span>
+                                  <img class="default" src="~@/assets/styles/images/arrow-blue-right.png" />
+                                  <img class="hover" src="~@/assets/styles/images/arrow-white-right.png" />
+                                </span>
+                                Xem thêm
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </b-col>
+                </b-row>
               </div>
-            </div>
-          </div>
-
-          <div class="pt-2">
-            Theo tiếng gọi của nhà nước về định hướng kết hợp y học cổ truyền và
-            y học hiện đại để giải quyết bài toán chăm sóc sức khỏe, khám chữa
-            bệnh toàn dân. Trước bối cảnh thị trường thiếu vắng các sản phẩm
-            chất
-          </div>
+            </b-tab>
+            <b-tab title="HOẠT ĐỘNG CỘNG ĐỒNG">
+              <p>I'm a disabled tab!</p>
+            </b-tab>
+          </b-tabs>
         </div>
       </div>
-    </div>
-    <div class="row justify-content-center py-3">
-      <el-pagination
-        :current-page.sync="currentPage"
-        :page-size="10"
-        layout="total, prev, pager, next, jumper"
-        :total="1000"
-      >
-      </el-pagination>
-    </div>
+    </main>
   </div>
 </template>
-
 <script>
 export default {
-  name: "News",
+  props: {
+  },
+  name: 'News',
+  components: {},
+  methods: {
+  },
   data() {
     return {
-      currentPage: 1,
-    };
+    }
   },
-  components: {},
-};
+}
 </script>
 <style lang="scss" scoped>
-.new-item-image {
-  overflow: hidden;
-  &:hover img {
-    transform: scale(1.1);
-    transition: all 0.4s ease-in-out;
-  }
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 60px 70px;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+.content-new .smalls-new .small-new {
+    height: 560px;
 }
 </style>

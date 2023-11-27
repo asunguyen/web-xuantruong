@@ -67,7 +67,7 @@ export default {
     BFormGroup,
     BFormCheckbox,
     BFormSelect,
-    BAlert 
+    BAlert
   }
 }
 </script>
@@ -88,4 +88,24 @@ export default {
     top: 0;
   }
 }
-</style>
+
+.nav-tabs {
+  border: unset !important;
+  padding: 40px 0 40px 5px;
+
+  .nav-link {
+    border: unset !important;
+    color: #6d6d6d !important;
+
+    &:hover {
+      font-weight: 600;
+      border: unset;
+    }
+  }
+
+  .nav-link.active
+  {
+    color: #000!important;
+    font-weight: bold;
+  }
+}</style>
