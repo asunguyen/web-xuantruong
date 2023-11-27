@@ -58,9 +58,9 @@ export const constantRoutes = [
       },
       {
         path: "introduce",
-        name: "introduce",
+        name: "Introduce",
         component: () => import("@/views/client/Introduce"),
-        meta: { title: "introduce", icon: "introduce" },
+        meta: { title: "Introduce", icon: "Introduce" },
       },
       {
         path: "MyProject",

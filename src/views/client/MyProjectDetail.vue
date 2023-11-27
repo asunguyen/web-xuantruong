@@ -32,7 +32,7 @@
                                     <img src="~@/assets/styles/images/3.jpg" alt="">
                                 </div>
                                 <div class="text">
-                                    <p>Dự án Nhà máy thủy điện Ngòi Hút 2 là dự án đầu tiên của Trường Thành, được khởi công
+                                    <p>Dự án Nhà máy thủy điện Ngòi Hút 2 là dự án đầu tiên của Xuân Trường, được khởi công
                                         xây
                                         dựng từ tháng 08 năm 2010, tại địa bàn xã Nậm Có, huyện Mù Căng Chải, tỉnh Yên Bái.
                                         Sau gần
@@ -47,7 +47,7 @@
                                         để đến nhà máy và trạm biến áp tại địa phận xã Châu Quế Thượng, huyên Văn Yên, tỉnh
                                         Yên Bái.
                                     </p>
-                                    <p>Để phục vụ cho dự án, Trường Thành đã mở mới 20Km đường nối tới quốc lộ 32 tại xã Tú
+                                    <p>Để phục vụ cho dự án, Xuân Trường đã mở mới 20Km đường nối tới quốc lộ 32 tại xã Tú
                                         Lệ,
                                         huyện Văn Chấn; xây dựng cầu vượt suối Ngòi Hút giúp người dân địa phương và công
                                         nhân thuận
@@ -67,8 +67,7 @@
                                     <ul>
                                         <li>
                                             <label>Chủ đầu tư</label>
-                                            <span>Công ty cổ phần Đầu tư xây dựng và phát triển Trường
-                                                Thành</span>
+                                            <span>Công ty cổ phần Đầu tư xây dựng và phát triển Xuân Trường</span>
                                         </li>
                                         <li>
                                             <label>Vị trí</label>
@@ -332,6 +331,7 @@ export default {
         .image {
             max-width: 300px;
             margin: 20px 0;
+
             img {
                 max-width: 100%;
                 height: auto;
@@ -346,6 +346,7 @@ export default {
     .project-infor {
         .site-project-info-single {
             margin-top: unset;
+
             h2 {
                 font-size: 35px;
                 font-weight: bold;

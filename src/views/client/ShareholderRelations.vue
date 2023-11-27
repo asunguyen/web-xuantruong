@@ -38,7 +38,6 @@
                                         <div class="form-group">
                                             <input type="text" class="form-control" id="searchTerm" v-model="searchTerm">  <button type="submit" class="btn btn-primary">Search</button></input>
                                         </div>
-                                       
                                     </form>
                                     <div class="sk-widget-shareholder-year">
                                         <ul>
