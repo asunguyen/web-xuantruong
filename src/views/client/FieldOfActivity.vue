@@ -135,7 +135,7 @@
 export default {
     props: {
     },
-    name: 'MyProject',
+    name: 'FieldOfActivity',
     components: {},
     methods: {
     },
@@ -163,7 +163,6 @@ export default {
     height: 500px;
 }
 .my-project{
-    margin-top: 70px;
     h3.title{
         padding-left: 20px;
     }

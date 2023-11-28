@@ -40,7 +40,8 @@ import {
   BFormCheckbox,
   BFormGroup,
   BFormSelect,
-  BAlert
+  BAlert,
+  BForm
 } from 'bootstrap-vue'
 
 export default {
@@ -67,7 +68,8 @@ export default {
     BFormGroup,
     BFormCheckbox,
     BFormSelect,
-    BAlert
+    BAlert,
+    BForm
   }
 }
 </script>
