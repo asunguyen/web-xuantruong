@@ -106,12 +106,12 @@ export const constantRoutes = [
       },
     ],
   },
-  {
-    path: "/",
-    redirect: "/",
-    name: "Dashboard",
-    meta: { title: "Dashboard", icon: "el-icon-s-help" },
-  },
+  // {
+  //   path: "/",
+  //   redirect: "/",
+  //   name: "Dashboard",
+  //   meta: { title: "Dashboard", icon: "el-icon-s-help" },
+  // },
   {
     path: "/admin",
     component: Layout,
@@ -132,7 +132,7 @@ export const constantRoutes = [
     component: Layout,
     redirect: "/admin/table",
     name: "Admin",
-    meta: { title: "Example", icon: "el-icon-s-help" },
+    meta: { title: "Form", icon: "el-icon-s-help" },
     children: [
       {
         path: "form",
@@ -140,6 +140,66 @@ export const constantRoutes = [
         component: () => import("@/views/admin/Form.vue"),
         meta: { title: "Form", icon: "tree" },
       },
+    ],
+  },
+  {
+    path: "/admin",
+    component: Layout,
+    redirect: "/admin/table",
+    name: "Admin",
+    // meta: { title: "Category", icon: "el-icon-s-help" },
+    children: [
+      {
+        path: "category",
+        name: "Category",
+        component: () => import("@/views/admin/Category.vue"),
+        meta: { title: "Category", icon: "tree" },
+      },
+    ],
+  },
+  {
+    path: "/admin",
+    component: Layout,
+    redirect: "/admin/table",
+    name: "Admin",
+    // meta: { title: "Slide", icon: "el-icon-s-help" },
+    children: [
+      {
+        path: "slide",
+        name: "Slide",
+        component: () => import("@/views/admin/Slide.vue"),
+        meta: { title: "Slide", icon: "tree" },
+      }
+    ],
+  },
+  {
+    path: "/admin",
+    component: Layout,
+    redirect: "/admin/table",
+    name: "Admin",
+    // meta: { title: "Posts", icon: "el-icon-s-help" },
+    children: [
+      {
+        path: "posts",
+        name: "Posts",
+        component: () => import("@/views/admin/Posts.vue"),
+        meta: { title: "Posts", icon: "tree" },
+      }
+    ],
+  },
+  {
+    path: "/admin",
+    component: Layout,
+    redirect: "/admin/table",
+    name: "Admin",
+    // meta: { title: "Media", icon: "el-icon-s-help" },
+    children: [
+      {
+        path: "media",
+        name: "Media",
+        component: () => import("@/views/admin/Media.vue"),
+        meta: { title: "Media", icon: "tree" },
+      }
     ],
   },
 

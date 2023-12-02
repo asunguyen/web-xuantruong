@@ -30,12 +30,10 @@
           </div>
         </div>
       </div>
-
     </b-container>
   </header>
 </template>
 <script>
-
 export default {
   data() {
     return {
