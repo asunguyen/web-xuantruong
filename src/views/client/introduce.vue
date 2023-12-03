@@ -4,7 +4,7 @@
             <div class="site-page-content">
                 <div class="section_ ">
                     <b-row>
-                        <b-col class="p-0" cols="5">
+                        <b-col class="sidebar p-0" cols="5">
                             <div class="banner-left">
                                 <div class="text-content-section">
                                     <div class="title">
@@ -14,13 +14,16 @@
                                             </h3>
                                         </div>
                                         <ul class="sk-custom-items">
-                                            <li><a href="#"> Tổng quan
+                                            <li class="menu-item"><a href="#section-1"> Tổng quan
                                                     <img alt="" src="~@/assets/styles/images/arrow-white-right.png"></a>
                                             </li>
-                                            <li><a href="#"> Lich sử phát triển
+                                            <li class="menu-item"><a href="#section-2"> Lich sử phát triển
                                                     <img alt="" src="~@/assets/styles/images/arrow-white-right.png"></a>
                                             </li>
-                                            <li><a href="#"> Sứ mệnh - tầm nhìn
+                                            <li class="menu-item"><a href="#section-3"> Sứ mệnh - tầm nhìn
+                                                    <img alt="" src="~@/assets/styles/images/arrow-white-right.png"></a>
+                                            </li>
+                                            <li class="menu-item"><a href="#section-4"> Lãnh đạo
                                                     <img alt="" src="~@/assets/styles/images/arrow-white-right.png"></a>
                                             </li>
                                         </ul>
@@ -28,8 +31,8 @@
                                 </div>
                             </div>
                         </b-col>
-                        <b-col cols="7 hight-default">
-                            <div class="content-right d-flex">
+                        <b-col cols="7 hight-default sections">
+                            <div id="section-1" class="content-right d-flex">
                                 <div class="text">
                                     <h3 class="title-big">Tổng Quan</h3>
                                     <div class="content">
@@ -61,7 +64,7 @@
                                     <img src="~@/assets/images/Logo-02.png" />
                                 </div>
                             </div>
-                            <div class="history">
+                            <div id="section-2" class="history">
                                 <h3 class="title">Lich sử hình thành & phát triển</h3>
                                 <VueSlickCarousel v-bind="settingsHistory" class="">
                                     <div class="item">
@@ -110,7 +113,7 @@
                                     </div>
                                 </VueSlickCarousel>
                             </div>
-                            <div class="section-sumenh">
+                            <div id="section-3" class="section-sumenh">
                                 <div class="content-right d-flex">
                                     <div class="about-content d-flex">
                                         <div class="text">
@@ -150,7 +153,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="ban-lanhdao">
+                            <div id="section-4" class="ban-lanhdao">
                                 <b-row>
                                     <b-col cols="12">
                                         <div class="item">
@@ -282,10 +285,12 @@
 import VueSlickCarousel from 'vue-slick-carousel'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+import MenuScrollMixin from '@/mixin/MenuScroll'
 
 export default {
     name: 'Introduce',
     components: { VueSlickCarousel },
+    mixins: [MenuScrollMixin],
     // methods: {
     // },
     data() {
@@ -302,228 +307,10 @@ export default {
                 'otsClass': 'slick-dots custom-dot-class'
             }
         }
-    }
+    },
+  
 }
 </script>
 <style lang="scss" scoped>
-.menu-header .menu_ ul li a {
-    color: black;
-}
-
-.menu-header {
-    position: unset;
-}
-
-.content-right {
-    height: unset;
-
-    .text {
-        h3.title-big {
-            color: rgba(7, 44, 11, .09);
-            font-size: 60px;
-            font-weight: 600;
-            line-height: 83px;
-        }
-    }
-
-}
-
-.hight-default {
-    padding: 160px 30px 100px;
-    overflow-y: scroll;
-    height: 100vh;
-    display: block;
-    background-color: #f5f5f5;
-}
-
-.section_  {
-    padding-bottom: 30px;
-    border-bottom: 1px solid #c3afaf85;
-
-    .banner-left {
-        .text-content-section {
-            ul.sk-custom-items {
-                li {
-                    width: 70%;
-                    margin-left: 0px;
-                    &:hover {
-                        img {
-                            opacity: 1;
-                            visibility: visible;
-                        }
-
-                        a {
-                            border-color: #fff;
-                            background: rgba(255, 255, 255, .1);
-                        }
-
-                    }
-
-                    a {
-                        display: block;
-                        color: #fff;
-                        padding: 9px 27px;
-                        border: 2px transparent solid;
-                        -webkit-border-radius: 25px;
-                        border-radius: 25px;
-                        -webkit-transition: all .3s ease-in-out;
-                        transition: all .3s ease-in-out;
-                    }
-
-                    img {
-                        display: inline-block;
-                        float: right;
-                        margin-left: 20px;
-                        opacity: 0;
-                        visibility: hidden;
-                        -webkit-transition: all .3s ease-in-out;
-                        transition: all .3s ease-in-out;
-                        position: relative;
-                        top: 5px;
-                    }
-                }
-            }
-        }
-    }
-}
-
-.history {
-    margin-top: 20px;
-
-    .slick-slide[data-v-e4caeaf8] {
-        padding-right: 30px;
-    }
-
-    .slick-initialized {
-        .item {
-            padding-top: 50px;
-            margin-top: 20px;
-            margin-right: 30px;
-            position: relative;
-
-            &::before {
-                position: absolute;
-                top: 0;
-                left: 0;
-                content: ".";
-                overflow: hidden;
-                width: 93%;
-                height: 1px;
-                background-color: #adadad;
-            }
-
-            h3.year {
-                font-size: 60px;
-                line-height: 73px;
-                margin-bottom: 60px;
-            }
-
-            .sk-slider-video {
-                .desc {
-                    width: 170px;
-                    min-width: 170px;
-                    margin-right: 30px;
-                    font-size: 14px;
-
-                    p {
-                        margin: 0 0 15px;
-
-                    }
-                }
-
-                .image {
-                    width: 30px;
-
-                    img {
-                        display: block;
-                        width: 100%;
-                    }
-                }
-            }
-        }
-    }
-}
-
-.ban-lanhdao {
-    padding: 100px 0 70px;
-
-    .row {
-        div:first-child {
-            display: block;
-
-            .item {
-                display: -webkit-box;
-                width: 100%;
-
-                .content-image {
-                    width: 30%;
-
-                    // margin: 0 45px;
-                    .image {
-                        width: 200px;
-                        height: 250px;
-                    }
-
-                }
-
-                .content {
-                    padding-left: 20px;
-                    width: 60%;
-
-                    h4.title {
-                        margin-top: 0;
-                    }
-                }
-            }
-        }
-    }
-
-    .item {
-        display: block;
-        margin-bottom: 70px;
-
-        .image {
-            width: 200px;
-            height: 250px;
-
-            img {
-                vertical-align: middle;
-                display: inline-block;
-                width: 100%;
-                height: 100%;
-            }
-        }
-
-        .content {
-            h4.title {
-                font-size: 20px;
-                font-weight: 600;
-                margin-top: 15px;
-            }
-
-            .important {
-                font-style: italic;
-                font-size: 16px;
-                padding: 10px 0;
-
-                p {
-                    margin-bottom: 0;
-
-                }
-            }
-
-            .progress-content {
-                display: block;
-
-                h5.title {
-                    font-size: 16px;
-                    font-weight: 800;
-                }
-
-                p {}
-            }
-        }
-    }
-
-}
+@import "~@/styles/page.scss";
 </style>

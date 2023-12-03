@@ -104,6 +104,12 @@ export const constantRoutes = [
         component: () => import("@/views/client/FieldOfActivity"),
         meta: { title: "FieldOfActivity", icon: "FieldOfActivity"},
       },
+      {
+        path: "recruitment",
+        name: "Recruitment",
+        component: () => import("@/views/client/Recruitment"),
+        meta: { title: "Recruitment", icon: "Recruitment"},
+      },
     ],
   },
   // {

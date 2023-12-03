@@ -93,12 +93,21 @@ ul {
   .sk-btn img.hover {
     display: none;
   }
+  .slick-slide .sk-btn img.hover {
+    display: none;
+  }
   
   .sk-btn:hover {
     background: #fff;
     color: #1b5b23;
     padding: 0 60px 0 25px;
   }
+  
+  /* .slick-slide .sk-btn:hover {
+    background: #fff;
+    color: #1b5b23;
+    padding: 0 60px 0 25px;
+  } */
   
   .sk-btn:hover span {
     background: #1b5b23;
