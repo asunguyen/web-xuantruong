@@ -35,8 +35,8 @@
                             <b-col cols="xl-3 md-12">
                                 <div class="search-category">
                                     <form @submit.prevent="onSubmit">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="searchTerm" v-model="searchTerm">  <button type="submit" class="btn btn-primary">Search</button></input>
+                                        <div class="form-group d-flex">
+                                            <input type="text" class="form-control" id="searchTerm" v-model="searchTerm"><button type="submit" class="btn btn-primary ml-1">Search</button></input>
                                         </div>
                                     </form>
                                     <div class="sk-widget-shareholder-year">
@@ -80,9 +80,12 @@ export default {
     name: 'ShareholderRelations',
     components: {},
     methods: {
+        onSubmit(){
+        }
     },
     data() {
         return {
+            searchTerm: '',
             customers: [
                 { stt: 1, date: '25/10/2023', content: 'BCTC quý III năm 2023', download: 'download' },
                 { stt: 2, date: '27/10/2023', content: 'Báo cáo tài chính quý II năm 2023', download: 'download' }
@@ -100,6 +103,12 @@ export default {
     position: absolute;
     width: 100%;
     z-index: 2;
+}
+.my-project{
+    margin-top: 60px;
+    h3.title{
+        margin-left: 15px;
+    }
 }
 
 .hight-default {

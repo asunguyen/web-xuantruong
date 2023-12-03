@@ -160,14 +160,11 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.menu-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  padding: 60px 70px;
-  position: absolute;
-  width: 100%;
-  z-index: 2;
+.my-project{
+  margin-top: 70px;
+  h3.title{
+    margin-left: 15px;
+  }
 }
 .content-new .smalls-new .small-new {
     height: 560px;
