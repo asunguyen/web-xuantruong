@@ -1,7 +1,7 @@
 <template>
   <header id="home" class="site-header">
     <b-container fluid class="p-0">
-      <div class="menu-header" :class="{ menuPage: checkHeaPage }">
+      <div class="menu-header" :class="{ menuPage: checkHeaPage, menuPageText: !isPageHome }">
         <div class="logo">
           <a href="#">
             <img src="~@/assets/images/Logo-04.png" />
@@ -45,6 +45,10 @@ export default {
     this.checkHeaPage()
   },
   computed: {
+    isPageHome() { 
+      console.log(this.$route.name )
+      return this.$route.name === 'Home' ? true : false ;
+    },
     checkHeaPage() {
       const check = this.$route.name
       switch (check) {
@@ -54,7 +58,7 @@ export default {
         case 'Introduce':
           return false
           break
-        case 'fieldOfActivity':
+        case 'FieldOfActivity':
           return false
           break
         case 'Recruitment':

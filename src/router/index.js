@@ -37,6 +37,11 @@ export const constantRoutes = [
     component: () => import("@/views/login/index"),
     hidden: true,
   },
+  {
+    path: "/register",
+    component: () => import("@/views/login/Register"),
+    hidden: true,
+  },
 
   {
     path: "/404",
@@ -103,6 +108,12 @@ export const constantRoutes = [
         name: "FieldOfActivity",
         component: () => import("@/views/client/FieldOfActivity"),
         meta: { title: "FieldOfActivity", icon: "FieldOfActivity"},
+      },
+      {
+        path: "recruitment",
+        name: "Recruitment",
+        component: () => import("@/views/client/Recruitment"),
+        meta: { title: "Recruitment", icon: "Recruitment"},
       },
     ],
   },

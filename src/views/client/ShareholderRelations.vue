@@ -81,6 +81,7 @@ export default {
     components: {},
     methods: {
         onSubmit(){
+            console.log('this.searchTerm', this.searchTerm)
         }
     },
     data() {

@@ -3,13 +3,13 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  padding: 60px 70px;
+  padding: 10px 70px 0px;
   position: absolute;
   width: 100%;
   z-index: 2;
 }
 .menu-header .logo{
-  width:200px
+  width:150px
 }
 
 .menu-header .menu_ ul {
@@ -31,6 +31,9 @@
 
 .menu-header .menu_ ul li a {
   color: #fff;
+}
+.menuPageText .menu_ ul li a {
+  color: #000;
 }
 
 .search-flag {
