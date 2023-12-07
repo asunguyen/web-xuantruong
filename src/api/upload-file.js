@@ -1,9 +1,11 @@
 import request from '@/utils/request'
 
-export function uploadFile(data) {
+export function uploadFile(formData) {
   return request({
     url: 'v1/upload/image',
     method: 'post',
+    headers:{'Content-Type': 'multipart/form-data'},
+    data: formData
   })
 }
 

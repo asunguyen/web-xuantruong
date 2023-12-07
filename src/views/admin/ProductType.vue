@@ -5,7 +5,7 @@
         <div class="col-6">
           <div class="form-group">
             <label for="quocgia">Title</label>
-            <el-input placeholder="Nhập title" v-model.trim="title"></el-input>
+            <el-input placeholder="Nhập title" v-model="title"></el-input>
           </div>
         </div>
 
@@ -38,7 +38,7 @@
               style="flex: 1"
               type="textarea"
               placeholder="Nhập description"
-              v-model.trim="description"
+              v-model="description"
             ></el-input>
           </div>
         </div>

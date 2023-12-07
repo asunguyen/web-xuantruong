@@ -36,7 +36,7 @@
             </el-form-item>
 
             <el-button :loading="loading" type="primary" style="width:100%;margin-bottom:30px;"
-                @click.native.prevent="handleRegister">Register</el-button>
+                @click.native.prevent="handleRegister"> Register </el-button>
 
             <!-- <div class="tips">
                 <span style="margin-right:20px;">username: admin</span>
@@ -100,6 +100,7 @@ export default {
     //   }
     // },
     methods: {
+
         resetRegister() {
             this.Register.email = ''
             this.Register.username = ''

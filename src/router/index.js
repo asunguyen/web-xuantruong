@@ -126,7 +126,7 @@ export const constantRoutes = [
   {
     path: "/admin",
     component: Layout,
-    redirect: "/admin/table",
+    redirect: "/admin/category",
     name: "Admin",
     meta: { title: "Example", icon: "el-icon-s-help" },
     children: [
@@ -141,7 +141,6 @@ export const constantRoutes = [
   {
     path: "/admin",
     component: Layout,
-    redirect: "/admin/table",
     name: "Admin",
     meta: { title: "Form", icon: "el-icon-s-help" },
     children: [
@@ -154,14 +153,13 @@ export const constantRoutes = [
     ],
   },
   {
-    path: "/admin",
+    path: "/admin/category",
     component: Layout,
-    redirect: "/admin/table",
     name: "Admin",
     // meta: { title: "Category", icon: "el-icon-s-help" },
     children: [
       {
-        path: "category",
+        path: "",
         name: "Category",
         component: () => import("@/views/admin/Category.vue"),
         meta: { title: "Category", icon: "tree" },
@@ -171,7 +169,6 @@ export const constantRoutes = [
   {
     path: "/admin",
     component: Layout,
-    redirect: "/admin/table",
     name: "Admin",
     // meta: { title: "Slide", icon: "el-icon-s-help" },
     children: [
@@ -186,7 +183,6 @@ export const constantRoutes = [
   {
     path: "/admin",
     component: Layout,
-    redirect: "/admin/table",
     name: "Admin",
     // meta: { title: "Posts", icon: "el-icon-s-help" },
     children: [
@@ -201,7 +197,6 @@ export const constantRoutes = [
   {
     path: "/admin",
     component: Layout,
-    redirect: "/admin/table",
     name: "Admin",
     // meta: { title: "Media", icon: "el-icon-s-help" },
     children: [
