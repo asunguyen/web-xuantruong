@@ -117,24 +117,37 @@ export const constantRoutes = [
       },
     ],
   },
+  {
+    path: "/",
+    redirect: "/",
+    name: "Dashboard",
+    meta: { title: "Dashboard", icon: "el-icon-s-help" },
+  },
   // {
-  //   path: "/",
-  //   redirect: "/",
-  //   name: "Dashboard",
-  //   meta: { title: "Dashboard", icon: "el-icon-s-help" },
+  //   path: "/admin",
+  //   component: Layout,
+  //   redirect: "/admin/category",
+  //   name: "Admin",
+  //   meta: { title: "Example", icon: "el-icon-s-help" },
+  //   children: [
+  //     {
+  //       path: "table",
+  //       name: "Table",
+  //       component: () => import("@/views/admin/Table.vue"),
+  //       meta: { title: "Table", icon: "table" },
+  //     },
+  //   ],
   // },
   {
     path: "/admin",
     component: Layout,
-    redirect: "/admin/category",
     name: "Admin",
-    meta: { title: "Example", icon: "el-icon-s-help" },
     children: [
       {
-        path: "table",
-        name: "Table",
-        component: () => import("@/views/admin/Table.vue"),
-        meta: { title: "Table", icon: "table" },
+        path: "ProductType",
+        name: "ProductType",
+        component: () => import("@/views/admin/ProductType.vue"),
+        meta: { title: "Quản lý danh mục sản phẩm" },
       },
     ],
   },
@@ -142,44 +155,30 @@ export const constantRoutes = [
     path: "/admin",
     component: Layout,
     name: "Admin",
-    meta: { title: "Form", icon: "el-icon-s-help" },
     children: [
       {
-        path: "form",
-        name: "Form",
-        component: () => import("@/views/admin/Form.vue"),
-        meta: { title: "Form", icon: "tree" },
+        path: "product",
+        name: "Product",
+        component: () => import("@/views/admin/Product.vue"),
+        meta: { title: "Quản lý sản phẩm" },
       },
     ],
   },
   {
-    path: "/admin/category",
+    path: "/admin",
     component: Layout,
     name: "Admin",
     // meta: { title: "Category", icon: "el-icon-s-help" },
     children: [
       {
-        path: "",
+        path: "category",
         name: "Category",
         component: () => import("@/views/admin/Category.vue"),
-        meta: { title: "Category", icon: "tree" },
+        meta: { title: "Quản lý danh mục bài viết" },
       },
     ],
   },
-  {
-    path: "/admin",
-    component: Layout,
-    name: "Admin",
-    // meta: { title: "Slide", icon: "el-icon-s-help" },
-    children: [
-      {
-        path: "slide",
-        name: "Slide",
-        component: () => import("@/views/admin/Slide.vue"),
-        meta: { title: "Slide", icon: "tree" },
-      }
-    ],
-  },
+
   {
     path: "/admin",
     component: Layout,
@@ -190,7 +189,7 @@ export const constantRoutes = [
         path: "posts",
         name: "Posts",
         component: () => import("@/views/admin/Posts.vue"),
-        meta: { title: "Posts", icon: "tree" },
+        meta: { title: "Quản lý bài viết" },
       }
     ],
   },
@@ -204,7 +203,21 @@ export const constantRoutes = [
         path: "media",
         name: "Media",
         component: () => import("@/views/admin/Media.vue"),
-        meta: { title: "Media", icon: "tree" },
+        meta: { title: "Quản lý Media" },
+      }
+    ],
+  },
+  {
+    path: "/admin",
+    component: Layout,
+    name: "Admin",
+    // meta: { title: "Slide", icon: "el-icon-s-help" },
+    children: [
+      {
+        path: "slide",
+        name: "Slide",
+        component: () => import("@/views/admin/Slide.vue"),
+        meta: { title: "Quản lý Slide" },
       }
     ],
   },

@@ -9,7 +9,8 @@
   z-index: 2;
 }
 .menu-header .logo{
-  width:150px
+  width:150px;
+  z-index: 2
 }
 
 .menu-header .menu_ ul {
@@ -20,6 +21,7 @@
 
 .menu_ {
   /* width: 70%; */
+  display:flex
 }
 
 .menu-header .menu_ ul li {
@@ -160,7 +162,7 @@
 }
 
 .content-right .text {
-  width: 50%;
+  /* width: 50%; */
   padding: 15px 50px 15px 0px;
 }
 
@@ -178,7 +180,7 @@
 }
 
 .content-right .images {
-  width: 50%;
+  /* width: 50%; */
 }
 
 .content-right .images img {

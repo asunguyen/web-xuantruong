@@ -307,6 +307,7 @@ export default {
       this.listLoading = true;
       getListSlider().then((response) => {
         this.listSlider = response.data;
+        this.$store.dispatch("slide/getListSlider", this.listSlider);
         this.listLoading = false;
       });
     },

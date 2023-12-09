@@ -12,6 +12,10 @@ import '@/styles/index.scss' // global css
 import App from './App'
 import store from './store'
 import router from './router'
+import VueQuillEditor from 'vue-quill-editor'
+import 'quill/dist/quill.core.css'
+import 'quill/dist/quill.snow.css'
+import 'quill/dist/quill.bubble.css'
 
 import '@/icons' // icon
 import '@/permission' // permission control
@@ -39,7 +43,7 @@ Vue.use(ElementUI, { locale })
 Vue.use(BootstrapVue)
 // Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin)
-
+Vue.use(VueQuillEditor)
 Vue.config.productionTip = false
 
 new Vue({

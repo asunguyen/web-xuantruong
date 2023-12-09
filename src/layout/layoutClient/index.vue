@@ -1,6 +1,6 @@
 <template>
   <div class="app-wrapper">
-    <div class="">
+    <div>
       <div class="sk-wrapper">
         <div id="back-top">
           <a href="#">
@@ -16,7 +16,7 @@
     </div>
   </div>
 </template>
-
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 <script>
 import Header from './Header.vue'
 import Footer from './Footer.vue'
@@ -78,6 +78,7 @@ export default {
 @import "~@/styles/variables.scss";
 @import "~@/styles/css/home.css";
 @import "~@/styles/css/common.css";
+@import "~@/styles/css/menu-mobile.css";
 
 .app-wrapper {
   @include clearfix;
@@ -110,4 +111,5 @@ export default {
     color: #000!important;
     font-weight: bold;
   }
-}</style>
+}
+</style>
