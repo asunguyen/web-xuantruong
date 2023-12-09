@@ -1,6 +1,7 @@
 import request from '@/utils/request'
 
 export function uploadFile(formData) {
+  console.log('formData', formData)
   return request({
     url: 'v1/upload/image',
     method: 'post',
