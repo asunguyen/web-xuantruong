@@ -99,7 +99,7 @@ export default {
   .nav-link {
     border: unset !important;
     color: #6d6d6d !important;
-
+    text-transform: uppercase;
     &:hover {
       font-weight: 600;
       border: unset;
