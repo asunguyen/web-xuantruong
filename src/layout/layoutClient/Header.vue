@@ -163,7 +163,7 @@ export default {
 }
 </script>
 <style scoped >
-/* .menuPage {
+.menuPage {
   position: unset !important;
   padding: 0px 70px 23px;
 
@@ -176,5 +176,5 @@ export default {
       }
     }
   }
-} */
+}
 </style>

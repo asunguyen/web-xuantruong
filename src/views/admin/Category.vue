@@ -279,6 +279,7 @@
             label: item.title,
             value: item._id,
           }));
+          this.$store.dispatch("new/getListSlider", this.listCategory);
         });
       },
       handleCurrentChange(page) {
