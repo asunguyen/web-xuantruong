@@ -1,0 +1,74 @@
+@media screen and (max-width: 1025px) {
+  // header
+  .hight-default {
+    height: unset;
+  }
+  .content-right {
+    .text {
+      padding: 15px 0px 15px 30px;
+    }
+    .about-content {
+      .text {
+        padding: 40px 30px;
+      }
+      .text-images {
+        padding: 40px 30px 40px 0;
+        h3.title {
+          font-size: 30px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+  .section-about{
+    .swiper-slide .image {
+        height: 800px;
+    }
+  }
+  .section-about-vision{
+    h3.title{
+        margin: 40px 30px 0;
+    }
+  }
+  .section-about-active{
+    .content-new{
+        margin: 40px 0;
+    }
+  }
+  .section-field-activity{
+    h3.title{
+        margin-bottom: 30px;
+    }
+    .item-new {
+        height: 450px;
+        margin-bottom: 20px;
+    }
+  } 
+}
+
+@media screen and (max-width: 700px) {
+    // header
+    .text-content-section {
+      padding: 50px 50px 60px;
+      .title h5 {
+          font-size: 13px;
+        }
+       .title h3 {
+          font-size: 30px;
+          line-height: 35px;
+          // margin-top: 10px;
+       }
+    }
+    .banner-header {
+      .text-content {
+        .title h5 {
+          font-size: 13px;
+        }
+       .title h3 {
+          font-size: 30px;
+          line-height: 35px;
+          // margin-top: 10px;
+       }
+      }
+    }
+}

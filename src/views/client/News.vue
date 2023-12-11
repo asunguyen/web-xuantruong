@@ -2,7 +2,7 @@
   <div class="sticky-footer">
     <main class="site-container site-container-elementor">
       <div class="site-page-content">
-        <div class="my-project">
+        <div class="my-project news-list">
           <h3 class="title"> Tin Tức</h3>
           <div>
             <b-tabs content-class="mt-3">

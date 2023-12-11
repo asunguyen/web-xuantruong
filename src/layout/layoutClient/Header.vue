@@ -5,41 +5,27 @@
         <div class="menu-mobile">
           <h3 id="menu-toggle">Menu</h3>
           <ul id="menu">
-            <li><a href="#">Home</a>
-              <ul class="sub-menu">
-                <li><a href="#">Test 1</a></li>
-                <li><a href="#">Test 2</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Products</a>
-              <ul class="sub-menu">
-                <li><a href="#">HTML</a></li>
-                <li><a href="#">CSS</a></li>
-                <li><a href="#">Javascript</a>
-                  <ul class="sub-menu">
-                    <li><a href="#">jQuery</a></li>
-                    <li><a href="#">MooTools</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#"> <router-link to="introduce"> gới thiệu </router-link></a></li>
+            <li><a href="#"> <router-link to="fieldOfActivity"> lĩnh vực hoạt động </router-link></a> </li>
+            <li><a href="#"> <router-link to="myProject"> dự án </router-link></a></li>
+            <li><a href="#"><router-link to="shareholderRelations"> quan hệ cổ đông </router-link> </a></li>
+            <li><a href="#"><router-link to="news">tin tức </router-link> </a></li>
+            <li><a href="#"><router-link to="recruitment"> tuyển dụng </router-link> </a></li>
           </ul>
         </div>
         <div class="logo">
           <a href="#">
-            <img src="~@/assets/images/Logo-04.png" />
+            <router-link to="/"> <img src="~@/assets/images/Logo-04.png" /> </router-link>
           </a>
         </div>
         <div class="menu_ ">
           <ul>
-            <li><a href="#"> gới thiệu </a></li>
-            <li><a href="#"> lĩnh vực hoạt động </a></li>
-            <li><a href="#"> dự án </a></li>
-            <li><a href="#"> quan hệ cổ đông </a></li>
-            <li><a href="#"> tin tức </a></li>
-            <li><a href="#"> tuyển dụng </a></li>
+            <li><a href="#"> <router-link to="introduce"> gới thiệu </router-link></a></li>
+            <li><a href="#"> <router-link to="fieldOfActivity"> lĩnh vực hoạt động </router-link></a> </li>
+            <li><a href="#"> <router-link to="myProject"> dự án </router-link></a></li>
+            <li><a href="#"><router-link to="shareholderRelations"> quan hệ cổ đông </router-link> </a></li>
+            <li><a href="#"><router-link to="news">tin tức </router-link> </a></li>
+            <li><a href="#"><router-link to="recruitment"> tuyển dụng </router-link> </a></li>
           </ul>
           <div class="search-flag">
             <div class="search">

@@ -62,7 +62,7 @@ export const constantRoutes = [
         meta: { title: "home", icon: "home" },
       },
       {
-        path: "MyProject",
+        path: "myProject",
         name: "MyProject",
         component: () => import("@/views/client/MyProject"),
         meta: { title: "MyProject", icon: "MyProject" },
@@ -80,7 +80,7 @@ export const constantRoutes = [
         meta: { title: "MyProjectDetail", icon: "MyProjectDetail" },
       },
       {
-        path: "ShareholderRelations",
+        path: "shareholderRelations",
         name: "ShareholderRelations",
         component: () => import("@/views/client/ShareholderRelations"),
         meta: { title: "ShareholderRelations", icon: "ShareholderRelations" },

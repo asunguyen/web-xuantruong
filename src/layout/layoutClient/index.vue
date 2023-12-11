@@ -79,6 +79,7 @@ export default {
 @import "~@/styles/css/home.css";
 @import "~@/styles/css/common.css";
 @import "~@/styles/css/menu-mobile.css";
+@import "~@/styles/reponsive.scss";
 
 .app-wrapper {
   @include clearfix;

@@ -230,6 +230,9 @@
   overflow: hidden;
   position: relative;
 }
+.section-about h3.title{
+  margin: 40px 30px;
+}
 
 .slick-section-about {
   height: 100%;
@@ -335,17 +338,19 @@
   align-items: center;
   /* padding: 0 50px; */
 }
-
-.tab-pane {
+.news-list{
+  margin: 0 15px 40px;
+}
+.news-list .tab-pane {
   display: flex;
   flex-wrap: wrap;
 }
 
-.tab-pane div.list_post:first-child {
+.news-list .tab-pane div.list_post:first-child {
   width: 50%
 }
 
-.tab-pane div.list_post {
+.news-list .tab-pane div.list_post {
   margin-top: 20px;
   padding: 0 10px;
   width: 25%
