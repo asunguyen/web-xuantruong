@@ -64,7 +64,7 @@
           <b-col cols="12" xl="7">
             <div class="content-right">
               <b-row>
-                <b-col cols="12" lg="6">
+                <b-col cols="12" md="6">
                   <div class="text">
                     <h3 class="title">Về Xuân Trường</h3>
                     <div class="content">
@@ -93,7 +93,7 @@
                     </div>
                   </div>
                 </b-col>
-                <b-col cols="12" lg="6">
+                <b-col cols="12" md="6" offset-lg-0>
                   <div class="images">
                     <img src="~@/assets/images/Logo-02.png" />
                   </div>
@@ -505,7 +505,7 @@
               <b-col cols="12">
                 <h3 class="title">Hoạt Động Cộng Đồng</h3>
               </b-col>
-              <b-col cols="12" xl="6">
+              <b-col cols="12" md="6">
                 <div class="item-new">
                   <div class="image">
                     <a href="#">
@@ -517,7 +517,7 @@
                   </div>
                 </div>
               </b-col>
-              <b-col cols="12" xl="6">
+              <b-col cols="12" md="6">
                 <div class="item-new">
                   <div class="image">
                     <a href="#">
