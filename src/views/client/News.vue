@@ -8,32 +8,32 @@
             <b-tabs content-class="mt-3">
               <div v-for="item, index in listCategory" :key="item._id">
                 <b-tab :title="item.title" :active="index == 0">
-                  <div class="list_post" v-for="itemnews in listPosts" :key="itemnews.categoryID" v-if="itemnews.categoryID === item._id">
+                  <div class="list_post" v-for="itemnews in listPosts" :key="itemnews.categoryID"
+                    v-if="itemnews.categoryID === item._id">
                     <div class="content-new">
                       <!-- v-if="item._id == itemnews.categoryID" -->
-                          <div class="big-new">
-                            <div class="images-new">
-                              <img class="default"
-                                :src="itemnews.thumbnail" />
-                            </div>
-                            <div class="text-new">
-                              <h5 class="title">
-                                {{ itemnews.title }}
-                              </h5>
-                              <span>17/10/2023</span>
-                              <P>{{itemnews.description}}</P>
-                              <div class="button-view">
-                                <a class="sk-btn sk-btn-1" href="#">
-                                  <span>
-                                    <img class="default" src="~@/assets/styles/images/arrow-blue-right.png" />
-                                    <img class="hover" src="~@/assets/styles/images/arrow-white-right.png" />
-                                  </span>
-                                  Xem thêm
-                                </a>
-                              </div>
-                            </div>
+                      <div class="big-new">
+                        <div class="images-new">
+                          <img class="default" :src="itemnews.thumbnail" />
+                        </div>
+                        <div class="text-new">
+                          <h5 class="title">
+                            {{ itemnews.title }}
+                          </h5>
+                          <span>17/10/2023</span>
+                          <P>{{ itemnews.description }}</P>
+                          <div class="button-view" @click="goToDetailNew(itemnews._id)">
+                            <a class="sk-btn sk-btn-1" href="#">
+                              <span>
+                                <img class="default" src="~@/assets/styles/images/arrow-blue-right.png" />
+                                <img class="hover" src="~@/assets/styles/images/arrow-white-right.png" />
+                              </span>
+                              Xem thêm
+                            </a>
                           </div>
-                        <!-- <div v-if="!listPosts[0]._id">
+                        </div>
+                      </div>
+                      <!-- <div v-if="!listPosts[0]._id">
                           <b-col cols="3" v-for="itemnews in listPosts" :key="itemnew.categoryID">
                             <div class="smalls-new">
                               <div class=" small-new">
@@ -101,7 +101,7 @@ export default {
       pagination: {
         totalItems: 0,
         currentPage: 1,
-        pageSize: 10,
+        pageSize: 10
       }
     };
   },
@@ -112,6 +112,16 @@ export default {
     this.getListCategory();
   },
   methods: {
+    goToDetailNew(data) {
+      console.log('data', data)
+      this.$router.push({
+        path: "/news/detail",
+        params: {
+          id: data
+        }
+      })
+      // this.$router.push("news/detail")
+    },
     getListCategory() {
       const params = {
         page: 0,
@@ -150,6 +160,11 @@ export default {
       this.getListPostsByUser();
     }
   },
+  mounted() {
+    // newsDetailId = this.$route.params
+    console.log(' this.$route.params.id', this.$route.params.id)
+  },
+  
 };
 </script>
 <style lang="scss" scoped>

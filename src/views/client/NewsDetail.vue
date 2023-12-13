@@ -3,11 +3,7 @@
     <div class="row">
       <el-breadcrumb separator-class="el-icon-arrow-right">
         <el-breadcrumb-item :to="{ path: '/' }">Trang chủ</el-breadcrumb-item>
-        <el-breadcrumb-item
-          ><span style="cursor: pointer" @click="categoryType = ''"
-            >Blog</span
-          ></el-breadcrumb-item
-        >
+        <el-breadcrumb-item><span style="cursor: pointer" @click="categoryType = ''">Blog</span></el-breadcrumb-item>
         <el-breadcrumb-item v-if="categoryType">{{
           categoryType
         }}</el-breadcrumb-item>
@@ -20,16 +16,11 @@
           <div class="meta-post">
             <i class="el-icon-date"> </i>
             03/08/2022
-            <span class="meta-divider">/</span><span></span>Posted by<a
-              href=""
-              title="Đăng bởi admin"
-              rel="author"
-              >admin</a
-            >
+            <span class="meta-divider">/</span><span></span>Posted by<a href="" title="Đăng bởi admin"
+              rel="author">admin</a>
             <span class="meta-divider px-1">/</span>
             <span class="views-count">
-              <i class="el-icon-view pr-1"></i>50</span
-            >
+              <i class="el-icon-view pr-1"></i>50</span>
             <span class="meta-divider px-1">/</span>
             <i class="el-icon-chat-square pr-1"></i>0
           </div>
@@ -60,8 +51,7 @@
           <p>Kế hoạch kinh doanh năm 2022 như sau:</p>
 
           <p>
-            <em><strong>Mục tiêu 1:</strong></em
-            >&nbsp;Đưa thảo dược đến gần hơn với gia đình người Việt Nam. Kiện
+            <em><strong>Mục tiêu 1:</strong></em>&nbsp;Đưa thảo dược đến gần hơn với gia đình người Việt Nam. Kiện
             toàn hệ sinh thái thảo dược ngành Massage trị liệu xây dựng vùng
             nguyên liệu 15ha; Đảm bảo duy trì ổn định và phát triển các giống
             loài bố mẹ; Từng bước phát triển vùng dược liệu lớn Ra mắt nhóm sản
@@ -69,8 +59,8 @@
           </p>
 
           <p>
-            <em><strong>Mục tiêu 2: về thị trường, thương hiệu:</strong></em
-            >&nbsp;Doanh thu đạt 40 tỷ đồng, là thương hiệu Việt hàng đầu sản
+            <em><strong>Mục tiêu 2: về thị trường, thương hiệu:</strong></em>&nbsp;Doanh thu đạt 40 tỷ đồng, là thương
+            hiệu Việt hàng đầu sản
             xuất các mặt hàng thảo dược phục vụ ngành Massage trị liệu, có ít
             nhất 3 sản phẩm xuất khẩu thị trường nước ngoài.
           </p>
@@ -78,10 +68,8 @@
           <p><strong>Ban hành chính sách đại lý:</strong></p>
 
           <p>
-            <strong
-              >– Quyền lợi khi trở thành đại lý chính thức của AnCo tại thị
-              trường Việt Nam.</strong
-            >
+            <strong>– Quyền lợi khi trở thành đại lý chính thức của AnCo tại thị
+              trường Việt Nam.</strong>
           </p>
 
           <p>
@@ -112,9 +100,7 @@
           </p>
 
           <p>
-            <strong
-              ><em>– Chương trình hỗ trợ 300 nhà khởi nghiệp 2022</em></strong
-            >
+            <strong><em>– Chương trình hỗ trợ 300 nhà khởi nghiệp 2022</em></strong>
           </p>
 
           <p>+ Tặng giá để hàng: Cho các đơn hàng từ 5trđ trở lên</p>
@@ -139,21 +125,16 @@
           <p>Để biết thêm thông tin chi tiết vui lòng liên hệ Hadu Việt Nam:</p>
 
           <p>
-            <strong><em>Facebook</em></strong
-            >:&nbsp;<a
-              href="https://www.facebook.com/nghiencuuphattrienmassagetrilieu.haduvn/"
-              >https://www.facebook.com/nghiencuuphattrienmassagetrilieu.haduvn/</a
-            >
+            <strong><em>Facebook</em></strong>:&nbsp;<a
+              href="https://www.facebook.com/nghiencuuphattrienmassagetrilieu.haduvn/">https://www.facebook.com/nghiencuuphattrienmassagetrilieu.haduvn/</a>
           </p>
 
           <p>
-            <strong><em>Website</em></strong
-            >:&nbsp;<a href="https://hadushop.com/">https://hadushop.com/</a>
+            <strong><em>Website</em></strong>:&nbsp;<a href="https://hadushop.com/">https://hadushop.com/</a>
           </p>
 
           <p>
-            <strong><em>Hotline</em></strong
-            >: 02423.211.919
+            <strong><em>Hotline</em></strong>: 02423.211.919
           </p>
         </div>
         <hr />
@@ -162,27 +143,22 @@
           <div class="row pt-2">
             <div class="col-4 mb-4">
               <div class="">
-                <img
-                  class="w-100"
-                  src="https://e68fq8ewhqk.exactdn.com/wp-content/uploads/2022/08/ab430b84640ca652ff1d.jpg?strip=all&amp;lossy=1&amp;quality=77&amp;webp=77&amp;fit=150%2C150&amp;ssl=1"
-                />
+                <img class="w-100"
+                  src="https://e68fq8ewhqk.exactdn.com/wp-content/uploads/2022/08/ab430b84640ca652ff1d.jpg?strip=all&amp;lossy=1&amp;quality=77&amp;webp=77&amp;fit=150%2C150&amp;ssl=1" />
               </div>
               <div class="">
                 <div class="post-data">
                   <div class="post-heading">
                     <div class="post-heading-inner">
                       <h5 class="entry-title pt-2">
-                        <router-link :to="{ path: '/news/detail' }"
-                          >Chính sách phát triển AnCo</router-link
-                        >
+                        <router-link :to="{ path: '/news/detail' }">Chính sách phát triển AnCo</router-link>
                       </h5>
                       <div class="meta-post">
                         <i class="el-icon-date"> </i>
                         03/08/2022
                         <span class="meta-divider px-1">/</span>
                         <span class="views-count">
-                          <i class="el-icon-view pr-1"></i>50</span
-                        >
+                          <i class="el-icon-view pr-1"></i>50</span>
                         <span class="meta-divider px-1">/</span>
                         <i class="el-icon-chat-square pr-1"></i>0
                       </div>
@@ -212,11 +188,7 @@
         <hr />
         <div>
           <ul class="categories pl-0">
-            <li
-              class="categories-item"
-              v-for="item in listCategory"
-              :key="item"
-            >
+            <li class="categories-item" v-for="item in listCategory" :key="item">
               <a @click="categoryType = item">{{ item }}</a>
             </li>
           </ul>
@@ -226,11 +198,7 @@
         </div>
         <hr />
         <div>
-          <el-input
-            placeholder="Search..."
-            v-model="valueSearch"
-            class="input-with-select"
-          >
+          <el-input placeholder="Search..." v-model="valueSearch" class="input-with-select">
             <el-button slot="append" icon="el-icon-search"></el-button>
           </el-input>
         </div>
@@ -239,14 +207,8 @@
         </div>
         <hr />
         <div>
-          <el-tag
-            effect="plain"
-            type="warning"
-            class="mr-2 mb-2 product-tag"
-            v-for="tag in tags"
-            :key="tag.value"
-            >{{ tag.label }}</el-tag
-          >
+          <el-tag effect="plain" type="warning" class="mr-2 mb-2 product-tag" v-for="tag in tags" :key="tag.value">{{
+            tag.label }}</el-tag>
         </div>
         <div class="pt-5">
           <h5>LATEST POSTS</h5>
@@ -254,19 +216,15 @@
         <hr />
         <div class="row new-item mb-3 mx-0">
           <div class="col-3 new-item-image px-0">
-            <img
-              class="w-100 h-100"
-              src="https://e68fq8ewhqk.exactdn.com/wp-content/uploads/2022/08/ab430b84640ca652ff1d.jpg?strip=all&amp;lossy=1&amp;quality=77&amp;webp=77&amp;fit=150%2C150&amp;ssl=1"
-            />
+            <img class="w-100 h-100"
+              src="https://e68fq8ewhqk.exactdn.com/wp-content/uploads/2022/08/ab430b84640ca652ff1d.jpg?strip=all&amp;lossy=1&amp;quality=77&amp;webp=77&amp;fit=150%2C150&amp;ssl=1" />
           </div>
           <div class="col-9 align-items-center d-flex">
             <div class="post-data">
               <div class="post-heading">
                 <div class="post-heading-inner">
                   <h6 class="entry-title">
-                    <router-link :to="{ path: '/news/detail' }"
-                      >Chính sách phát triển AnCo</router-link
-                    >
+                    <router-link :to="{ path: '/news/detail' }">Chính sách phát triển AnCo</router-link>
                   </h6>
                   <div class="meta-post">
                     <i class="el-icon-date"> </i>
@@ -279,19 +237,15 @@
         </div>
         <div class="row new-item mb-3 mx-0">
           <div class="col-3 new-item-image px-0">
-            <img
-              class="w-100 h-100"
-              src="https://e68fq8ewhqk.exactdn.com/wp-content/uploads/2022/08/ab430b84640ca652ff1d.jpg?strip=all&amp;lossy=1&amp;quality=77&amp;webp=77&amp;fit=150%2C150&amp;ssl=1"
-            />
+            <img class="w-100 h-100"
+              src="https://e68fq8ewhqk.exactdn.com/wp-content/uploads/2022/08/ab430b84640ca652ff1d.jpg?strip=all&amp;lossy=1&amp;quality=77&amp;webp=77&amp;fit=150%2C150&amp;ssl=1" />
           </div>
           <div class="col-9 align-items-center d-flex">
             <div class="post-data">
               <div class="post-heading">
                 <div class="post-heading-inner">
                   <h6 class="entry-title">
-                    <router-link :to="{ path: '/news/detail' }"
-                      >Chính sách phát triển AnCo</router-link
-                    >
+                    <router-link :to="{ path: '/news/detail' }">Chính sách phát triển AnCo</router-link>
                   </h6>
                   <div class="meta-post">
                     <i class="el-icon-date"> </i>
@@ -304,19 +258,15 @@
         </div>
         <div class="row new-item mb-3 mx-0">
           <div class="col-3 new-item-image px-0">
-            <img
-              class="w-100 h-100"
-              src="https://e68fq8ewhqk.exactdn.com/wp-content/uploads/2022/08/ab430b84640ca652ff1d.jpg?strip=all&amp;lossy=1&amp;quality=77&amp;webp=77&amp;fit=150%2C150&amp;ssl=1"
-            />
+            <img class="w-100 h-100"
+              src="https://e68fq8ewhqk.exactdn.com/wp-content/uploads/2022/08/ab430b84640ca652ff1d.jpg?strip=all&amp;lossy=1&amp;quality=77&amp;webp=77&amp;fit=150%2C150&amp;ssl=1" />
           </div>
           <div class="col-9 align-items-center d-flex">
             <div class="post-data">
               <div class="post-heading">
                 <div class="post-heading-inner">
                   <h6 class="entry-title">
-                    <router-link :to="{ path: '/news/detail' }"
-                      >Chính sách phát triển AnCo</router-link
-                    >
+                    <router-link :to="{ path: '/news/detail' }">Chính sách phát triển AnCo</router-link>
                   </h6>
                   <div class="meta-post">
                     <i class="el-icon-date"> </i>
@@ -337,11 +287,13 @@ import VueSlickCarousel from "vue-slick-carousel";
 import "vue-slick-carousel/dist/vue-slick-carousel.css";
 import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 
+// const newsDetailId = this.$route.params.id;
 export default {
   name: "NewsDetail",
   components: { VueSlickCarousel },
   data() {
     return {
+      newsDetailId: null,
       categoryType: "",
       listCategory: [
         "Chính sách",
@@ -387,12 +339,19 @@ export default {
       valueSearch: "",
     };
   },
+
   computed: {},
   methods: {
+
     goToProductDetail() {
       this.$router.push("/product-detail");
     },
   },
+  mounted() {
+    // newsDetailId = this.$route.params
+    console.log('this.newDetailId', newsDetailId)
+  },
+
 };
 </script>
 <style lang="scss" scoped>
@@ -400,48 +359,59 @@ export default {
   margin-left: -30px;
   margin-right: -30px;
 }
+
 .image {
   background-repeat: no-repeat;
   background-size: cover;
   height: 300px;
 }
+
 .product-image {
   background-repeat: no-repeat;
   background-size: cover;
   height: 200px;
 }
+
 .categories {
   &-item {
     cursor: pointer;
     list-style: none;
     color: #888;
     padding-top: 10px;
+
     &:hover {
       color: #e98c13;
     }
   }
 }
+
 .icon-show-hide {
   cursor: pointer;
 }
+
 ::v-deep {
   .slick-next {
     right: 2px;
   }
+
   .slick-next:before {
     color: gray;
   }
+
   .slick-prev {
     left: 2px;
     z-index: 1;
   }
+
   .slick-prev:before {
     color: gray;
   }
 }
+
 .product-tag {
   cursor: pointer;
   font-size: 14px;
+
   &:hover {
     background-color: #e98c13;
     color: #fff;

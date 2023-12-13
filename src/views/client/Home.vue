@@ -2,7 +2,6 @@
   <div class="sticky-footer">
     <!-- <main class="site-container site-container-elementor"> -->
     <div class="site-page-content">
-      <b-container class="bv-example-row"></b-container>
       <div class="banner-header">
         <VueSlickCarousel v-bind="bannerHome">
           <div class="slick-banner">
@@ -99,7 +98,6 @@
                   </div>
                 </b-col>
               </b-row>
-
             </div>
           </b-col>
         </b-row>
@@ -136,8 +134,8 @@
             </div>
           </b-col>
           <b-col cols="12 hight-default" xl="7">
-            <div class="content-right d-flex">
-              <div class="about-content d-flex">
+            <div class="content-right ">
+              <div class="about-content ">
                 <div class="text">
                   <h3 class="title">
                     <img class="default" src="~@/assets/styles/images/icons1.png" />
@@ -273,102 +271,6 @@
           </b-col>
           <b-col cols="12" xl="7">
             <VueSlickCarousel v-bind="settingsNews" class="slick-section-about">
-              <div class="content-new">
-                <b-row>
-                  <b-col cols="12">
-                    <h3 class="title pb-3">Tin tức</h3>
-                  </b-col>
-                  <b-col cols="6">
-                    <div class="big-new">
-                      <div class="images-new">
-                        <img class="default"
-                          src="~@/assets/styles/images/z2265403739225_01cfaa40494e07911fff673d827b0756.jpg" />
-                      </div>
-                      <div class="text-new">
-                        <h5 class="title">
-                          Suất đầu tư liên quan tới điện khí, điện gió, mặt trời
-                          trên thế giới (cập nhật tháng 10/2023)
-                        </h5>
-                        <span>17/10/2023</span>
-                        <P>Liên quan tới suất đầu tư một số nguồn điện, chuyên gia
-                          Tạp chí Năng lượng Việt Nam cập nhật thông tin về suất
-                          đầu tư thuộc lĩnh vực điện khí, điện gió và điện mặt
-                          trời trên thế giới hiện nay để bạn đọc cùng tham khảo.
-                          Suất đầu...</P>
-                        <div class="button-view">
-                          <a class="sk-btn sk-btn-1" href="#">
-                            <span>
-                              <img class="default" src="~@/assets/styles/images/arrow-blue-right.png" />
-                              <img class="hover" src="~@/assets/styles/images/arrow-white-right.png" />
-                            </span>
-                            Xem thêm
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </b-col>
-                  <b-col cols="6">
-                    <div class="smalls-new">
-                      <div class=" small-new">
-                        <div class="images-new">
-                          <img src="~@/assets/styles/images/Dien-MT-TQ-1.jpg" />
-                        </div>
-                        <div class="text-new">
-                          <h5 class="title">
-                            Suất đầu tư liên quan tới điện khí, điện gió, mặt trời
-                            trên thế giới (cập nhật tháng 10/2023)
-                          </h5>
-                          <span>17/10/2023</span>
-                          <div class="content-bottom">
-                            <P>Liên quan tới suất đầu tư một số nguồn điện, chuyên
-                              gia Tạp chí Năng lượng Việt Nam cập nhật thông tin
-                              về suất đầu tư thuộc lĩnh vực điện khí, điện gió và
-                              điện mặt trời trên thế giới hiện nay để bạn đọc cùng
-                              tham khảo. Suất đầu...</P>
-                            <div class="button-view">
-                              <a class="sk-btn sk-btn-1" href="#">
-                                <span>
-                                  <img class="default" src="~@/assets/styles/images/arrow-blue-right.png" />
-                                  <img class="hover" src="~@/assets/styles/images/arrow-white-right.png" />
-                                </span>
-                                Xem thêm
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class=" small-new">
-                        <div class="images-new">
-                          <img src="~@/assets/styles/images/dien-gio-ngoai-khoi.jpeg" />
-                        </div>
-                        <div class="text-new">
-                          <h5 class="title">
-                            Suất đầu tư liên quan tới điện khí, điện gió, mặt trời
-                            trên thế giới (cập nhật tháng 10/2023)
-                          </h5>
-                          <span>17/10/2023</span>
-                          <div class="content-bottom">
-                            <P>Liên quan tới suất đầu tư một số nguồn điện, chuyên
-                              gia Tạp chí Năng lượng Việt Nam cập nhật thông tin
-                              về suất đầu tư thuộc lĩnh vực điện khí, điện gió và
-                              điện mặt trời trên thế giới hiện nay để bạn đọc cùng
-                              tham khảo. Suất đầu...</P>
-                            <div class="button-view">
-                              <a class="sk-btn sk-btn-1" href="#">
-                                <span>
-                                  <img class="default" src="~@/assets/styles/images/arrow-blue-right.png" />
-                                  <img class="hover" src="~@/assets/styles/images/arrow-white-right.png" />
-                                </span>
-                                Xem thêm
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </b-col>
-                </b-row>
-              </div>
               <div class="content-new">
                 <b-row>
                   <b-col cols="12">
@@ -651,7 +553,7 @@
                     </div>
                   </div>
                 </b-col>
-                <b-col cols="12" xl="3" lg="6">
+                <b-col cols="12" xl="3" md="6">
                   <div class="smalls-new">
                     <div class="small-new">
                       <div class="images-new">
@@ -709,7 +611,7 @@
                     </div>
                   </div>
                 </b-col>
-                <b-col cols="12" xl="3" lg="6">
+                <b-col cols="12" xl="3" md="6">
                   <div class="smalls-new">
                     <div class="small-new">
                       <div class="images-new">
@@ -809,7 +711,6 @@
         </VueSlickCarousel>
       </div>
     </div>
-    </main>
   </div>
 </template>
 
@@ -828,8 +729,6 @@ export default {
 
   computed: {
     ...mapGetters(["dataSlie"])
-    
-    
   },
   methods: {
     goToProductDetail() {
