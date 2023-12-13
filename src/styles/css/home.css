@@ -96,6 +96,8 @@
 
 .banner-header .slick-slide img {
   width: 100%;
+  height:100%;
+  /* margin-bottom: -7px; */
 }
 
 /* section_1 */
@@ -197,6 +199,9 @@
 .content-right .text-images h3.title {
   font-size: 35px;
   margin-bottom: 50px;
+}
+.section-sumenh .content-right .about-content{
+  display: flex;
 }
 
 /* section_sumenh */

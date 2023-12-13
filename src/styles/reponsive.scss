@@ -20,55 +20,125 @@
       }
     }
   }
-  .section-about{
+  .section-about {
     .swiper-slide .image {
-        height: 800px;
+      height: 800px;
     }
   }
-  .section-about-vision{
-    h3.title{
-        margin: 40px 30px 0;
+  .section-about-vision {
+    h3.title {
+      margin: 40px 30px 0;
     }
   }
-  .section-about-active{
-    .content-new{
-        margin: 40px 0;
+  .section-about-active {
+    .content-new {
+      margin: 40px 0;
     }
   }
-  .section-field-activity{
-    h3.title{
-        margin-bottom: 30px;
+  .section-field-activity {
+    h3.title {
+      margin-bottom: 30px;
     }
     .item-new {
-        height: 450px;
-        margin-bottom: 20px;
+      height: 450px;
+      margin-bottom: 20px;
     }
-  } 
+  }
+  .section-our-project .item-new-big {
+    margin-bottom: 20px;
+  }
 }
 
-@media screen and (max-width: 700px) {
-    // header
-    .text-content-section {
-      padding: 50px 50px 60px;
-      .title h5 {
-          font-size: 13px;
-        }
-       .title h3 {
-          font-size: 30px;
-          line-height: 35px;
-          // margin-top: 10px;
-       }
+@media screen and (max-width: 800px) {
+  // header
+  .text-content-section {
+    padding: 50px 50px 60px;
+    .title h5 {
+      font-size: 13px;
     }
-    .banner-header {
-      .text-content {
-        .title h5 {
-          font-size: 13px;
-        }
-       .title h3 {
-          font-size: 30px;
-          line-height: 35px;
-          // margin-top: 10px;
-       }
+    .title h3 {
+      font-size: 30px;
+      line-height: 35px;
+      // margin-top: 10px;
+    }
+  }
+  .banner-header {
+    .text-content {
+      .title h5 {
+        font-size: 13px;
+      }
+      .title h3 {
+        font-size: 30px;
+        line-height: 35px;
+        // margin-top: 10px;
       }
     }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .banner-header{
+    .slick-banner{
+      height: 50vh;
+    }
+    .text-content {
+      .title{
+        div{
+          align-items: center;
+        }
+        h5 {
+          font-size: 13px;
+          line-height: 20px;
+          
+        }
+      } 
+      .title h3 {
+        font-size: 23px;
+        line-height: 35px;
+        margin-top: 10px;
+      }
+    }
+  }
+  .menu-header{
+    padding: 10px 25px 0
+  }
+  .text-content-section {
+    padding: 50px 50px 60px;
+    .title h5 {
+      font-size: 10px;
+    }
+    .title h3 {
+      font-size: 20px;
+      line-height: 30px;
+      margin: 10px 0;
+    }
+  }
+  .section-sumenh {
+    .content-right {
+      .about-content {
+        .text {
+          width: 100%;
+          padding: 25px 0px;
+        }
+        .text-images {
+          width: 100%;
+          padding: 0px 0px 40px 0;
+        }
+        display: block;
+      }
+    }
+  }
+  .banner-left {
+    height: 50vh !important;
+  }
+  .section-about {
+    .swiper-slide {
+      .image {
+        height: 50vh;
+      }
+    }
+  }
+  .content-new .big-new{
+    margin-bottom: 20px;
+  }
 }
