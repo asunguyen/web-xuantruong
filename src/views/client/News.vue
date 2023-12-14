@@ -23,13 +23,13 @@
                           <span>17/10/2023</span>
                           <P>{{ itemnews.description }}</P>
                           <div class="button-view" @click="goToDetailNew(itemnews._id)">
-                            <a class="sk-btn sk-btn-1" href="#">
+                            <div class="sk-btn sk-btn-1">
                               <span>
                                 <img class="default" src="~@/assets/styles/images/arrow-blue-right.png" />
                                 <img class="hover" src="~@/assets/styles/images/arrow-white-right.png" />
                               </span>
                               Xem thêm
-                            </a>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -86,6 +86,7 @@ import {
 } from "@/api/posts";
 import { getListCategory } from "@/api/category";
 export default {
+  name: "News",
   data() {
     return {
       title: "",
@@ -113,14 +114,10 @@ export default {
   },
   methods: {
     goToDetailNew(data) {
-      console.log('data', data)
+      console.log(data, 'data')
       this.$router.push({
-        path: "/news/detail",
-        params: {
-          id: data
-        }
-      })
-      // this.$router.push("news/detail")
+        path: `/news-detail${data}`
+      });
     },
     getListCategory() {
       const params = {
@@ -161,11 +158,8 @@ export default {
     }
   },
   mounted() {
-    // newsDetailId = this.$route.params
-    console.log(' this.$route.params.id', this.$route.params.id)
-  },
-  
-};
+  }
+}
 </script>
 <style lang="scss" scoped>
 .my-project {

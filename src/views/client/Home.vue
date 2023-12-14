@@ -728,7 +728,7 @@ export default {
   components: { VueSlickCarousel },
 
   computed: {
-    ...mapGetters(["dataSlie"])
+    ...mapGetters(["dataSlie",])
   },
   methods: {
     goToProductDetail() {
