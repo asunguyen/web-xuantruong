@@ -1,13 +1,13 @@
 <template>
   <div class="container mt-4">
     <div class="row">
-      <el-breadcrumb separator-class="el-icon-arrow-right">
+      <!-- <el-breadcrumb separator-class="el-icon-arrow-right">
         <el-breadcrumb-item :to="{ path: '/' }">Trang chủ</el-breadcrumb-item>
         <el-breadcrumb-item><span style="cursor: pointer" @click="categoryType">Tin tức</span></el-breadcrumb-item>
         <el-breadcrumb-item v-if="categoryType">{{
           categoryType
         }}</el-breadcrumb-item>
-      </el-breadcrumb>
+      </el-breadcrumb> -->
     </div>
     <div class="row pt-4">
       <div class="col-9">
@@ -15,14 +15,7 @@
           <h2 class="entry-title">{{ dataPostsDetail.title }}</h2>
           <div class="meta-post">
             <i class="el-icon-date"> </i>
-            {{ formatDateTime(dataPostsDetail.createdAt)}}
-            <!-- <span class="meta-divider">/</span><span></span>Posted by<a href="" title="Đăng bởi admin"
-              rel="author">admin</a>
-            <span class="meta-divider px-1">/</span>
-            <span class="views-count">
-              <i class="el-icon-view pr-1"></i>50</span>
-            <span class="meta-divider px-1">/</span>
-            <i class="el-icon-chat-square pr-1"></i>0 -->
+            {{ formatDateTime(dataPostsDetail.createdAt) }}
           </div>
         </div>
         <div class="content-article entry-content" v-html="dataPostsDetail.content">
@@ -31,34 +24,27 @@
         <div class="post-heading">
           <h2 class="entry-title">Related posts</h2>
           <div class="row pt-2">
-            <div class="col-4 mb-4">
-              <div class="">
-                <img class="w-100"
-                  src="https://e68fq8ewhqk.exactdn.com/wp-content/uploads/2022/08/ab430b84640ca652ff1d.jpg?strip=all&amp;lossy=1&amp;quality=77&amp;webp=77&amp;fit=150%2C150&amp;ssl=1" />
+            <div class="col-4 mb-4" v-for="item in listRelatedPosts" :key="item._id" >
+              <div class="image-related ">
+                <img class="w-100 h-100"
+              :src="item.thumbnail" />
               </div>
               <div class="">
                 <div class="post-data">
                   <div class="post-heading">
                     <div class="post-heading-inner">
-                      <h5 class="entry-title pt-2">
-                        <router-link :to="{ path: '/news/detail' }">Chính sách phát triển AnCo</router-link>
+                      <h5 class="entry-title pt-2" @click="goToDetailNew(item._id)">
+                        {{ item.title }}
                       </h5>
                       <div class="meta-post">
                         <i class="el-icon-date"> </i>
-                        03/08/2022
-                        <span class="meta-divider px-1">/</span>
-                        <span class="views-count">
-                          <i class="el-icon-view pr-1"></i>50</span>
-                        <span class="meta-divider px-1">/</span>
-                        <i class="el-icon-chat-square pr-1"></i>0
+                        {{formatDateTime(item.updatedAt)}}
                       </div>
                     </div>
                   </div>
 
                   <div class="pt-2">
-                    Theo tiếng gọi của nhà nước về định hướng kết hợp y học cổ
-                    truyền và y học hiện đại để giải quyết bài toán chăm sóc sức
-                    khỏe, khám chữa bệnh toàn dân
+                   {{item.description}}
                   </div>
                 </div>
               </div>
@@ -78,89 +64,30 @@
         <hr />
         <div>
           <ul class="categories pl-0">
-            <li class="categories-item" v-for="item in listCategory" :key="item">
-              <a @click="categoryType = item">{{ item }}</a>
+            <li class="categories-item" v-for="item in listCategory" :key="item._id">
+              <p @click="goToCategoryNews(item._id)">{{ item.title }}</p>
             </li>
           </ul>
         </div>
-        <!-- <div class="pt-3">
-          <h5>SEARCH</h5>
-        </div> -->
-        <!-- <hr />
-        <div>
-          <el-input placeholder="Search..." v-model="valueSearch" class="input-with-select">
-            <el-button slot="append" icon="el-icon-search"></el-button>
-          </el-input>
-        </div> -->
-        <!-- <div class="pt-5">
-          <h5>PRODUCT TAGS</h5>
-        </div>
-        <hr />
-        <div>
-          <el-tag effect="plain" type="warning" class="mr-2 mb-2 product-tag" v-for="tag in tags" :key="tag.value">{{
-            tag.label }}</el-tag>
-        </div> -->
         <div class="pt-5">
           <h5>LATEST POSTS</h5>
         </div>
         <hr />
-        <div class="row new-item mb-3 mx-0">
+        <div class="row new-item mb-3 mx-0" v-for="item in listLatestPosts" :key="item._id">
           <div class="col-3 new-item-image px-0">
             <img class="w-100 h-100"
-              src="https://e68fq8ewhqk.exactdn.com/wp-content/uploads/2022/08/ab430b84640ca652ff1d.jpg?strip=all&amp;lossy=1&amp;quality=77&amp;webp=77&amp;fit=150%2C150&amp;ssl=1" />
+              :src="item.thumbnail" />
           </div>
           <div class="col-9 align-items-center d-flex">
             <div class="post-data">
               <div class="post-heading">
                 <div class="post-heading-inner">
-                  <h6 class="entry-title">
-                    <router-link :to="{ path: '/news/detail' }">Chính sách phát triển AnCo</router-link>
+                  <h6 class="entry-title" @click="goToDetailNew(item._id)">
+                    {{ item.title }}
                   </h6>
                   <div class="meta-post">
                     <i class="el-icon-date"> </i>
-                    03/08/2022
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row new-item mb-3 mx-0">
-          <div class="col-3 new-item-image px-0">
-            <img class="w-100 h-100"
-              src="https://e68fq8ewhqk.exactdn.com/wp-content/uploads/2022/08/ab430b84640ca652ff1d.jpg?strip=all&amp;lossy=1&amp;quality=77&amp;webp=77&amp;fit=150%2C150&amp;ssl=1" />
-          </div>
-          <div class="col-9 align-items-center d-flex">
-            <div class="post-data">
-              <div class="post-heading">
-                <div class="post-heading-inner">
-                  <h6 class="entry-title">
-                    <router-link :to="{ path: '/news/detail' }">Chính sách phát triển AnCo</router-link>
-                  </h6>
-                  <div class="meta-post">
-                    <i class="el-icon-date"> </i>
-                    03/08/2022
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row new-item mb-3 mx-0">
-          <div class="col-3 new-item-image px-0">
-            <img class="w-100 h-100"
-              src="https://e68fq8ewhqk.exactdn.com/wp-content/uploads/2022/08/ab430b84640ca652ff1d.jpg?strip=all&amp;lossy=1&amp;quality=77&amp;webp=77&amp;fit=150%2C150&amp;ssl=1" />
-          </div>
-          <div class="col-9 align-items-center d-flex">
-            <div class="post-data">
-              <div class="post-heading">
-                <div class="post-heading-inner">
-                  <h6 class="entry-title">
-                    <router-link :to="{ path: '/news/detail' }">Chính sách phát triển AnCo</router-link>
-                  </h6>
-                  <div class="meta-post">
-                    <i class="el-icon-date"> </i>
-                    03/08/2022
+                    {{formatDateTime(item.updatedAt)}}
                   </div>
                 </div>
               </div>
@@ -177,11 +104,11 @@ import VueSlickCarousel from "vue-slick-carousel";
 import "vue-slick-carousel/dist/vue-slick-carousel.css";
 import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 import {
-  getPostsDetail
+  getPostsDetail, getListAllPosts
 } from "@/api/posts";
+import { getListCategory } from "@/api/category";
 import moment from "moment";
 export default {
-  // const newsDetailId = this.$route.params.id;  
   name: "NewsDetail",
   components: { VueSlickCarousel },
   data() {
@@ -189,12 +116,9 @@ export default {
       newsDetailId: null,
       dataPostsDetail: [],
       categoryType: "",
-      listCategory: [
-        "Chính sách",
-        "CHÍNH SÁCH PHÂN PHỐI",
-        "Organic",
-        "Trang thiết bị Spa",
-      ],
+      listCategory: [],
+      listLatestPosts: [],
+      listRelatedPosts: [],
       valueRate: null,
       tags: [
         {
@@ -230,19 +154,74 @@ export default {
           label: "Dưỡng sinh",
         },
       ],
+      pagination: {
+        totalItems: 0,
+        currentPage: 1,
+        pageSize: 10,
+      },
       valueSearch: "",
     };
   },
 
   computed: {},
+  created() {
+    this.getListCategory()
+    this.getListAllPosts();
+  },
   methods: {
     formatDateTime(data) {
-      return moment(data).format("YYYY-MM-DD HH:mm");
+      return moment(data).format("YYYY-MM-DD");
+    },
+    goToDetailNew(data) {
+      this.$router.push({
+        path: `/news-detail${data}`,
+      });
+    },
+    goToCategoryNews(data) {
+      this.$router.push({
+        path: `/news`,
+      });
     },
     getPostsDetail(param) {
       getPostsDetail(param).then((response) => {
         this.dataPostsDetail = response.data;
-        // console.log('this.dataPostsDetail', this.dataPostsDetail)
+      });
+    },
+    getListCategory() {
+      const params = {
+        page: 0,
+        size: 10000,
+      };
+      getListCategory(params).then((response) => {
+        const categoryNews = [
+          "657530d1498e2cea511898e1",
+          "657530f7498e2cea511898e5",
+          "65753106498e2cea511898e9",
+          "65753120498e2cea511898ed",
+        ];
+        for (const i of response.data) {
+          for (const j of categoryNews) {
+            if (j == i._id) {
+              this.listCategory.push(i);
+            }
+          }
+        }
+        console.log("this.listCategory", this.listCategory);
+      });
+    },
+    getListAllPosts() {
+      this.listLoading = true;
+      const params = {
+        page: this.pagination.currentPage - 1,
+        size: this.pagination.pageSize,
+      };
+      getListAllPosts(params).then((response) => {
+        this.pagination.totalItems = response.total;
+        console.log('response.data', response.data)
+        this.listLatestPosts = response.data.slice(0, 3);
+        this.listRelatedPosts = response.data.slice(-3);
+        console.log(this.listLatestPosts, 'this.listLatestPosts')
+        this.listLoading = false;
       });
     },
 
@@ -265,6 +244,11 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   height: 300px;
+}
+.image-related {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
 }
 
 .product-image {
@@ -316,6 +300,12 @@ export default {
   &:hover {
     background-color: #e98c13;
     color: #fff;
+  }
+}
+
+.categories-item {
+  p {
+    text-transform: uppercase;
   }
 }
 </style>

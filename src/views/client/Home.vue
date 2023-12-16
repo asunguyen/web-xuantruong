@@ -344,10 +344,10 @@
                 <div class="content-item">
                   <div class="title">
                     <!-- <img src="~@/assets/styles/images/icon-category1.png" /> -->
-                    <h5>{{ item.title }}</h5>
+                    <h5 @click="goToDetailProject()">{{ item.title }}</h5>
                   </div>
                   <div class="button-view">
-                    <a class="sk-btn sk-btn-1" href="#">
+                    <div class="sk-btn sk-btn-1" @click="goToDetailProject()">
                       <span>
                         <img
                           class="default"
@@ -359,7 +359,7 @@
                         />
                       </span>
                       Xem thêm
-                    </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -578,17 +578,15 @@ export default {
     this.getListCategory();
   },
   methods: {
-    goToProductDetail() {
-      this.$router.push("/product-detail");
-    },
+
     goToDetailNew(data) {
       this.$router.push({
         path: `/news-detail${data}`,
       });
     },
-    goToDetailProject(data) {
+    goToDetailProject() {
       this.$router.push({
-        path: `/myproject-detail${data}`,
+        path: `/myproject`,
       });
     },
     getListAllPosts() {

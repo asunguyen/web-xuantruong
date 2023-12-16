@@ -14,7 +14,7 @@
                                 <h5 class="title">
                                     {{ itemnews.title }}
                                 </h5>
-                                <span>17/10/2023</span>
+                                <span>{{formatDateTime(itemnews.createdAt)}}</span>
                                 <P>{{ itemnews.description }}</P>
                                 <div class="button-view" @click="handleDirectional(itemnews._id)">
                                     <div class="sk-btn sk-btn-1">
@@ -68,7 +68,8 @@
 </template>
 
 <script>
-import { getListPostsByUser, getListAllPosts } from "@/api/posts";
+import { getListAllPosts } from "@/api/posts";
+import moment from "moment";
 export default {
     name: "ListNewsfollowCategory",
     props: {
@@ -97,13 +98,13 @@ export default {
         };
     },
     created() {
-        this.getListPostsByUser();
+        this.getListAllPosts();
     },
     methods: {
         handleDirectional(data) {
             this.$emit("directional", data);
         },
-        getListPostsByUser() {
+        getListAllPosts() {
             this.listLoading = true;
             const params = {
                 page: this.pagination.currentPage - 1,
@@ -119,12 +120,15 @@ export default {
         },
         handleCurrentChange(page) {
             this.pagination.currentPage = page;
-            this.getListPostsByUser();
+            this.getListAllPosts();
         },
         handleSizeChange(size) {
             this.pagination.pageSize = size;
             this.pagination.currentPage = 1;
-            this.getListPostsByUser();
+            this.getListAllPosts();
+        },
+        formatDateTime(data) {
+            return moment(data).format("YYYY-MM-DD");
         },
     },
 };
