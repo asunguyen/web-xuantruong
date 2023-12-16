@@ -114,7 +114,7 @@ export default {
                 this.listPosts = response.data;
                 this.listLoading = false;
                 // this.$store.dispatch("new/getListnNews", this.listPosts);
-                console.log("this.listPosts", this.listPosts);
+                // console.log("this.listPosts", this.listPosts);
             });
         },
         handleCurrentChange(page) {

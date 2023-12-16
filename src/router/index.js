@@ -86,17 +86,6 @@ export const constantRoutes = [
         meta: { title: "ShareholderRelations", icon: "ShareholderRelations" },
       },
       {
-        path: "product-detail",
-        name: "ProductDetail",
-        component: () => import("@/views/client/ProductDetail"),
-        meta: { title: "home", icon: "home" },
-      },
-      {
-        path: "product",
-        name: "ProductDetail",
-        component: () => import("@/views/client/Product"),
-      },
-      {
         path: "news",
         name: "News",
         component: () => import("@/views/client/News"),

@@ -117,7 +117,6 @@ export default {
     methods: {
         goToDetailNew(data) {
             this.getPostsDetail(data);
-            console.log(data, "data");
             this.$router.push({
                 path: `/myproject-detail${data}`,
             });

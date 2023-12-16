@@ -49,7 +49,6 @@ export default {
   },
   methods: {
     goToDetailNew(data) {
-      console.log(data, "data");
       this.$router.push({
         path: `/news-detail${data}`,
       });

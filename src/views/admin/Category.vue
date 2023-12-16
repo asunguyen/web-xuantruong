@@ -283,7 +283,6 @@
         });
       },
       handleCurrentChange(page) {
-        console.log(this.pagination, page);
         this.pagination.currentPage = page;
         this.getListCategory();
       },

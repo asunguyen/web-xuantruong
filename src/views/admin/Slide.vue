@@ -369,7 +369,6 @@ export default {
         id: this.detail.id,
       };
       updateSlider(params).then((response) => {
-        console.log("response::", response);
         if (response) {
           Message({
             message: "Update Slider successfully",

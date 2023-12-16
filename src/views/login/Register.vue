@@ -138,7 +138,6 @@ export default {
         handleRegister() {
             const params = this.Register
             register(params).then((response) => {
-                console.log('response.code', response.code)
                 if (response.code === 200) {
                     this.resetRegister()
                 }

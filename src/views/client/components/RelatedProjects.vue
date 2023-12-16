@@ -117,10 +117,8 @@ export default {
             };
             getListAllPosts(params).then((response) => {
                 this.pagination.totalItems = response.total;
-                console.log('response.data', response.data)
                 const arr = []
                 for (const item of response.data) {
-                    console.log('item', item)
                     if (item.categoryID == "657d1f01498e2cea51189f14") {
                         arr.push(item)
                     }
