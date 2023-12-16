@@ -279,11 +279,10 @@
             label: item.title,
             value: item._id,
           }));
-          this.$store.dispatch("new/getListSlider", this.listCategory);
+          this.$store.dispatch("news/getListnCategory", this.listCategory);
         });
       },
       handleCurrentChange(page) {
-        console.log(this.pagination, page);
         this.pagination.currentPage = page;
         this.getListCategory();
       },

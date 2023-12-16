@@ -307,7 +307,7 @@ export default {
       this.listLoading = true;
       getListSlider().then((response) => {
         this.listSlider = response.data;
-        this.$store.dispatch("slide/getListSlider", this.listSlider);
+        // this.$store.dispatch("slide/getListSlider", this.listSlider);
         this.listLoading = false;
       });
     },
@@ -369,7 +369,6 @@ export default {
         id: this.detail.id,
       };
       updateSlider(params).then((response) => {
-        console.log("response::", response);
         if (response) {
           Message({
             message: "Update Slider successfully",

@@ -368,7 +368,7 @@ export default {
         this.pagination.totalItems = response.total;
         this.listPosts = response.data;
         this.listLoading = false;
-        this.$store.dispatch("new/getListnNews", this.listPosts);
+        this.$store.dispatch("news/getListnNews", this.listPosts);
         console.log('this.listPosts',this.listPosts)
       });
     },

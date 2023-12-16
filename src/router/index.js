@@ -74,7 +74,7 @@ export const constantRoutes = [
         meta: { title: "Introduce", icon: "Introduce" },
       },
       {
-        path: "MyProjectDetail",
+        path: "myproject-detail:id",
         name: "MyProjectDetail",
         component: () => import("@/views/client/MyProjectDetail"),
         meta: { title: "MyProjectDetail", icon: "MyProjectDetail" },
@@ -84,17 +84,6 @@ export const constantRoutes = [
         name: "ShareholderRelations",
         component: () => import("@/views/client/ShareholderRelations"),
         meta: { title: "ShareholderRelations", icon: "ShareholderRelations" },
-      },
-      {
-        path: "product-detail",
-        name: "ProductDetail",
-        component: () => import("@/views/client/ProductDetail"),
-        meta: { title: "home", icon: "home" },
-      },
-      {
-        path: "product",
-        name: "ProductDetail",
-        component: () => import("@/views/client/Product"),
       },
       {
         path: "news",
@@ -141,32 +130,6 @@ export const constantRoutes = [
   //     },
   //   ],
   // },
-  {
-    path: "/admin",
-    component: Layout,
-    name: "Admin",
-    children: [
-      {
-        path: "ProductType",
-        name: "ProductType",
-        component: () => import("@/views/admin/ProductType.vue"),
-        meta: { title: "Quản lý danh mục sản phẩm" },
-      },
-    ],
-  },
-  {
-    path: "/admin",
-    component: Layout,
-    name: "Admin",
-    children: [
-      {
-        path: "product",
-        name: "Product",
-        component: () => import("@/views/admin/Product.vue"),
-        meta: { title: "Quản lý sản phẩm" },
-      },
-    ],
-  },
   {
     path: "/admin",
     component: Layout,
