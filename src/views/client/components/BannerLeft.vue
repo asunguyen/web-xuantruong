@@ -35,6 +35,7 @@ export default {
         },
         textBanner: {
             type: String,
+            default: 'Default text banner',
             required: false,
         }
     },
@@ -45,8 +46,6 @@ export default {
         }
     },
     mounted() {
-        console.log(this.listSlider, 'dataSlide')
-        console.log(this.textBanner, 'dataSlide')
 
     }
 
