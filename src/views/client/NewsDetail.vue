@@ -242,7 +242,7 @@ export default {
     getPostsDetail(param) {
       getPostsDetail(param).then((response) => {
         this.dataPostsDetail = response.data;
-        console.log('this.dataPostsDetail', this.dataPostsDetail)
+        // console.log('this.dataPostsDetail', this.dataPostsDetail)
       });
     },
 

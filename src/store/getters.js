@@ -5,8 +5,8 @@ const getters = {
   avatar: state => state.user.avatar,
   name: state => state.user.name,
   dataSlie: state => state.slide.dataSlie,
-  categoryNewStore: state => state.news.categoryNewm,
-  newsStore: state => state.news.news
+  categoryNews: state => state.news.categoryNews,
+  listNews: state => state.news.listNews
 }
 // console.log('dataSlie', getters.name)
 export default getters

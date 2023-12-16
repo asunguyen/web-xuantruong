@@ -1,8 +1,8 @@
 
 const getDefaultState = () => {
     return {
-        news: [],
-        categoryNew: []
+        listNews: [],
+        categoryNews: []
     }
 }
 
@@ -10,10 +10,10 @@ const state = getDefaultState()
 
 const mutations = {
     GET_LIST_NEWS: (state, data) => {
-        state.news = data
+        state.listNews = data
     },
     GET_LIST_CATEGORY: (state, data) => {
-        state.categoryNew = data
+        state.categoryNews = data
     },
 }
 

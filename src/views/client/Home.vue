@@ -726,16 +726,7 @@ export default {
   },
   name: 'Home',
   components: { VueSlickCarousel },
-
-  computed: {
-    ...mapGetters(["dataSlie",])
-  },
-  methods: {
-    goToProductDetail() {
-      this.$router.push('/product-detail')
-    }
-  },
-  data() {
+    data() {
     return {
       videoId: 'https://www.youtube.com/watch?v=WLc5-k3y_Po',
       value: '',
@@ -812,8 +803,19 @@ export default {
       }
     }
   },
+
+  computed: {
+    ...mapGetters(["dataSlie", "categoryNews", "listNews"])
+  },
+  methods: {
+    goToProductDetail() {
+      this.$router.push('/product-detail')
+    }
+  },
+
   mounted() {
-    console.log("this.dataSlie", this.dataSlie)
+    console.log("this.categoryNews", this.categoryNews)
+    console.log("this.listNews", this.listNews)
   }
 }
 </script>

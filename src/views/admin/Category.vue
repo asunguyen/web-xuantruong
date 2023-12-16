@@ -279,7 +279,7 @@
             label: item.title,
             value: item._id,
           }));
-          this.$store.dispatch("new/getListSlider", this.listCategory);
+          this.$store.dispatch("news/getListnCategory", this.listCategory);
         });
       },
       handleCurrentChange(page) {

@@ -3,74 +3,9 @@
     <main class="site-container site-container-elementor">
       <div class="site-page-content">
         <div class="my-project news-list">
-          <h3 class="title"> Tin Tức</h3>
+          <h3 class="title">Tin Tức</h3>
           <div>
-            <b-tabs content-class="mt-3">
-              <div v-for="item, index in listCategory" :key="item._id">
-                <b-tab :title="item.title" :active="index == 0">
-                  <div class="list_post" v-for="itemnews in listPosts" :key="itemnews.categoryID"
-                    v-if="itemnews.categoryID === item._id">
-                    <div class="content-new">
-                      <!-- v-if="item._id == itemnews.categoryID" -->
-                      <div class="big-new">
-                        <div class="images-new">
-                          <img class="default" :src="itemnews.thumbnail" />
-                        </div>
-                        <div class="text-new">
-                          <h5 class="title">
-                            {{ itemnews.title }}
-                          </h5>
-                          <span>17/10/2023</span>
-                          <P>{{ itemnews.description }}</P>
-                          <div class="button-view" @click="goToDetailNew(itemnews._id)">
-                            <div class="sk-btn sk-btn-1">
-                              <span>
-                                <img class="default" src="~@/assets/styles/images/arrow-blue-right.png" />
-                                <img class="hover" src="~@/assets/styles/images/arrow-white-right.png" />
-                              </span>
-                              Xem thêm
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- <div v-if="!listPosts[0]._id">
-                          <b-col cols="3" v-for="itemnews in listPosts" :key="itemnew.categoryID">
-                            <div class="smalls-new">
-                              <div class=" small-new">
-                                <div class="images-new">
-                                  <img src="~@/assets/styles/images/Dien-MT-TQ-1.jpg" />
-                                </div>
-                                <div class="text-new">
-                                  <h5 class="title">
-                                    {{ itemnew.title }}
-                                  </h5>
-                                  <span>17/10/2023</span>
-                                  <div class="content-bottom">
-                                    <P>Liên quan tới suất đầu tư một số nguồn điện, chuyên
-                                      gia Tạp chí Năng lượng Việt Nam cập nhật thông tin
-                                      về suất đầu tư thuộc lĩnh vực điện khí, điện gió và
-                                      điện mặt trời trên thế giới hiện nay để bạn đọc cùng
-                                      tham khảo. Suất đầu...</P>
-                                    <div class="button-view">
-                                      <a class="sk-btn sk-btn-1" href="#">
-                                        <span>
-                                          <img class="default" src="~@/assets/styles/images/arrow-blue-right.png" />
-                                          <img class="hover" src="~@/assets/styles/images/arrow-white-right.png" />
-                                        </span>
-                                        Xem thêm
-                                      </a>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </b-col>
-                        </div> -->
-                    </div>
-                  </div>
-                </b-tab>
-              </div>
-            </b-tabs>
+            <ListNewsfollowCategory :listCategory="listCategory" @directional="goToDetailNew" />
           </div>
         </div>
       </div>
@@ -78,15 +13,16 @@
   </div>
 </template>
 <script>
-import {
-  getListPostsByUser,
-  createPosts,
-  updatePosts,
-  deletePosts,
-} from "@/api/posts";
+// import {
+//   getListPostsByUser,
+// } from "@/api/posts";
 import { getListCategory } from "@/api/category";
+import ListNewsfollowCategory from "./components/ListNewsfollowCategory.vue";
 export default {
   name: "News",
+  components: {
+    ListNewsfollowCategory
+  },
   data() {
     return {
       title: "",
@@ -102,21 +38,20 @@ export default {
       pagination: {
         totalItems: 0,
         currentPage: 1,
-        pageSize: 10
-      }
+        pageSize: 10,
+      },
     };
   },
-  computed: {
-  },
+  computed: {},
   created() {
-    this.getListPostsByUser();
+    // this.getListPostsByUser();
     this.getListCategory();
   },
   methods: {
     goToDetailNew(data) {
-      console.log(data, 'data')
+      console.log(data, "data");
       this.$router.push({
-        path: `/news-detail${data}`
+        path: `/news-detail${data}`,
       });
     },
     getListCategory() {
@@ -125,41 +60,52 @@ export default {
         size: 10000,
       };
       getListCategory(params).then((response) => {
-        this.listCategory = response.data;
-        console.log('this.listCategory', this.listCategory)
+        const categoryNews = [
+          "657530d1498e2cea511898e1",
+          "657530f7498e2cea511898e5",
+          "65753106498e2cea511898e9",
+          "65753120498e2cea511898ed",
+        ];
+        for (const i of response.data) {
+          for (const j of categoryNews) {
+            if (j == i._id) {
+              this.listCategory.push(i);
+            }
+          }
+        }
+        console.log("this.listCategory", this.listCategory);
         this.options = response.data.map((item) => ({
           label: item.title,
           value: item._id,
         }));
       });
     },
-    getListPostsByUser() {
-      this.listLoading = true;
-      const params = {
-        page: this.pagination.currentPage - 1,
-        size: this.pagination.pageSize,
-      };
-      getListPostsByUser(params).then((response) => {
-        this.pagination.totalItems = response.total;
-        this.listPosts = response.data;
-        this.listLoading = false;
-        // this.$store.dispatch("new/getListnNews", this.listPosts);
-        console.log('this.listPosts', this.listPosts)
-      });
-    },
-    handleCurrentChange(page) {
-      this.pagination.currentPage = page;
-      this.getListPostsByUser();
-    },
-    handleSizeChange(size) {
-      this.pagination.pageSize = size;
-      this.pagination.currentPage = 1;
-      this.getListPostsByUser();
-    }
+    // getListPostsByUser() {
+    //   this.listLoading = true;
+    //   const params = {
+    //     page: this.pagination.currentPage - 1,
+    //     size: this.pagination.pageSize,
+    //   };
+    //   getListPostsByUser(params).then((response) => {
+    //     this.pagination.totalItems = response.total;
+    //     this.listPosts = response.data;
+    //     this.listLoading = false;
+    //     // this.$store.dispatch("new/getListnNews", this.listPosts);
+    //     console.log("this.listPosts", this.listPosts);
+    //   });
+    // },
+    // handleCurrentChange(page) {
+    //   this.pagination.currentPage = page;
+    //   this.getListPostsByUser();
+    // },
+    // handleSizeChange(size) {
+    //   this.pagination.pageSize = size;
+    //   this.pagination.currentPage = 1;
+    //   this.getListPostsByUser();
+    // },
   },
-  mounted() {
-  }
-}
+  mounted() {},
+};
 </script>
 <style lang="scss" scoped>
 .my-project {

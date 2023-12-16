@@ -74,7 +74,7 @@ export const constantRoutes = [
         meta: { title: "Introduce", icon: "Introduce" },
       },
       {
-        path: "MyProjectDetail",
+        path: "myproject-detail:id",
         name: "MyProjectDetail",
         component: () => import("@/views/client/MyProjectDetail"),
         meta: { title: "MyProjectDetail", icon: "MyProjectDetail" },
