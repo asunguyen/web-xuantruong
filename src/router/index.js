@@ -134,32 +134,6 @@ export const constantRoutes = [
     path: "/admin",
     component: Layout,
     name: "Admin",
-    children: [
-      {
-        path: "ProductType",
-        name: "ProductType",
-        component: () => import("@/views/admin/ProductType.vue"),
-        meta: { title: "Quản lý danh mục sản phẩm" },
-      },
-    ],
-  },
-  {
-    path: "/admin",
-    component: Layout,
-    name: "Admin",
-    children: [
-      {
-        path: "product",
-        name: "Product",
-        component: () => import("@/views/admin/Product.vue"),
-        meta: { title: "Quản lý sản phẩm" },
-      },
-    ],
-  },
-  {
-    path: "/admin",
-    component: Layout,
-    name: "Admin",
     // meta: { title: "Category", icon: "el-icon-s-help" },
     children: [
       {

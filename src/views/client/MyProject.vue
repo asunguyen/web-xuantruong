@@ -10,7 +10,7 @@
           </div>
         </div>
       </main>
-    </div>
+    </div>  
   </template>
   <script>
   import { getListCategory } from "@/api/category";
@@ -46,7 +46,6 @@
     },
     methods: {
       goToDetailNew(data) {
-        console.log(data, "data");
         this.$router.push({
           path: `/myproject-detail${data}`,
         });

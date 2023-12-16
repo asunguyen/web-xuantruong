@@ -13,11 +13,9 @@
         </VueSlickCarousel>
         <div class="text-content text-content-section">
           <div class="title">
-            <div class="d-flex ">
+            <div class="d-flex">
               <img src="~@/assets/styles/images/star.png" />
-              <h5>
-                CÔNG TY CỔ PHẦN ĐẦU TƯ XÂY DỰNG VÀ PHÁT TRIỂN XUÂN TRƯỜNG
-              </h5>
+              <h5>CÔNG TY CỔ PHẦN ĐẦU TƯ XÂY DỰNG VÀ PHÁT TRIỂN XUÂN TRƯỜNG</h5>
             </div>
             <h3>Phát triển nguồn năng lượng xanh cho tương lai bền vững</h3>
           </div>
@@ -35,30 +33,7 @@
       <div class="section_">
         <b-row>
           <b-col cols="12" xl="5">
-            <div class="banner-left">
-              <div class="text-content-section">
-                <div class="title">
-                  <div class="d-flex">
-                    <h5>
-                      <img src="~@/assets/styles/images/star.png" />
-                      CÔNG TY CỔ PHẦN ĐẦU TƯ XÂY DỰNG VÀ PHÁT TRIỂN XUÂN TRƯỜNG
-                    </h5>
-                  </div>
-                  <h3>
-                    Phát triển nguồn năng lượng xanh cho tương lai bền vững
-                  </h3>
-                </div>
-                <div class="button-view">
-                  <a class="sk-btn sk-btn-1" href="#">
-                    <span>
-                      <img class="default" src="~@/assets/styles/images/arrow-blue-right.png" />
-                      <img class="hover" src="~@/assets/styles/images/arrow-white-right.png" />
-                    </span>
-                    Xem thêm
-                  </a>
-                </div>
-              </div>
-            </div>
+            <BannerLeft :listSlider="developSlide" :textBanner=" listText " />
           </b-col>
           <b-col cols="12" xl="7">
             <div class="content-right">
@@ -68,17 +43,17 @@
                     <h3 class="title">Về Xuân Trường</h3>
                     <div class="content">
                       <p>
-                        Công ty Cổ phần Đầu tư Xây dựng và Phát triển Xuân Trường
-                        là đơn vị chuyên nghiệp về đầu tư và xây dựng các công trình
-                        năng lượng như thuỷ điện, năng lượng mặt trời, năng lượng
-                        gió.
+                        Công ty Cổ phần Đầu tư Xây dựng và Phát triển Xuân
+                        Trường là đơn vị chuyên nghiệp về đầu tư và xây dựng các
+                        công trình năng lượng như thuỷ điện, năng lượng mặt
+                        trời, năng lượng gió.
                       </p>
                       <p>
-                        Trải qua hơn 1 thập kỷ, với kinh nghiệm và quan hệ với những
-                        đối tác lớn hàng đầu, Công ty liên tục nghiên cứu và đầu tư
-                        mới vào các dự án năng lượng tái tạo khác trên phạm vi cả
-                        nước. Mục tiêu 5 năm tới trở thành đơn vị phát triển năng
-                        lượng tái tạo hàng đầu Việt Nam.
+                        Trải qua hơn 1 thập kỷ, với kinh nghiệm và quan hệ với
+                        những đối tác lớn hàng đầu, Công ty liên tục nghiên cứu
+                        và đầu tư mới vào các dự án năng lượng tái tạo khác trên
+                        phạm vi cả nước. Mục tiêu 5 năm tới trở thành đơn vị
+                        phát triển năng lượng tái tạo hàng đầu Việt Nam.
                       </p>
                     </div>
                     <div class="sk-button">
@@ -105,37 +80,11 @@
       <div class="section_ section-sumenh">
         <b-row>
           <b-col cols="12" xl="5">
-            <div class="banner-left">
-              <div class="text-content-section">
-                <div class="title">
-                  <div class="d-flex ">
-                    <h5>
-                      <img src="~@/assets/styles/images/star.png" />
-                      XÂY NHỮNG GIÁ TRỊ, DỰNG NHỮNG ƯỚC MƠ
-                    </h5>
-                  </div>
-                  <h3>Xây Những Giá Trị, Dựng Những Ước Mơ</h3>
-                  <p>
-                    Công ty Cổ phần Đầu tư và xây lắp Xuân Trường là doanh
-                    nghiệp cổ phần được chuyển đổi từ Công ty TNHH MTV Trường
-                    Thành.
-                  </p>
-                </div>
-                <div class="button-view">
-                  <a class="sk-btn sk-btn-1" href="#">
-                    <span>
-                      <img class="default" src="~@/assets/styles/images/arrow-blue-right.png" />
-                      <img class="hover" src="~@/assets/styles/images/arrow-white-right.png" />
-                    </span>
-                    Xem thêm
-                  </a>
-                </div>
-              </div>
-            </div>
+            <BannerLeft :listSlider="valueSlide" :textBanner="valueText" />
           </b-col>
           <b-col cols="12 hight-default" xl="7">
-            <div class="content-right ">
-              <div class="about-content ">
+            <div class="content-right">
+              <div class="about-content">
                 <div class="text">
                   <h3 class="title">
                     <img class="default" src="~@/assets/styles/images/icons1.png" />
@@ -158,14 +107,13 @@
                       Tầm nhìn
                     </h3>
                     <p>
-                      Xuân“Trường Group quyết tâm trở thành tập đoàn phát
-                      triển hệ sinh thái năng lượng xanh hàng đầu Việt Nam và
-                      khu vực, không ngừng học hỏi và sáng tạo, luôn đi đầu
-                      trong việc ứng dụng công nghệ mới để kiến tạo hệ sinh thái
-                      năng lượng xanh, góp phần hạn chế biến đổi khí hậu, bảo vệ
-                      môi trường và nâng tầm vị thế của thương hiệu Việt trên
-                      trường quốc tế, trở thành Doanh nghiệp mang tầm cỡ Quốc
-                      gia.”
+                      Xuân“Trường Group quyết tâm trở thành tập đoàn phát triển
+                      hệ sinh thái năng lượng xanh hàng đầu Việt Nam và khu vực,
+                      không ngừng học hỏi và sáng tạo, luôn đi đầu trong việc
+                      ứng dụng công nghệ mới để kiến tạo hệ sinh thái năng lượng
+                      xanh, góp phần hạn chế biến đổi khí hậu, bảo vệ môi trường
+                      và nâng tầm vị thế của thương hiệu Việt trên trường quốc
+                      tế, trở thành Doanh nghiệp mang tầm cỡ Quốc gia.”
                     </p>
                   </div>
                 </div>
@@ -177,33 +125,7 @@
       <div class="section_ section-about">
         <b-row>
           <b-col cols="12" xl="5">
-            <div class="banner-left">
-              <div class="text-content-section">
-                <div class="title">
-                  <div class="d-flex ">
-                    <h5>
-                      <img src="~@/assets/styles/images/star.png" />
-                      ABOUT US
-                    </h5>
-                  </div>
-                  <h3>Về chúng tôi</h3>
-                  <p>
-                    Công ty Cổ phần Đầu tư và xây lắp Xuân Trường là doanh
-                    nghiệp cổ phần được chuyển đổi từ Công ty TNHH MTV Trường
-                    Thành.
-                  </p>
-                </div>
-                <div class="button-view">
-                  <a class="sk-btn sk-btn-1" href="#">
-                    <span>
-                      <img class="default" src="~@/assets/styles/images/arrow-blue-right.png" />
-                      <img class="hover" src="~@/assets/styles/images/arrow-white-right.png" />
-                    </span>
-                    Xem thêm
-                  </a>
-                </div>
-              </div>
-            </div>
+            <BannerLeft :listSlider="aboutUsSlide" :textBanner="aboutUsText" />
           </b-col>
           <b-col cols="12" xl="7">
             <h3 class="title" Xuân>Trường Group TV</h3>
@@ -241,33 +163,7 @@
       <div class="section_ section-about-vision">
         <b-row>
           <b-col cols="12" xl="5">
-            <div class="banner-left">
-              <div class="text-content-section">
-                <div class="title">
-                  <div class="d-flex ">
-                    <h5>
-                      <img src="~@/assets/styles/images/star.png" />
-                      ABOUT US
-                    </h5>
-                  </div>
-                  <h3>Sứ mệnh & tầm nhìn</h3>
-                  <p>
-                    Công ty Cổ phần Đầu tư và xây lắp Xuân Trường là doanh
-                    nghiệp cổ phần được chuyển đổi từ Công ty TNHH MTV Trường
-                    Thành.
-                  </p>
-                </div>
-                <div class="button-view">
-                  <a class="sk-btn sk-btn-1" href="#">
-                    <span>
-                      <img class="default" src="~@/assets/styles/images/arrow-blue-right.png" />
-                      <img class="hover" src="~@/assets/styles/images/arrow-white-right.png" />
-                    </span>
-                    Xem thêm
-                  </a>
-                </div>
-              </div>
-            </div>
+            <BannerLeft  :listSlider="missionSlide" :textBanner=" aboutUsText " />
           </b-col>
           <b-col cols="12" xl="7">
             <VueSlickCarousel v-bind="settingsNews" class="slick-section-about">
@@ -288,11 +184,11 @@
                           trên thế giới (cập nhật tháng 10/2023)
                         </h5>
                         <span>17/10/2023</span>
-                        <P>Liên quan tới suất đầu tư một số nguồn điện, chuyên gia
-                          Tạp chí Năng lượng Việt Nam cập nhật thông tin về suất
-                          đầu tư thuộc lĩnh vực điện khí, điện gió và điện mặt
-                          trời trên thế giới hiện nay để bạn đọc cùng tham khảo.
-                          Suất đầu...</P>
+                        <P>Liên quan tới suất đầu tư một số nguồn điện, chuyên
+                          gia Tạp chí Năng lượng Việt Nam cập nhật thông tin về
+                          suất đầu tư thuộc lĩnh vực điện khí, điện gió và điện
+                          mặt trời trên thế giới hiện nay để bạn đọc cùng tham
+                          khảo. Suất đầu...</P>
                         <div class="button-view">
                           <a class="sk-btn sk-btn-1" href="#">
                             <span>
@@ -307,22 +203,22 @@
                   </b-col>
                   <b-col cols="12" md="6">
                     <div class="smalls-new">
-                      <div class=" small-new">
+                      <div class="small-new">
                         <div class="images-new">
                           <img src="~@/assets/styles/images/Dien-MT-TQ-1.jpg" />
                         </div>
                         <div class="text-new">
                           <h5 class="title">
-                            Suất đầu tư liên quan tới điện khí, điện gió, mặt trời
-                            trên thế giới (cập nhật tháng 10/2023)
+                            Suất đầu tư liên quan tới điện khí, điện gió, mặt
+                            trời trên thế giới (cập nhật tháng 10/2023)
                           </h5>
                           <span>17/10/2023</span>
                           <div class="content-bottom">
-                            <P>Liên quan tới suất đầu tư một số nguồn điện, chuyên
-                              gia Tạp chí Năng lượng Việt Nam cập nhật thông tin
-                              về suất đầu tư thuộc lĩnh vực điện khí, điện gió và
-                              điện mặt trời trên thế giới hiện nay để bạn đọc cùng
-                              tham khảo. Suất đầu...</P>
+                            <P>Liên quan tới suất đầu tư một số nguồn điện,
+                              chuyên gia Tạp chí Năng lượng Việt Nam cập nhật
+                              thông tin về suất đầu tư thuộc lĩnh vực điện khí,
+                              điện gió và điện mặt trời trên thế giới hiện nay
+                              để bạn đọc cùng tham khảo. Suất đầu...</P>
                             <div class="button-view">
                               <a class="sk-btn sk-btn-1" href="#">
                                 <span>
@@ -335,22 +231,22 @@
                           </div>
                         </div>
                       </div>
-                      <div class=" small-new">
+                      <div class="small-new">
                         <div class="images-new">
                           <img src="~@/assets/styles/images/dien-gio-ngoai-khoi.jpeg" />
                         </div>
                         <div class="text-new">
                           <h5 class="title">
-                            Suất đầu tư liên quan tới điện khí, điện gió, mặt trời
-                            trên thế giới (cập nhật tháng 10/2023)
+                            Suất đầu tư liên quan tới điện khí, điện gió, mặt
+                            trời trên thế giới (cập nhật tháng 10/2023)
                           </h5>
                           <span>17/10/2023</span>
                           <div class="content-bottom">
-                            <P>Liên quan tới suất đầu tư một số nguồn điện, chuyên
-                              gia Tạp chí Năng lượng Việt Nam cập nhật thông tin
-                              về suất đầu tư thuộc lĩnh vực điện khí, điện gió và
-                              điện mặt trời trên thế giới hiện nay để bạn đọc cùng
-                              tham khảo. Suất đầu...</P>
+                            <P>Liên quan tới suất đầu tư một số nguồn điện,
+                              chuyên gia Tạp chí Năng lượng Việt Nam cập nhật
+                              thông tin về suất đầu tư thuộc lĩnh vực điện khí,
+                              điện gió và điện mặt trời trên thế giới hiện nay
+                              để bạn đọc cùng tham khảo. Suất đầu...</P>
                             <div class="button-view">
                               <a class="sk-btn sk-btn-1" href="#">
                                 <span>
@@ -374,33 +270,7 @@
       <div class="section_ section-about-active">
         <b-row>
           <b-col cols="12" xl="5">
-            <div class="banner-left">
-              <div class="text-content-section">
-                <div class="title">
-                  <div class="d-flex ">
-                    <h5>
-                      <img src="~@/assets/styles/images/star.png" />
-                      ABOUT US
-                    </h5>
-                  </div>
-                  <h3>Xuân Trường TV</h3>
-                  <p>
-                    Công ty Cổ phần Đầu tư và xây lắp Xuân Trường là doanh
-                    nghiệp cổ phần được chuyển đổi từ Công ty TNHH MTV Trường
-                    Thành.
-                  </p>
-                </div>
-                <div class="button-view">
-                  <a class="sk-btn sk-btn-1" href="#">
-                    <span>
-                      <img class="default" src="~@/assets/styles/images/arrow-blue-right.png" />
-                      <img class="hover" src="~@/assets/styles/images/arrow-white-right.png" />
-                    </span>
-                    Xem thêm
-                  </a>
-                </div>
-              </div>
-            </div>
+            <BannerLeft :listSlider="companySlide" :textBanner="aboutUsText" />
           </b-col>
           <b-col cols="12 hight-default" xl="7">
             <b-row class="content-new">
@@ -448,7 +318,7 @@
         </b-row>
       </div>
       <div class="section-field-activity">
-        <div class="hight-default ">
+        <div class="hight-default">
           <b-row>
             <b-col cols="12">
               <h3 class="title">Lĩnh vực hoạt động</h3>
@@ -522,159 +392,7 @@
           </b-row>
         </div>
       </div>
-      <div class="section-our-project">
-        <h3 class="title"> Dự án của chúng tôi</h3>
-        <div class="hight-default content-new w-100 d-block">
-          <VueSlickCarousel v-bind="settingMyProject" class="slick-section-about">
-            <div class="item-slick">
-              <b-row class="w-100">
-                <b-col cols="12" xl="6">
-                  <div class="item-new-big">
-                    <div class="image">
-                      <img src="~@/assets/styles/images/item4.jpg" />
-                    </div>
-                    <div class="text-new">
-                      <a href="#">
-                        <h5 class="title">Nhà máy Thủy điện Ngòi Hút 2</h5>
-                      </a>
-                      <P>Liên quan tới suất đầu tư một số nguồn điện, chuyên gia Tạp
-                        chí Năng lượng Việt Nam cập nhật thông tin về suất đầu tư
-                        thuộc lĩnh vực điện khí, điện gió và điện mặt trời trên thế
-                        giới hiện nay để bạn đọc cùng tham khảo. Suất đầu...</P>
-                      <div class="button-view">
-                        <a class="sk-btn sk-btn-1" href="#">
-                          <span>
-                            <img class="default" src="~@/assets/styles/images/arrow-blue-right.png" />
-                            <img class="hover" src="~@/assets/styles/images/arrow-white-right.png" />
-                          </span>
-                          Xem thêm
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </b-col>
-                <b-col cols="12" xl="3" md="6">
-                  <div class="smalls-new">
-                    <div class="small-new">
-                      <div class="images-new">
-                        <img src="~@/assets/styles/images/item5.jpg" />
-                      </div>
-                      <div class="text-new">
-                        <a href="#">
-                          <h5 class="title">Nhà máy Thủy điện Ngòi Hút 2A</h5>
-                        </a>
-                        <div class="content-bottom">
-                          <P>Dự án được khởi công vào năm 2015 và hoàn thành vào quý
-                            IV năm 2016, với tổng mức đầu tư 292 tỷ đồng, được xây
-                            dựng trên diện tích đất 13,5 ha, tại huyện Mù Căng Chải,
-                            tỉnh Yên Bái. Nhà máy thủy điện Ngòi Hút 2A có 2 tổ máy,
-                            công suất 8,4 MWp, cho sản lượng 30 triệu KWh/năm.</P>
-                          <div class="button-view">
-                            <a class="sk-btn sk-btn-1" href="#">
-                              <span>
-                                <img class="default" src="~@/assets/styles/images/arrow-blue-right.png" />
-                                <img class="hover" src="~@/assets/styles/images/arrow-white-right.png" />
-                              </span>
-                              Xem thêm
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="small-new">
-                      <div class="images-new">
-                        <img src="~@/assets/styles/images/item6.jpg" />
-                      </div>
-                      <div class="text-new">
-                        <a href="#">
-                          <h5 class="title">Trang trại Điện gió Phương Mai 1</h5>
-                        </a>
-                        <div class="content-bottom">
-                          <P>Dự án Trang trại điện mặt trời Hồ Bầu Ngứ được khởi
-                            công vào tháng 03/2018 lắp đặt gần 190.000 tấm pin năng
-                            lượng mặt trời, đóng điện và hòa lưới điện quốc gia vào
-                            quý IV năm 2019, với tổng vốn đầu tư 1.457 tỷ đồng. Dự
-                            án xây dựng trên diện tích 75ha tại huyện Ninh Phước và
-                            huyện Thuận Nam, tỉnh Ninh Thuận, với công suất thiết kế
-                            là trên 61,77 MWp, cho sản lượng 98 triệu KWh/năm.</P>
-                          <div class="button-view">
-                            <a class="sk-btn sk-btn-1" href="#">
-                              <span>
-                                <img class="default" src="~@/assets/styles/images/arrow-blue-right.png" />
-                                <img class="hover" src="~@/assets/styles/images/arrow-white-right.png" />
-                              </span>
-                              Xem thêm
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </b-col>
-                <b-col cols="12" xl="3" md="6">
-                  <div class="smalls-new">
-                    <div class="small-new">
-                      <div class="images-new">
-                        <img src="~@/assets/styles/images/item7.jpg" />
-                      </div>
-                      <div class="text-new">
-                        <a href="#">
-                          <h5 class="title">Trang trại Điện mặt trời Hồ Bầu Ngứ</h5>
-                        </a>
-                        <div class="content-bottom">
-                          <P>Dự án Trang trại điện mặt trời Hồ Bầu Ngứ được khởi
-                            công vào tháng 03/2018 lắp đặt gần 190.000 tấm pin năng
-                            lượng mặt trời, đóng điện và hòa lưới điện quốc gia vào
-                            quý IV năm 2019, với tổng vốn đầu tư 1.457 tỷ đồng. Dự
-                            án xây dựng trên diện tích 75ha tại huyện Ninh Phước và
-                            huyện Thuận Nam, tỉnh Ninh Thuận, với công suất thiết kế
-                            là trên 61,77 MWp, cho sản lượng 98 triệu KWh/năm.</P>
-                          <div class="button-view">
-                            <a class="sk-btn sk-btn-1" href="#">
-                              <span>
-                                <img class="default" src="~@/assets/styles/images/arrow-blue-right.png" />
-                                <img class="hover" src="~@/assets/styles/images/arrow-white-right.png" />
-                              </span>
-                              Xem thêm
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="small-new">
-                      <div class="images-new">
-                        <img src="~@/assets/styles/images/item8.jpg" />
-                      </div>
-                      <div class="text-new">
-                        <a href="#">
-                          <h5 class="title">Nhà máy Thuỷ điện Pá Hu</h5>
-                        </a>
-                        <div class="content-bottom">
-                          <P>Dự án Nhà máy thủy điện Pá Hú, được tỉnh Yên Bái chấp
-                            thuận đầu tư xây dựng vào tháng 03/2017 và đã đóng điện
-                            vào tháng 10/2020, tại địa bàn huyện Trạm Tấu, tỉnh Yên
-                            Bái, với 2 tổ máy chính, công suất thiết kế là 26 MWp,
-                            cho sản lượng điện 90 triệu KWh/năm, và có tổng mức đầu
-                            tư trên 1.024 tỷ đồng.</P>
-                          <div class="button-view">
-                            <a class="sk-btn sk-btn-1" href="#">
-                              <span>
-                                <img class="default" src="~@/assets/styles/images/arrow-blue-right.png" />
-                                <img class="hover" src="~@/assets/styles/images/arrow-white-right.png" />
-                              </span>
-                              Xem thêm
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </b-col>
-              </b-row>
-            </div>
-          </VueSlickCarousel>
-        </div>
-      </div>
+      <RelatedProjects @directional="goToDetailNew" />
       <div class="section-customers-partners">
         <h3 class="title">Khách hàng và đối tác</h3>
         <VueSlickCarousel v-bind="settings">
@@ -716,23 +434,36 @@
 
 <script>
 import { mapGetters } from "vuex";
-import VueSlickCarousel from 'vue-slick-carousel'
-import 'vue-slick-carousel/dist/vue-slick-carousel.css'
-import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+import VueSlickCarousel from "vue-slick-carousel";
+import BannerLeft from "./components/BannerLeft.vue";
+import RelatedProjects from "./components/RelatedProjects.vue";
+import { getListAllPosts } from "@/api/posts";
+import { getListSlider } from "@/api/slide";
+import "vue-slick-carousel/dist/vue-slick-carousel.css";
+import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 import $ from "jquery";
 
 export default {
-  props: {
-  },
-  name: 'Home',
-  components: { VueSlickCarousel },
-    data() {
+  props: {},
+  name: "Home",
+  components: { VueSlickCarousel, BannerLeft, RelatedProjects },
+  data() {
     return {
-      videoId: 'https://www.youtube.com/watch?v=WLc5-k3y_Po',
-      value: '',
+      videoId: "https://www.youtube.com/watch?v=WLc5-k3y_Po",
+      value: "",
       context: null,
       slide: 0,
       sliding: null,
+      textBanner: '',
+      listText: 'CÔNG TY CỔ PHẦN ĐẦU TƯ XÂY DỰNG VÀ PHÁT TRIỂN TRƯỜNG THÀNH',
+      valueText: ' XÂY NHỮNG GIÁ TRỊ, DỰNG NHỮNG ƯỚC MƠ',
+      aboutUsText: 'ABOUT US',
+      listSlider: [],
+      developSlide: [],
+      valueSlide: [],
+      aboutUsSlide: [],
+      missionSlide: [],
+      companySlide: [],
       settings: {
         dots: false,
         infinite: true,
@@ -748,10 +479,10 @@ export default {
             breakpoint: 1023,
             settings: {
               slidesToShow: 3,
-              slidesToScroll: 3
-            }
-          }
-        ]
+              slidesToScroll: 3,
+            },
+          },
+        ],
       },
       settingsAbout: {
         dots: true,
@@ -760,16 +491,16 @@ export default {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        swipeToSlide: true
+        swipeToSlide: true,
       },
       settingMyProject: {
         dots: true,
-        dotsClass: 'slick-dots custom-dot-class',
+        dotsClass: "slick-dots custom-dot-class",
         infinite: true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 2,
-        swipeToSlide: true
+        swipeToSlide: true,
       },
       settingsNews: {
         dots: true,
@@ -779,8 +510,8 @@ export default {
         slidesToShow: 1,
         slidesToScroll: 1,
         swipeToSlide: true,
-        centerPadding: '700px',
-        'otsClass': 'slick-dots custom-dot-class'
+        centerPadding: "700px",
+        otsClass: "slick-dots custom-dot-class",
       },
       bannerHome: {
         dots: false,
@@ -792,32 +523,91 @@ export default {
         autoplay: false,
         swipeToSlide: true,
         edgeFriction: 0.35,
-        'otsClass': 'slick-dots custom-dot-class'
+        otsClass: "slick-dots custom-dot-class",
       },
-
       form: {
-        email: '',
-        name: '',
-        phoneNumber: '',
-        content: ''
-      }
-    }
+        email: "",
+        name: "",
+        phoneNumber: "",
+        content: "",
+      },
+      pagination: {
+        totalItems: 0,
+        currentPage: 1,
+        pageSize: 100,
+      },
+    };
   },
 
   computed: {
-    ...mapGetters(["dataSlie", "categoryNews", "listNews"])
+    ...mapGetters(["dataSlie", "categoryNews", "listNews"]),
+  },
+  created() {
+    this.getListAllPosts();
+    this.getListSlider();
   },
   methods: {
     goToProductDetail() {
-      this.$router.push('/product-detail')
-    }
+      this.$router.push("/product-detail");
+    },
+    goToDetailNew(data) {
+      this.$router.push({
+        path: `/myproject-detail${data}`,
+      });
+    },
+    getListAllPosts() {
+      this.listLoading = true;
+      const params = {
+        page: this.pagination.currentPage - 1,
+        size: this.pagination.pageSize,
+      };
+      getListAllPosts(params).then((response) => {
+        this.pagination.totalItems = response.total;
+        const arr = [];
+        for (const item of response.data) {
+          if (item.categoryID == "657d1f01498e2cea51189f14") {
+            arr.push(item);
+          }
+        }
+        this.listPosts = arr;
+      });
+    },
+    getListSlider() {
+      this.listLoading = true;
+      getListSlider().then((response) => {
+        console.log('responselistSlider', response.data)
+        this.listSlider = response.data;
+        for (const item of response.data) {
+          switch (item._id) {
+            case "657d6dfb498e2cea5118a0b6":
+              this.developSlide = item
+              break;
+            case "657d6e46498e2cea5118a0bb":
+              this.valueSlide = item
+              break;
+            case "657d6e7a498e2cea5118a0be":
+              this.aboutUsSlide = item
+              break;
+            case "657d6ebe498e2cea5118a0c1":
+              this.missionSlide = item
+              break;
+            case "657d6ee4498e2cea5118a0c4":
+              this.companySlide = item
+              break;
+
+          }
+        }
+        // this.$store.dispatch("slide/getListSlider", this.listSlider);
+        this.listLoading = false;
+      });
+    },
   },
 
   mounted() {
-    console.log("this.categoryNews", this.categoryNews)
-    console.log("this.listNews", this.listNews)
-  }
-}
+    console.log("this.categoryNews", this.categoryNews);
+    console.log("this.listNews", this.listNews);
+  },
+};
 </script>
 <style lang="scss" scoped>
 .menu-header {

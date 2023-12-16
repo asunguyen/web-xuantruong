@@ -63,7 +63,7 @@
 </template>
 
 <script>
-import { getListPostsByUser, getListAllPosts } from "@/api/posts";
+import { getListAllPosts } from "@/api/posts";
 import VueSlickCarousel from "vue-slick-carousel";
 export default {
     name: "ListNewsfollowCategory",
@@ -103,13 +103,13 @@ export default {
         };
     },
     created() {
-        this.getListPostsByUser();
+        this.getListAllPosts();
     },
     methods: {
         handleDirectional(data) {
             this.$emit("directional", data);
         },
-        getListPostsByUser() {
+        getListAllPosts() {
             this.listLoading = true;
             const params = {
                 page: this.pagination.currentPage - 1,
@@ -132,12 +132,12 @@ export default {
         },
         handleCurrentChange(page) {
             this.pagination.currentPage = page;
-            this.getListPostsByUser();
+            this.getListAllPosts();
         },
         handleSizeChange(size) {
             this.pagination.pageSize = size;
             this.pagination.currentPage = 1;
-            this.getListPostsByUser();
+            this.getListAllPosts();
         },
     },
 };
