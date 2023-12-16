@@ -15,15 +15,21 @@
           <div class="title">
             <div class="d-flex">
               <img src="~@/assets/styles/images/star.png" />
-              <h5>CÔNG TY CỔ PHẦN ĐẦU TƯ XÂY DỰNG VÀ PHÁT TRIỂN XUÂN TRƯỜNG</h5>
+              <h5>{{ listText }}</h5>
             </div>
-            <h3>Phát triển nguồn năng lượng xanh cho tương lai bền vững</h3>
+            <h3>{{ developSlide.title }}</h3>
           </div>
           <div class="button-view">
             <a class="sk-btn sk-btn-1" href="#">
               <span>
-                <img class="default" src="~@/assets/styles/images/arrow-blue-right.png" />
-                <img class="hover" src="~@/assets/styles/images/arrow-white-right.png" />
+                <img
+                  class="default"
+                  src="~@/assets/styles/images/arrow-blue-right.png"
+                />
+                <img
+                  class="hover"
+                  src="~@/assets/styles/images/arrow-white-right.png"
+                />
               </span>
               Xem thêm
             </a>
@@ -33,7 +39,7 @@
       <div class="section_">
         <b-row>
           <b-col cols="12" xl="5">
-            <BannerLeft :listSlider="developSlide" :textBanner=" listText " />
+            <BannerLeft :listSlider="developSlide" :textBanner="listText" />
           </b-col>
           <b-col cols="12" xl="7">
             <div class="content-right">
@@ -59,8 +65,14 @@
                     <div class="sk-button">
                       <a class="sk-btn sk-btn-1" href="#">
                         <span>
-                          <img class="default" src="~@/assets/styles/images/icon-download-blue.png" />
-                          <img class="hover" src="~@/assets/styles/images/icon-download-white.png" />
+                          <img
+                            class="default"
+                            src="~@/assets/styles/images/icon-download-blue.png"
+                          />
+                          <img
+                            class="hover"
+                            src="~@/assets/styles/images/icon-download-white.png"
+                          />
                         </span>
                         Xuân Trường Profile
                       </a>
@@ -87,7 +99,10 @@
               <div class="about-content">
                 <div class="text">
                   <h3 class="title">
-                    <img class="default" src="~@/assets/styles/images/icons1.png" />
+                    <img
+                      class="default"
+                      src="~@/assets/styles/images/icons1.png"
+                    />
                     Sứ mệnh
                   </h3>
                   <div class="content">
@@ -103,7 +118,10 @@
                   </div>
                   <div class="text_right">
                     <h3 class="title">
-                      <img class="default" src="~@/assets/styles/images/icons2.png" />
+                      <img
+                        class="default"
+                        src="~@/assets/styles/images/icons2.png"
+                      />
                       Tầm nhìn
                     </h3>
                     <p>
@@ -129,15 +147,23 @@
           </b-col>
           <b-col cols="12" xl="7">
             <h3 class="title" Xuân>Trường Group TV</h3>
-            <VueSlickCarousel v-bind="settingsAbout" class="slick-section-about">
+            <VueSlickCarousel
+              v-bind="settingsAbout"
+              class="slick-section-about"
+            >
               <div class="swiper-slide">
                 <div class="image">
                   <img class="hover" src="~@/assets/images/Logo-02.png" />
                 </div>
                 <div class="sk-video-play">
-                  <a href="https://www.youtube.com/watch?v=AEHfRfb6rsM&feature=emb_title">
+                  <a
+                    href="https://www.youtube.com/watch?v=AEHfRfb6rsM&feature=emb_title"
+                  >
                     <span>
-                      <img class="hover" src="~@/assets/styles/images/icon-play.png" />
+                      <img
+                        class="hover"
+                        src="~@/assets/styles/images/icon-play.png"
+                      />
                     </span>
                   </a>
                 </div>
@@ -148,9 +174,14 @@
                   <img class="hover" src="~@/assets/images/Logo-02.png" />
                 </div>
                 <div class="sk-video-play">
-                  <a href="https://www.youtube.com/watch?v=AEHfRfb6rsM&feature=emb_title">
+                  <a
+                    href="https://www.youtube.com/watch?v=AEHfRfb6rsM&feature=emb_title"
+                  >
                     <span>
-                      <img class="hover" src="~@/assets/styles/images/icon-play.png" />
+                      <img
+                        class="hover"
+                        src="~@/assets/styles/images/icon-play.png"
+                      />
                     </span>
                   </a>
                 </div>
@@ -163,98 +194,78 @@
       <div class="section_ section-about-vision">
         <b-row>
           <b-col cols="12" xl="5">
-            <BannerLeft  :listSlider="missionSlide" :textBanner=" aboutUsText " />
+            <BannerLeft :listSlider="missionSlide" :textBanner="aboutUsText" />
           </b-col>
           <b-col cols="12" xl="7">
             <VueSlickCarousel v-bind="settingsNews" class="slick-section-about">
               <div class="content-new">
                 <b-row>
                   <b-col cols="12">
-                    <h3 class="title pb-3">Tin tức</h3>
+                    <h3 class="title pb-3">Tin tức chung</h3>
                   </b-col>
                   <b-col cols="12" md="6">
-                    <div class="big-new">
+                    <div class="big-new" v-for="(item, index) in newsCategory" :key="item._id" v-if="index==0">
                       <div class="images-new">
-                        <img class="default"
-                          src="~@/assets/styles/images/z2265403739225_01cfaa40494e07911fff673d827b0756.jpg" />
+                        <img
+                          class="default"
+                          :src="item.thumbnail"
+                        />
                       </div>
                       <div class="text-new">
                         <h5 class="title">
-                          Suất đầu tư liên quan tới điện khí, điện gió, mặt trời
-                          trên thế giới (cập nhật tháng 10/2023)
+                          {{item.title}}
                         </h5>
-                        <span>17/10/2023</span>
-                        <P>Liên quan tới suất đầu tư một số nguồn điện, chuyên
-                          gia Tạp chí Năng lượng Việt Nam cập nhật thông tin về
-                          suất đầu tư thuộc lĩnh vực điện khí, điện gió và điện
-                          mặt trời trên thế giới hiện nay để bạn đọc cùng tham
-                          khảo. Suất đầu...</P>
+                        <span>{{ formatDateTime(item.createdAt) }}</span>
+                        <P
+                          >{{item.description}}</P
+                        >
                         <div class="button-view">
-                          <a class="sk-btn sk-btn-1" href="#">
+                          <div class="sk-btn sk-btn-1" href="#" @click="goToDetailNew(item._id)">
                             <span>
-                              <img class="default" src="~@/assets/styles/images/arrow-blue-right.png" />
-                              <img class="hover" src="~@/assets/styles/images/arrow-white-right.png" />
+                              <img
+                                class="default"
+                                src="~@/assets/styles/images/arrow-blue-right.png"
+                              />
+                              <img
+                                class="hover"
+                                src="~@/assets/styles/images/arrow-white-right.png"
+                              />
                             </span>
                             Xem thêm
-                          </a>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </b-col>
                   <b-col cols="12" md="6">
                     <div class="smalls-new">
-                      <div class="small-new">
+                      <div class="small-new"  v-for="(item, index) in newsCategory" :key="item._id" v-if="index!=0 && index <= 2" >
                         <div class="images-new">
-                          <img src="~@/assets/styles/images/Dien-MT-TQ-1.jpg" />
+                          <img :src="item.thumbnail" />
                         </div>
                         <div class="text-new">
                           <h5 class="title">
-                            Suất đầu tư liên quan tới điện khí, điện gió, mặt
-                            trời trên thế giới (cập nhật tháng 10/2023)
+                            {{item.title}}
                           </h5>
-                          <span>17/10/2023</span>
+                          <span>{{ formatDateTime(item.createdAt) }}</span>
                           <div class="content-bottom">
-                            <P>Liên quan tới suất đầu tư một số nguồn điện,
-                              chuyên gia Tạp chí Năng lượng Việt Nam cập nhật
-                              thông tin về suất đầu tư thuộc lĩnh vực điện khí,
-                              điện gió và điện mặt trời trên thế giới hiện nay
-                              để bạn đọc cùng tham khảo. Suất đầu...</P>
+                            <P
+                          >{{item.description}}</P
+                            >
                             <div class="button-view">
-                              <a class="sk-btn sk-btn-1" href="#">
+                              <div class="sk-btn sk-btn-1"  @click="goToDetailNew(item._id)">
                                 <span>
-                                  <img class="default" src="~@/assets/styles/images/arrow-blue-right.png" />
-                                  <img class="hover" src="~@/assets/styles/images/arrow-white-right.png" />
+                                  <img
+                                    class="default"
+                                    src="~@/assets/styles/images/arrow-blue-right.png"
+                                  />
+                                  <img
+                                    class="hover"
+                                    src="~@/assets/styles/images/arrow-white-right.png"
+                                  />
                                 </span>
                                 Xem thêm
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="small-new">
-                        <div class="images-new">
-                          <img src="~@/assets/styles/images/dien-gio-ngoai-khoi.jpeg" />
-                        </div>
-                        <div class="text-new">
-                          <h5 class="title">
-                            Suất đầu tư liên quan tới điện khí, điện gió, mặt
-                            trời trên thế giới (cập nhật tháng 10/2023)
-                          </h5>
-                          <span>17/10/2023</span>
-                          <div class="content-bottom">
-                            <P>Liên quan tới suất đầu tư một số nguồn điện,
-                              chuyên gia Tạp chí Năng lượng Việt Nam cập nhật
-                              thông tin về suất đầu tư thuộc lĩnh vực điện khí,
-                              điện gió và điện mặt trời trên thế giới hiện nay
-                              để bạn đọc cùng tham khảo. Suất đầu...</P>
-                            <div class="button-view">
-                              <a class="sk-btn sk-btn-1" href="#">
-                                <span>
-                                  <img class="default" src="~@/assets/styles/images/arrow-blue-right.png" />
-                                  <img class="hover" src="~@/assets/styles/images/arrow-white-right.png" />
-                                </span>
-                                Xem thêm
-                              </a>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -277,37 +288,33 @@
               <b-col cols="12">
                 <h3 class="title">Hoạt Động Cộng Đồng</h3>
               </b-col>
-              <b-col cols="12" md="6">
+              <b-col cols="12" md="6" v-for="(item, index) in communityCategory " :key="item._id" v-if="index <= 1" >
                 <div class="item-new">
                   <div class="image">
                     <a href="#">
-                      <img src="~@/assets/styles/images/Ung-ho-vaccine-Covid-768x555.jpg" />
+                      <img
+                        :src="item.thumbnail"
+                      />
                     </a>
                   </div>
                   <div class="text">
-                    <a href="#">Xuân Trường ủy hộ mua vaccine phòng ngừa Covid-19</a>
+                    <p @click="goToDetailNew(item._id)">{{item.title}}</p>
                   </div>
                 </div>
               </b-col>
-              <b-col cols="12" md="6">
-                <div class="item-new">
-                  <div class="image">
-                    <a href="#">
-                      <img src="~@/assets/styles/images/Ung-ho-vaccine-Covid-768x555.jpg" />
-                    </a>
-                  </div>
-                  <div class="text">
-                    <a href="#">Lễ công bố Quyết định thành lập chi bộ chi nhánh công ty
-                      Xuân Trường tại Ninh Thuận</a>
-                  </div>
-                </div>
-              </b-col>
+
               <b-col cols="12">
                 <div class="sk-button">
                   <a class="sk-btn sk-btn-1" href="#">
                     <span>
-                      <img class="default" src="~@/assets/styles/images/arrow-bg-blue-right.png" />
-                      <img class="hover" src="~@/assets/styles/images/arrow-bg-white-right.png" />
+                      <img
+                        class="default"
+                        src="~@/assets/styles/images/arrow-bg-blue-right.png"
+                      />
+                      <img
+                        class="hover"
+                        src="~@/assets/styles/images/arrow-bg-white-right.png"
+                      />
                     </span>
                     Xuân Trường Profile
                   </a>
@@ -323,21 +330,33 @@
             <b-col cols="12">
               <h3 class="title">Lĩnh vực hoạt động</h3>
             </b-col>
-            <b-col cols="12" xl="4" sm="6">
+            <b-col
+              cols="12"
+              xl="4"
+              sm="6"
+              v-for="item in listCategoryActivity"
+              :key="item._id"
+            >
               <div class="item-new">
                 <div class="image">
                   <img src="~@/assets/styles/images/item1.jpg" />
                 </div>
                 <div class="content-item">
                   <div class="title">
-                    <img src="~@/assets/styles/images/icon-category1.png" />
-                    <h5>Thuỷ điện</h5>
+                    <!-- <img src="~@/assets/styles/images/icon-category1.png" /> -->
+                    <h5>{{ item.title }}</h5>
                   </div>
                   <div class="button-view">
                     <a class="sk-btn sk-btn-1" href="#">
                       <span>
-                        <img class="default" src="~@/assets/styles/images/arrow-blue-right.png" />
-                        <img class="hover" src="~@/assets/styles/images/arrow-white-right.png" />
+                        <img
+                          class="default"
+                          src="~@/assets/styles/images/arrow-blue-right.png"
+                        />
+                        <img
+                          class="hover"
+                          src="~@/assets/styles/images/arrow-white-right.png"
+                        />
                       </span>
                       Xem thêm
                     </a>
@@ -345,7 +364,7 @@
                 </div>
               </div>
             </b-col>
-            <b-col cols="12" xl="4" sm="6">
+            <!-- <b-col cols="12" xl="4" sm="6">
               <div class="item-new">
                 <div class="image">
                   <img src="~@/assets/styles/images/item2.jpg" />
@@ -388,11 +407,13 @@
                   </div>
                 </div>
               </div>
-            </b-col>
+            </b-col> -->
           </b-row>
         </div>
       </div>
+      <!-- Dự án nổi bật -->
       <RelatedProjects @directional="goToDetailNew" />
+      <!-- End Dự án nổi bật -->
       <div class="section-customers-partners">
         <h3 class="title">Khách hàng và đối tác</h3>
         <VueSlickCarousel v-bind="settings">
@@ -403,12 +424,16 @@
           </div>
           <div>
             <div class="item-slick">
-              <img src="~@/assets/styles/images/General_Electric_logo.svg.png" />
+              <img
+                src="~@/assets/styles/images/General_Electric_logo.svg.png"
+              />
             </div>
           </div>
           <div>
             <div class="item-slick">
-              <img src="~@/assets/styles/images/Screen-Shot-2020-01-12-at-8.41.10-PM.jpg" />
+              <img
+                src="~@/assets/styles/images/Screen-Shot-2020-01-12-at-8.41.10-PM.jpg"
+              />
             </div>
           </div>
           <div>
@@ -435,10 +460,12 @@
 <script>
 import { mapGetters } from "vuex";
 import VueSlickCarousel from "vue-slick-carousel";
+import moment from "moment";
 import BannerLeft from "./components/BannerLeft.vue";
 import RelatedProjects from "./components/RelatedProjects.vue";
 import { getListAllPosts } from "@/api/posts";
 import { getListSlider } from "@/api/slide";
+import { getListCategory } from "@/api/category";
 import "vue-slick-carousel/dist/vue-slick-carousel.css";
 import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 import $ from "jquery";
@@ -454,16 +481,19 @@ export default {
       context: null,
       slide: 0,
       sliding: null,
-      textBanner: '',
-      listText: 'CÔNG TY CỔ PHẦN ĐẦU TƯ XÂY DỰNG VÀ PHÁT TRIỂN TRƯỜNG THÀNH',
-      valueText: ' XÂY NHỮNG GIÁ TRỊ, DỰNG NHỮNG ƯỚC MƠ',
-      aboutUsText: 'ABOUT US',
+      textBanner: "",
+      listText: "CÔNG TY CỔ PHẦN ĐẦU TƯ XÂY DỰNG VÀ PHÁT TRIỂN TRƯỜNG THÀNH",
+      valueText: " XÂY NHỮNG GIÁ TRỊ, DỰNG NHỮNG ƯỚC MƠ",
+      aboutUsText: "ABOUT US",
       listSlider: [],
       developSlide: [],
       valueSlide: [],
       aboutUsSlide: [],
       missionSlide: [],
       companySlide: [],
+      listCategoryActivity: [],
+      communityCategory: [],
+      newsCategory: [],
       settings: {
         dots: false,
         infinite: true,
@@ -545,12 +575,18 @@ export default {
   created() {
     this.getListAllPosts();
     this.getListSlider();
+    this.getListCategory();
   },
   methods: {
     goToProductDetail() {
       this.$router.push("/product-detail");
     },
     goToDetailNew(data) {
+      this.$router.push({
+        path: `/news-detail${data}`,
+      });
+    },
+    goToDetailProject(data) {
       this.$router.push({
         path: `/myproject-detail${data}`,
       });
@@ -563,50 +599,78 @@ export default {
       };
       getListAllPosts(params).then((response) => {
         this.pagination.totalItems = response.total;
-        const arr = [];
+        const arrNews = [];
+        const arrCommunity = [];
         for (const item of response.data) {
-          if (item.categoryID == "657d1f01498e2cea51189f14") {
-            arr.push(item);
+          switch (item.categoryID) {
+            case "65753120498e2cea511898ed":
+              arrNews.push(item);
+              break;
+            case "657530d1498e2cea511898e1":
+              arrCommunity.push(item);
+              break;
           }
         }
-        this.listPosts = arr;
+        this.communityCategory = arrCommunity
+        this.newsCategory = arrNews
+        console.log(" this.communityCategory", arrCommunity);
       });
     },
     getListSlider() {
       this.listLoading = true;
       getListSlider().then((response) => {
-        console.log('responselistSlider', response.data)
+        console.log("responselistSlider", response.data);
         this.listSlider = response.data;
         for (const item of response.data) {
           switch (item._id) {
             case "657d6dfb498e2cea5118a0b6":
-              this.developSlide = item
+              this.developSlide = item;
               break;
             case "657d6e46498e2cea5118a0bb":
-              this.valueSlide = item
+              this.valueSlide = item;
               break;
             case "657d6e7a498e2cea5118a0be":
-              this.aboutUsSlide = item
+              this.aboutUsSlide = item;
               break;
             case "657d6ebe498e2cea5118a0c1":
-              this.missionSlide = item
+              this.missionSlide = item;
               break;
             case "657d6ee4498e2cea5118a0c4":
-              this.companySlide = item
+              this.companySlide = item;
               break;
-
           }
         }
         // this.$store.dispatch("slide/getListSlider", this.listSlider);
         this.listLoading = false;
       });
     },
+    getListCategory() {
+      const params = {
+        page: 0,
+        size: 10000,
+      };
+      getListCategory(params).then((response) => {
+        const categoryNews = [
+          "657b306a498e2cea51189da7",
+          "657b305a498e2cea51189da3",
+          "657b3041498e2cea51189d9f",
+        ];
+        for (const i of response.data) {
+          for (const j of categoryNews) {
+            if (j == i._id) {
+              this.listCategoryActivity.push(i);
+            }
+          }
+        }
+        console.log("listCategory", this.listCategory);
+      });
+    },
+    formatDateTime(data) {
+      return moment(data).format("YYYY-MM-DD");
+    },
   },
 
-  mounted() {
-    console.log("this.categoryNews", this.categoryNews);
-    console.log("this.listNews", this.listNews);
-  },
+  mounted() {},
 };
 </script>
 <style lang="scss" scoped>

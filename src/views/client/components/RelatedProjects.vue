@@ -29,7 +29,7 @@
                         </b-col>
                         <b-col cols="6">
                             <div class="smalls-new">
-                                <div class="small-new"  v-for=" (item, index) in listPosts" :key="index" v-if="index !== 0">
+                                <div class="small-new"  v-for=" (item, index) in listPosts" :key="index" v-if="index !== 0 && index <=4">
                                     <div class="images-new">
                                         <img :src="item.thumbnail" />
                                     </div>
