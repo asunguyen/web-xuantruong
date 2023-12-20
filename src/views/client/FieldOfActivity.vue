@@ -65,191 +65,7 @@
                         </b-col>
                     </b-row>
                 </div>
-                <div class="section-our-project">
-                    <h3 class="title"> Dự án liên quan</h3>
-                    <div class="hight-defaultx content-new w-100 d-block">
-                        <VueSlickCarousel v-bind="settingMyProject" class="slick-section-about">
-                            <div class="item-slick">
-                                <b-row class="w-100">
-                                    <b-col cols="6 ">
-                                        <div class="item-new-big">
-                                            <div class="image">
-                                                <img src="~@/assets/styles/images/item4.jpg" />
-                                            </div>
-                                            <div class="text-new">
-                                                <a href="#">
-                                                    <h5 class="title">Nhà máy Thủy điện Ngòi Hút 2</h5>
-                                                </a>
-                                                <P>Liên quan tới suất đầu tư một số nguồn điện, chuyên gia Tạp
-                                                    chí Năng lượng Việt Nam cập nhật thông tin về suất đầu tư
-                                                    thuộc lĩnh vực điện khí, điện gió và điện mặt trời trên thế
-                                                    giới hiện nay để bạn đọc cùng tham khảo. Suất đầu...</P>
-                                                <div class="button-view">
-                                                    <a class="sk-btn sk-btn-1" href="#">
-                                                        <span>
-                                                            <img class="default"
-                                                                src="~@/assets/styles/images/arrow-blue-right.png" />
-                                                            <img class="hover"
-                                                                src="~@/assets/styles/images/arrow-white-right.png" />
-                                                        </span>
-                                                        Xem thêm
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </b-col>
-                                    <b-col cols="3">
-                                        <div class="smalls-new">
-                                            <div class="small-new">
-                                                <div class="images-new">
-                                                    <img src="~@/assets/styles/images/item5.jpg" />
-                                                </div>
-                                                <div class="text-new">
-                                                    <a href="#">
-                                                        <h5 class="title">Nhà máy Thủy điện Ngòi Hút 2A</h5>
-                                                    </a>
-                                                    <div class="content-bottom">
-                                                        <P>Dự án được khởi công vào năm 2015 và hoàn thành vào
-                                                            quý
-                                                            IV năm 2016, với tổng mức đầu tư 292 tỷ đồng, được
-                                                            xây
-                                                            dựng trên diện tích đất 13,5 ha, tại huyện Mù Căng
-                                                            Chải,
-                                                            tỉnh Yên Bái. Nhà máy thủy điện Ngòi Hút 2A có 2 tổ
-                                                            máy,
-                                                            công suất 8,4 MWp, cho sản lượng 30 triệu KWh/năm.
-                                                        </P>
-                                                        <div class="button-view">
-                                                            <a class="sk-btn sk-btn-1" href="#">
-                                                                <span>
-                                                                    <img class="default"
-                                                                        src="~@/assets/styles/images/arrow-blue-right.png" />
-                                                                    <img class="hover"
-                                                                        src="~@/assets/styles/images/arrow-white-right.png" />
-                                                                </span>
-                                                                Xem thêm
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="small-new">
-                                                <div class="images-new">
-                                                    <img src="~@/assets/styles/images/item6.jpg" />
-                                                </div>
-                                                <div class="text-new">
-                                                    <a href="#">
-                                                        <h5 class="title">Trang trại Điện gió Phương Mai 1</h5>
-                                                    </a>
-                                                    <div class="content-bottom">
-                                                        <P>Dự án Trang trại điện mặt trời Hồ Bầu Ngứ được khởi
-                                                            công vào tháng 03/2018 lắp đặt gần 190.000 tấm pin
-                                                            năng
-                                                            lượng mặt trời, đóng điện và hòa lưới điện quốc gia
-                                                            vào
-                                                            quý IV năm 2019, với tổng vốn đầu tư 1.457 tỷ đồng.
-                                                            Dự
-                                                            án xây dựng trên diện tích 75ha tại huyện Ninh Phước
-                                                            và
-                                                            huyện Thuận Nam, tỉnh Ninh Thuận, với công suất
-                                                            thiết kế
-                                                            là trên 61,77 MWp, cho sản lượng 98 triệu KWh/năm.
-                                                        </P>
-                                                        <div class="button-view">
-                                                            <a class="sk-btn sk-btn-1" href="#">
-                                                                <span>
-                                                                    <img class="default"
-                                                                        src="~@/assets/styles/images/arrow-blue-right.png" />
-                                                                    <img class="hover"
-                                                                        src="~@/assets/styles/images/arrow-white-right.png" />
-                                                                </span>
-                                                                Xem thêm
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </b-col>
-                                    <b-col cols="3">
-                                        <div class="smalls-new">
-                                            <div class="small-new">
-                                                <div class="images-new">
-                                                    <img src="~@/assets/styles/images/item7.jpg" />
-                                                </div>
-                                                <div class="text-new">
-                                                    <a href="#">
-                                                        <h5 class="title">Trang trại Điện mặt trời Hồ Bầu Ngứ
-                                                        </h5>
-                                                    </a>
-                                                    <div class="content-bottom">
-                                                        <P>Dự án Trang trại điện mặt trời Hồ Bầu Ngứ được khởi
-                                                            công vào tháng 03/2018 lắp đặt gần 190.000 tấm pin
-                                                            năng
-                                                            lượng mặt trời, đóng điện và hòa lưới điện quốc gia
-                                                            vào
-                                                            quý IV năm 2019, với tổng vốn đầu tư 1.457 tỷ đồng.
-                                                            Dự
-                                                            án xây dựng trên diện tích 75ha tại huyện Ninh Phước
-                                                            và
-                                                            huyện Thuận Nam, tỉnh Ninh Thuận, với công suất
-                                                            thiết kế
-                                                            là trên 61,77 MWp, cho sản lượng 98 triệu KWh/năm.
-                                                        </P>
-                                                        <div class="button-view">
-                                                            <a class="sk-btn sk-btn-1" href="#">
-                                                                <span>
-                                                                    <img class="default"
-                                                                        src="~@/assets/styles/images/arrow-blue-right.png" />
-                                                                    <img class="hover"
-                                                                        src="~@/assets/styles/images/arrow-white-right.png" />
-                                                                </span>
-                                                                Xem thêm
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="small-new">
-                                                <div class="images-new">
-                                                    <img src="~@/assets/styles/images/item8.jpg" />
-                                                </div>
-                                                <div class="text-new">
-                                                    <a href="#">
-                                                        <h5 class="title">Nhà máy Thuỷ điện Pá Hu</h5>
-                                                    </a>
-                                                    <div class="content-bottom">
-                                                        <P>Dự án Nhà máy thủy điện Pá Hú, được tỉnh Yên Bái chấp
-                                                            thuận đầu tư xây dựng vào tháng 03/2017 và đã đóng
-                                                            điện
-                                                            vào tháng 10/2020, tại địa bàn huyện Trạm Tấu, tỉnh
-                                                            Yên
-                                                            Bái, với 2 tổ máy chính, công suất thiết kế là 26
-                                                            MWp,
-                                                            cho sản lượng điện 90 triệu KWh/năm, và có tổng mức
-                                                            đầu
-                                                            tư trên 1.024 tỷ đồng.</P>
-                                                        <div class="button-view">
-                                                            <a class="sk-btn sk-btn-1" href="#">
-                                                                <span>
-                                                                    <img class="default"
-                                                                        src="~@/assets/styles/images/arrow-blue-right.png" />
-                                                                    <img class="hover"
-                                                                        src="~@/assets/styles/images/arrow-white-right.png" />
-                                                                </span>
-                                                                Xem thêm
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </b-col>
-                                </b-row>
-                            </div>
-                        </VueSlickCarousel>
-                    </div>
-                </div>
+                <RelatedProjects @directional="goToDetailNew" />
             </div>
         </main>
     </div>
@@ -259,10 +75,12 @@ import VueSlickCarousel from 'vue-slick-carousel'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 import MenuScrollMixin from '@/mixin/MenuScroll'
+import RelatedProjects from "./components/RelatedProjects.vue";
+
 
 export default {
     name: 'Introduce',
-    components: { VueSlickCarousel },
+    components: { VueSlickCarousel, RelatedProjects },
     mixins: [MenuScrollMixin],
     // methods: {
     // },
@@ -281,21 +99,30 @@ export default {
             }
         }
     },
+    methods: {
+        goToDetailNew(data) {
+            this.$router.push({
+                path: `/news-detail${data}`,
+            });
+        },
+    }
 
 }
 </script>
 <style lang="scss" scoped>
 @import "~@/styles/page.scss";
-.section_{
+
+.section_ {
     border-bottom: unset;
 }
+
 // .hight-default{
 //     background: unset;
 // }
-.section-our-project{
+.section-our-project {
     margin-top: 50px;
 }
+
 .slick-section-about .slick-slide a img {
-    height:unset
-}
-</style>
+    height: unset
+}</style>

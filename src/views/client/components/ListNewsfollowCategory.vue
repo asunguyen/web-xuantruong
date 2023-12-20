@@ -27,39 +27,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- <div v-if="!listPosts[0]._id">
-                          <b-col cols="3" v-for="itemnews in listPosts" :key="itemnew.categoryID">
-                            <div class="smalls-new">
-                              <div class=" small-new">
-                                <div class="images-new">
-                                  <img src="~@/assets/styles/images/Dien-MT-TQ-1.jpg" />
-                                </div>
-                                <div class="text-new">
-                                  <h5 class="title">
-                                    {{ itemnew.title }}
-                                  </h5>
-                                  <span>17/10/2023</span>
-                                  <div class="content-bottom">
-                                    <P>Liên quan tới suất đầu tư một số nguồn điện, chuyên
-                                      gia Tạp chí Năng lượng Việt Nam cập nhật thông tin
-                                      về suất đầu tư thuộc lĩnh vực điện khí, điện gió và
-                                      điện mặt trời trên thế giới hiện nay để bạn đọc cùng
-                                      tham khảo. Suất đầu...</P>
-                                    <div class="button-view">
-                                      <a class="sk-btn sk-btn-1" href="#">
-                                        <span>
-                                          <img class="default" src="~@/assets/styles/images/arrow-blue-right.png" />
-                                          <img class="hover" src="~@/assets/styles/images/arrow-white-right.png" />
-                                        </span>
-                                        Xem thêm
-                                      </a>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>  
-                            </div>
-                          </b-col>
-                        </div> -->
                     </div>
                 </div>
             </b-tab>

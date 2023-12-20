@@ -22,14 +22,8 @@
           <div class="button-view">
             <a class="sk-btn sk-btn-1" href="#">
               <span>
-                <img
-                  class="default"
-                  src="~@/assets/styles/images/arrow-blue-right.png"
-                />
-                <img
-                  class="hover"
-                  src="~@/assets/styles/images/arrow-white-right.png"
-                />
+                <img class="default" src="~@/assets/styles/images/arrow-blue-right.png" />
+                <img class="hover" src="~@/assets/styles/images/arrow-white-right.png" />
               </span>
               Xem thêm
             </a>
@@ -65,14 +59,8 @@
                     <div class="sk-button">
                       <a class="sk-btn sk-btn-1" href="#">
                         <span>
-                          <img
-                            class="default"
-                            src="~@/assets/styles/images/icon-download-blue.png"
-                          />
-                          <img
-                            class="hover"
-                            src="~@/assets/styles/images/icon-download-white.png"
-                          />
+                          <img class="default" src="~@/assets/styles/images/icon-download-blue.png" />
+                          <img class="hover" src="~@/assets/styles/images/icon-download-white.png" />
                         </span>
                         Xuân Trường Profile
                       </a>
@@ -99,10 +87,7 @@
               <div class="about-content">
                 <div class="text">
                   <h3 class="title">
-                    <img
-                      class="default"
-                      src="~@/assets/styles/images/icons1.png"
-                    />
+                    <img class="default" src="~@/assets/styles/images/icons1.png" />
                     Sứ mệnh
                   </h3>
                   <div class="content">
@@ -118,10 +103,7 @@
                   </div>
                   <div class="text_right">
                     <h3 class="title">
-                      <img
-                        class="default"
-                        src="~@/assets/styles/images/icons2.png"
-                      />
+                      <img class="default" src="~@/assets/styles/images/icons2.png" />
                       Tầm nhìn
                     </h3>
                     <p>
@@ -147,23 +129,15 @@
           </b-col>
           <b-col cols="12" xl="7">
             <h3 class="title" Xuân>Trường Group TV</h3>
-            <VueSlickCarousel
-              v-bind="settingsAbout"
-              class="slick-section-about"
-            >
+            <VueSlickCarousel v-bind="settingsAbout" class="slick-section-about">
               <div class="swiper-slide">
                 <div class="image">
                   <img class="hover" src="~@/assets/images/Logo-02.png" />
                 </div>
                 <div class="sk-video-play">
-                  <a
-                    href="https://www.youtube.com/watch?v=AEHfRfb6rsM&feature=emb_title"
-                  >
+                  <a href="https://www.youtube.com/watch?v=AEHfRfb6rsM&feature=emb_title">
                     <span>
-                      <img
-                        class="hover"
-                        src="~@/assets/styles/images/icon-play.png"
-                      />
+                      <img class="hover" src="~@/assets/styles/images/icon-play.png" />
                     </span>
                   </a>
                 </div>
@@ -174,14 +148,9 @@
                   <img class="hover" src="~@/assets/images/Logo-02.png" />
                 </div>
                 <div class="sk-video-play">
-                  <a
-                    href="https://www.youtube.com/watch?v=AEHfRfb6rsM&feature=emb_title"
-                  >
+                  <a href="https://www.youtube.com/watch?v=AEHfRfb6rsM&feature=emb_title">
                     <span>
-                      <img
-                        class="hover"
-                        src="~@/assets/styles/images/icon-play.png"
-                      />
+                      <img class="hover" src="~@/assets/styles/images/icon-play.png" />
                     </span>
                   </a>
                 </div>
@@ -204,32 +173,21 @@
                     <h3 class="title pb-3">Tin tức chung</h3>
                   </b-col>
                   <b-col cols="12" md="6">
-                    <div class="big-new" v-for="(item, index) in newsCategory" :key="item._id" v-if="index==0">
+                    <div class="big-new" v-for="(item, index) in newsCategory" :key="item._id" v-if="index == 0">
                       <div class="images-new">
-                        <img
-                          class="default"
-                          :src="item.thumbnail"
-                        />
+                        <img class="default" :src="item.thumbnail" />
                       </div>
                       <div class="text-new">
                         <h5 class="title">
-                          {{item.title}}
+                          {{ item.title }}
                         </h5>
                         <span>{{ formatDateTime(item.createdAt) }}</span>
-                        <P
-                          >{{item.description}}</P
-                        >
+                        <P>{{ item.description }}</P>
                         <div class="button-view">
                           <div class="sk-btn sk-btn-1" href="#" @click="goToDetailNew(item._id)">
                             <span>
-                              <img
-                                class="default"
-                                src="~@/assets/styles/images/arrow-blue-right.png"
-                              />
-                              <img
-                                class="hover"
-                                src="~@/assets/styles/images/arrow-white-right.png"
-                              />
+                              <img class="default" src="~@/assets/styles/images/arrow-blue-right.png" />
+                              <img class="hover" src="~@/assets/styles/images/arrow-white-right.png" />
                             </span>
                             Xem thêm
                           </div>
@@ -239,30 +197,23 @@
                   </b-col>
                   <b-col cols="12" md="6">
                     <div class="smalls-new">
-                      <div class="small-new"  v-for="(item, index) in newsCategory" :key="item._id" v-if="index!=0 && index <= 2" >
+                      <div class="small-new" v-for="(item, index) in newsCategory" :key="item._id"
+                        v-if="index != 0 && index <= 2">
                         <div class="images-new">
                           <img :src="item.thumbnail" />
                         </div>
                         <div class="text-new">
                           <h5 class="title">
-                            {{item.title}}
+                            {{ item.title }}
                           </h5>
                           <span>{{ formatDateTime(item.createdAt) }}</span>
                           <div class="content-bottom">
-                            <P
-                          >{{item.description}}</P
-                            >
+                            <P>{{ item.description }}</P>
                             <div class="button-view">
-                              <div class="sk-btn sk-btn-1"  @click="goToDetailNew(item._id)">
+                              <div class="sk-btn sk-btn-1" @click="goToDetailNew(item._id)">
                                 <span>
-                                  <img
-                                    class="default"
-                                    src="~@/assets/styles/images/arrow-blue-right.png"
-                                  />
-                                  <img
-                                    class="hover"
-                                    src="~@/assets/styles/images/arrow-white-right.png"
-                                  />
+                                  <img class="default" src="~@/assets/styles/images/arrow-blue-right.png" />
+                                  <img class="hover" src="~@/assets/styles/images/arrow-white-right.png" />
                                 </span>
                                 Xem thêm
                               </div>
@@ -288,17 +239,15 @@
               <b-col cols="12">
                 <h3 class="title">Hoạt Động Cộng Đồng</h3>
               </b-col>
-              <b-col cols="12" md="6" v-for="(item, index) in communityCategory " :key="item._id" v-if="index <= 1" >
+              <b-col cols="12" md="6" v-for="(item, index) in communityCategory " :key="item._id" v-if="index <= 1">
                 <div class="item-new">
                   <div class="image">
                     <a href="#">
-                      <img
-                        :src="item.thumbnail"
-                      />
+                      <img :src="item.thumbnail" />
                     </a>
                   </div>
                   <div class="text">
-                    <p @click="goToDetailNew(item._id)">{{item.title}}</p>
+                    <p @click="goToDetailNew(item._id)">{{ item.title }}</p>
                   </div>
                 </div>
               </b-col>
@@ -307,14 +256,8 @@
                 <div class="sk-button">
                   <a class="sk-btn sk-btn-1" href="#">
                     <span>
-                      <img
-                        class="default"
-                        src="~@/assets/styles/images/arrow-bg-blue-right.png"
-                      />
-                      <img
-                        class="hover"
-                        src="~@/assets/styles/images/arrow-bg-white-right.png"
-                      />
+                      <img class="default" src="~@/assets/styles/images/arrow-bg-blue-right.png" />
+                      <img class="hover" src="~@/assets/styles/images/arrow-bg-white-right.png" />
                     </span>
                     Xuân Trường Profile
                   </a>
@@ -330,13 +273,7 @@
             <b-col cols="12">
               <h3 class="title">Lĩnh vực hoạt động</h3>
             </b-col>
-            <b-col
-              cols="12"
-              xl="4"
-              sm="6"
-              v-for="item in listCategoryActivity"
-              :key="item._id"
-            >
+            <b-col cols="12" xl="4" sm="6" v-for="item in listCategoryActivity" :key="item._id">
               <div class="item-new">
                 <div class="image">
                   <img src="~@/assets/styles/images/item1.jpg" />
@@ -349,14 +286,8 @@
                   <div class="button-view">
                     <div class="sk-btn sk-btn-1" @click="goToDetailProject()">
                       <span>
-                        <img
-                          class="default"
-                          src="~@/assets/styles/images/arrow-blue-right.png"
-                        />
-                        <img
-                          class="hover"
-                          src="~@/assets/styles/images/arrow-white-right.png"
-                        />
+                        <img class="default" src="~@/assets/styles/images/arrow-blue-right.png" />
+                        <img class="hover" src="~@/assets/styles/images/arrow-white-right.png" />
                       </span>
                       Xem thêm
                     </div>
@@ -424,16 +355,12 @@
           </div>
           <div>
             <div class="item-slick">
-              <img
-                src="~@/assets/styles/images/General_Electric_logo.svg.png"
-              />
+              <img src="~@/assets/styles/images/General_Electric_logo.svg.png" />
             </div>
           </div>
           <div>
             <div class="item-slick">
-              <img
-                src="~@/assets/styles/images/Screen-Shot-2020-01-12-at-8.41.10-PM.jpg"
-              />
+              <img src="~@/assets/styles/images/Screen-Shot-2020-01-12-at-8.41.10-PM.jpg" />
             </div>
           </div>
           <div>
@@ -460,15 +387,17 @@
 <script>
 import { mapGetters } from "vuex";
 import VueSlickCarousel from "vue-slick-carousel";
+import "vue-slick-carousel/dist/vue-slick-carousel.css";
+import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
+import $ from "jquery";
 import moment from "moment";
 import BannerLeft from "./components/BannerLeft.vue";
 import RelatedProjects from "./components/RelatedProjects.vue";
 import { getListAllPosts } from "@/api/posts";
 import { getListSlider } from "@/api/slide";
 import { getListCategory } from "@/api/category";
-import "vue-slick-carousel/dist/vue-slick-carousel.css";
-import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
-import $ from "jquery";
+import { CATEGORY_NEWS, CATEGORY_PROJECT } from "./const.js";
+
 
 export default {
   props: {},
@@ -604,14 +533,13 @@ export default {
             case "65753120498e2cea511898ed":
               arrNews.push(item);
               break;
-            case "657530d1498e2cea511898e1":
+            case "6581b76061f3e85cd0a7acac":
               arrCommunity.push(item);
               break;
           }
         }
         this.communityCategory = arrCommunity
         this.newsCategory = arrNews
-        console.log(" this.communityCategory", arrCommunity);
       });
     },
     getListSlider() {
@@ -648,13 +576,8 @@ export default {
         size: 10000,
       };
       getListCategory(params).then((response) => {
-        const categoryNews = [
-          "657b306a498e2cea51189da7",
-          "657b305a498e2cea51189da3",
-          "657b3041498e2cea51189d9f",
-        ];
         for (const i of response.data) {
-          for (const j of categoryNews) {
+          for (const j of CATEGORY_PROJECT) {
             if (j == i._id) {
               this.listCategoryActivity.push(i);
             }
@@ -668,7 +591,7 @@ export default {
     },
   },
 
-  mounted() {},
+  mounted() { },
 };
 </script>
 <style lang="scss" scoped>

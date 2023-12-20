@@ -16,6 +16,7 @@
 // import {
 //   getListPostsByUser,
 // } from "@/api/posts";
+import { CATEGORY_NEWS, CATEGORY_PROJECT } from "./const.js";
 import { getListCategory } from "@/api/category";
 import ListNewsfollowCategory from "./components/ListNewsfollowCategory.vue";
 export default {
@@ -59,14 +60,9 @@ export default {
         size: 10000,
       };
       getListCategory(params).then((response) => {
-        const categoryNews = [
-          "657530d1498e2cea511898e1",
-          "657530f7498e2cea511898e5",
-          "65753106498e2cea511898e9",
-          "65753120498e2cea511898ed",
-        ];
+        console.log('response', response)
         for (const i of response.data) {
-          for (const j of categoryNews) {
+          for (const j of CATEGORY_NEWS) {
             if (j == i._id) {
               this.listCategory.push(i);
             }
