@@ -128,7 +128,7 @@
             <BannerLeft :listSlider="aboutUsSlide" :textBanner="aboutUsText" />
           </b-col>
           <b-col cols="12" xl="7">
-            <h3 class="title" Xuân>Trường Group TV</h3>
+            <h3 class="title" >Xuân Trường </h3>
             <VueSlickCarousel v-bind="settingsAbout" class="slick-section-about">
               <div class="swiper-slide">
                 <div class="image">
