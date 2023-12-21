@@ -119,7 +119,7 @@ export default {
                 this.pagination.totalItems = response.total;
                 const arr = []
                 for (const item of response.data) {
-                    if (item.categoryID == "657d1f01498e2cea51189f14") {
+                    if (item.categoryID == "6581ba2e61f3e85cd0a7ace7") {
                         arr.push(item)
                     }
                 }
@@ -127,7 +127,6 @@ export default {
                 // this.listPosts = response.data;
                 // this.listLoading = false;
                 // this.$store.dispatch("new/getListnNews", this.listPosts);
-              
             });
         },
         handleCurrentChange(page) {

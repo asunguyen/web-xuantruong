@@ -8,7 +8,7 @@
                         {{textBanner}}
                     </h5>
                 </div>
-                <h3> {{ listSlider.title }}</h3>
+                <h3> {{ listSlider.title }} </h3>
                 <p>
                     {{ listSlider.description }}
                 </p>

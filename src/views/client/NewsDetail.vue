@@ -24,27 +24,26 @@
         <div class="post-heading">
           <h2 class="entry-title">Related posts</h2>
           <div class="row pt-2">
-            <div class="col-4 mb-4" v-for="item in listRelatedPosts" :key="item._id" >
+            <div class="col-4 mb-4" v-for="item in listRelatedPosts" :key="item._id">
               <div class="image-related ">
-                <img class="w-100 h-100"
-              :src="item.thumbnail" />
+                <img class="w-100 h-100" :src="item.thumbnail" />
               </div>
               <div class="">
                 <div class="post-data">
                   <div class="post-heading">
                     <div class="post-heading-inner">
-                      <h5 class="entry-title pt-2" @click="goToDetailNew(item._id)">
+                      <h5 class="entry-title pt-2"  @click="goToDetailNew(item._id)">
                         {{ item.title }}
                       </h5>
                       <div class="meta-post">
                         <i class="el-icon-date"> </i>
-                        {{formatDateTime(item.updatedAt)}}
+                        {{ formatDateTime(item.updatedAt) }}
                       </div>
                     </div>
                   </div>
 
                   <div class="pt-2">
-                   {{item.description}}
+                    {{ item.description }}
                   </div>
                 </div>
               </div>
@@ -75,8 +74,7 @@
         <hr />
         <div class="row new-item mb-3 mx-0" v-for="item in listLatestPosts" :key="item._id">
           <div class="col-3 new-item-image px-0">
-            <img class="w-100 h-100"
-              :src="item.thumbnail" />
+            <img class="w-100 h-100" :src="item.thumbnail" />
           </div>
           <div class="col-9 align-items-center d-flex">
             <div class="post-data">
@@ -87,7 +85,7 @@
                   </h6>
                   <div class="meta-post">
                     <i class="el-icon-date"> </i>
-                    {{formatDateTime(item.updatedAt)}}
+                    {{ formatDateTime(item.updatedAt) }}
                   </div>
                 </div>
               </div>
@@ -107,6 +105,7 @@ import {
   getPostsDetail, getListAllPosts
 } from "@/api/posts";
 import { getListCategory } from "@/api/category";
+import { CATEGORY_NEWS, CATEGORY_PROJECT } from "./const.js";
 import moment from "moment";
 export default {
   name: "NewsDetail",
@@ -174,12 +173,13 @@ export default {
     },
     goToDetailNew(data) {
       this.$router.push({
-        path: `/news-detail${data}`,
+        path: `/news-detail${data}`
       });
+      window.location.reload();
     },
     goToCategoryNews(data) {
       this.$router.push({
-        path: `/news`,
+        path: `/news`
       });
     },
     getPostsDetail(param) {
@@ -193,24 +193,17 @@ export default {
         size: 10000,
       };
       getListCategory(params).then((response) => {
-        const categoryNews = [
-          "657530d1498e2cea511898e1",
-          "657530f7498e2cea511898e5",
-          "65753106498e2cea511898e9",
-          "65753120498e2cea511898ed",
-        ];
         for (const i of response.data) {
-          for (const j of categoryNews) {
+          for (const j of CATEGORY_NEWS) {
             if (j == i._id) {
               this.listCategory.push(i);
             }
           }
         }
-        console.log("this.listCategory", this.listCategory);
+        // console.log("this.listCategory", this.listCategory);
       });
     },
     getListAllPosts() {
-      this.listLoading = true;
       const params = {
         page: this.pagination.currentPage - 1,
         size: this.pagination.pageSize,
@@ -221,7 +214,6 @@ export default {
         this.listLatestPosts = response.data.slice(0, 3);
         this.listRelatedPosts = response.data.slice(-3);
         console.log(this.listLatestPosts, 'this.listLatestPosts')
-        this.listLoading = false;
       });
     },
 
@@ -245,6 +237,7 @@ export default {
   background-size: cover;
   height: 300px;
 }
+
 .image-related {
   background-repeat: no-repeat;
   background-size: cover;
@@ -306,6 +299,26 @@ export default {
 .categories-item {
   p {
     text-transform: uppercase;
+  }
+}
+
+.post-data {
+  h5.entry-title {
+    cursor: pointer;
+  }
+
+  div.pt-2 {
+    height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+}
+.post-heading-inner{
+  h6.entry-title{
+    cursor: pointer;
   }
 }
 </style>

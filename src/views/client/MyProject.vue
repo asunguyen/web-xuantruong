@@ -14,6 +14,7 @@
   </template>
   <script>
   import { getListCategory } from "@/api/category";
+  import { CATEGORY_NEW, CATEGORY_PROJECT } from "./const.js";
   import ListNewsfollowCategory from "./components/ListNewsfollowCategory.vue";
   export default {
     name: "News",
@@ -56,13 +57,8 @@
           size: 10000,
         };
         getListCategory(params).then((response) => {
-          const categoryNews = [
-            "657b306a498e2cea51189da7",
-            "657b305a498e2cea51189da3",
-            "657b3041498e2cea51189d9f",
-          ];
           for (const i of response.data) {
-            for (const j of categoryNews) {
+            for (const j of CATEGORY_PROJECT) {
               if (j == i._id) {
                 this.listCategory.push(i);
               }
