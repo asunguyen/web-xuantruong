@@ -5,19 +5,20 @@
       <div class="banner-header">
         <VueSlickCarousel v-bind="bannerHome">
           <div class="slick-banner">
-            <img class="hover" src="~@/assets/styles/images/project7.jpg" />
+            <!-- <img class="hover" src="~@/assets/styles/images/project7.jpg" /> -->
+            <img class="hover" :src="homeBannerSlide.image " />
           </div>
-          <div class="slick-banner">
+          <!-- <div class="slick-banner">
             <img class="hover" src="~@/assets/styles/images/project6.jpg" />
-          </div>
+          </div> -->
         </VueSlickCarousel>
         <div class="text-content text-content-section">
           <div class="title">
             <div class="d-flex">
               <img src="~@/assets/styles/images/star.png" />
-              <h5>{{ listText }}</h5>
+              <h5>{{ homeBannerSlide.title }}</h5>
             </div>
-            <h3>{{ developSlide.title }}</h3>
+            <h3>{{ homeBannerSlide.description }}</h3>
           </div>
           <div class="button-view">
             <a class="sk-btn sk-btn-1" href="#">
@@ -411,10 +412,11 @@ export default {
       slide: 0,
       sliding: null,
       textBanner: "",
-      listText: "CÔNG TY CỔ PHẦN ĐẦU TƯ XÂY DỰNG VÀ PHÁT TRIỂN TRƯỜNG THÀNH",
+      listText: "CÔNG TY CỔ PHẦN ĐẦU TƯ XÂY DỰNG VÀ PHÁT TRIỂN XUÂN TRƯỜNG",
       valueText: " XÂY NHỮNG GIÁ TRỊ, DỰNG NHỮNG ƯỚC MƠ",
       aboutUsText: "ABOUT US",
       listSlider: [],
+      homeBannerSlide: [],
       developSlide: [],
       valueSlide: [],
       aboutUsSlide: [],
@@ -473,7 +475,7 @@ export default {
         otsClass: "slick-dots custom-dot-class",
       },
       bannerHome: {
-        dots: false,
+        dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
@@ -482,7 +484,7 @@ export default {
         autoplay: false,
         swipeToSlide: true,
         edgeFriction: 0.35,
-        otsClass: "slick-dots custom-dot-class",
+        // otsClass: "slick-dots custom-dot-class",
       },
       form: {
         email: "",
@@ -528,6 +530,7 @@ export default {
         this.pagination.totalItems = response.total;
         const arrNews = [];
         const arrCommunity = [];
+        // console.log('response', response)
         for (const item of response.data) {
           switch (item.categoryID) {
             case "65753120498e2cea511898ed":
@@ -549,6 +552,9 @@ export default {
         this.listSlider = response.data;
         for (const item of response.data) {
           switch (item._id) {
+            case "65998f4361f3e85cd0a7b1c9":
+              this.homeBannerSlide = item;
+              break;
             case "657d6dfb498e2cea5118a0b6":
               this.developSlide = item;
               break;

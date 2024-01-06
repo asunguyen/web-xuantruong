@@ -4,7 +4,7 @@
             <div class="site-page-content">
                 <div class="section_ ">
                     <b-row>
-                        <b-col class="sidebar p-0" cols="5">
+                        <b-col  cols="12" lg="5" class="sidebar p-0">
                             <div class="banner-left">
                                 <div class="text-content-section">
                                     <div class="title">
@@ -28,7 +28,7 @@
                                 </div>
                             </div>
                         </b-col>
-                        <b-col cols="7 hight-default sections">
+                        <b-col cols="12" lg="7" class="hight-default sections">
                             <div id="section-1" class="content-right d-flex">
                                 <div class="text">
                                     <h3 class="title">Tiềm năng nghành Thuỷ Điện tại Việt Nam</h3>
