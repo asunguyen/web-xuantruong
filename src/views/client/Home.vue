@@ -411,7 +411,7 @@ export default {
       slide: 0,
       sliding: null,
       textBanner: "",
-      listText: "CÔNG TY CỔ PHẦN ĐẦU TƯ XÂY DỰNG VÀ PHÁT TRIỂN TRƯỜNG THÀNH",
+      listText: "CÔNG TY CỔ PHẦN ĐẦU TƯ XÂY DỰNG VÀ PHÁT TRIỂN XUÂN TRƯỜNG",
       valueText: " XÂY NHỮNG GIÁ TRỊ, DỰNG NHỮNG ƯỚC MƠ",
       aboutUsText: "ABOUT US",
       listSlider: [],
@@ -473,7 +473,7 @@ export default {
         otsClass: "slick-dots custom-dot-class",
       },
       bannerHome: {
-        dots: false,
+        dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
@@ -482,7 +482,7 @@ export default {
         autoplay: false,
         swipeToSlide: true,
         edgeFriction: 0.35,
-        otsClass: "slick-dots custom-dot-class",
+        // otsClass: "slick-dots custom-dot-class",
       },
       form: {
         email: "",
