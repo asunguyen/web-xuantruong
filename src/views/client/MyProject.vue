@@ -14,7 +14,7 @@
   </template>
   <script>
   import { getListCategory } from "@/api/category";
-  import { CATEGORY_NEW, CATEGORY_PROJECT } from "./const.js";
+  import { CATEGORY_NEWS, CATEGORY_PROJECT } from "./const.js";
   import ListNewsfollowCategory from "./components/ListNewsfollowCategory.vue";
   export default {
     name: "News",
